@@ -2,16 +2,19 @@ import type { Metadata } from "next";
 import { Raleway, Lato } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import TopHeader from "@/components/ui/landing/topHeader";
+import { Header } from "@/components/ui/landing/header";
+import Footer from "@/components/ui/landing/footer";
 
-const raleway = Raleway({ 
+const raleway = Raleway({
   subsets: ["latin"],
-  variable: "--font-raleway" 
+  variable: "--font-raleway",
 });
 
-const lato = Lato({ 
+const lato = Lato({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
-  variable: "--font-lato"
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -26,12 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(
-        "min-h-screen bg-background font-lato antialiased",
-        raleway.variable,
-        lato.variable
-      )}>
-        {children}
+      <body
+        className={cn(
+          "min-h-screen bg-background font-lato antialiased",
+          raleway.variable,
+          lato.variable
+        )}
+      >
+        <TopHeader />
+        <Header />
+        <div className="min-h-screen">{children}</div>
+        <Footer />
       </body>
     </html>
   );

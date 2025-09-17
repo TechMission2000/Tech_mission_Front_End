@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -46,7 +45,7 @@
 
 :root {
   --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+  --foreground: 222.2 84% 4.9%;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -122,4 +121,21 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.shape-container {
+  /* Basic container styles to make the shape visible */
+  width: 350px;
+  height: 250px;
+  background: linear-gradient(135deg, #007bff, #6cace4);
+
+  /* The magic happens here */
+  clip-path: path(
+    "M 0 35 L 50 35 C 70 15, 80 30, 90 50 C 95 65, 80 80, 70 85 Q 65 90, 60 85 L 60 95 L 0 70 Z"
+  );
+
+  /* Vendor prefix for wider support on older browsers */
+  -webkit-clip-path: path(
+    "M 0 35 L 50 35 C 70 15, 80 30, 90 50 C 95 65, 80 80, 70 85 Q 65 90, 60 85 L 60 95 L 0 70 Z"
+  );
 }

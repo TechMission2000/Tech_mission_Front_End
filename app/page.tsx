@@ -19,13 +19,11 @@ import WhatWeDo from "@/components/ui/landing/WhatWeDo";
 import WhyChooseUs from "@/components/ui/landing/WhyChooseUs";
 import WorkProcess from "@/components/ui/landing/WorkProcess";
 
-
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
-   
-      <TopHeader />
-      <Header />
+      {/* <TopHeader />
+      <Header /> */}
       <Hero />
       <ServicesMarquee />
       <AboutUs />
@@ -35,7 +33,7 @@ export default function Home() {
       <WhyChooseUs />
       <WorkProcess />
       <WhatWeDo />
-      <ExperticeService/>
+      <ExperticeService />
       <Portfolio />
       {/* <Team /> */}
       {/* <Testimonials /> */}
@@ -43,7 +41,7 @@ export default function Home() {
       <Contact />
       <Blog />
       {/* <CallToAction /> */}
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
