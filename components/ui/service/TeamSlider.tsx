@@ -110,14 +110,14 @@ const TeamSlider = () => {
         modules={[Autoplay]}
         loop
         centeredSlides
-        slidesPerView={4}
-        spaceBetween={40}
+        slidesPerView={5}
+        spaceBetween={2}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
-          320: { slidesPerView: 1, spaceBetween: 20 },
+          320: { slidesPerView: 1, spaceBetween: 20, centeredSlides: true },
           640: { slidesPerView: 2, spaceBetween: 20 },
           1024: { slidesPerView: 3, spaceBetween: 30 },
-          1440: { slidesPerView: 5, spaceBetween: 50 },
+          1440: { slidesPerView: 5, spaceBetween: 30 },
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
@@ -128,21 +128,26 @@ const TeamSlider = () => {
             (activeIndex - 1 + teamMembers.length) % teamMembers.length;
           const isNext = index === (activeIndex + 1) % teamMembers.length;
 
-          let scale = 0.8;
-          if (isActive) scale = 1.0;
-          else if (isPrev || isNext) scale = 0.9;
+          let scale = 0.75;
+          if (isActive) scale = 0.95;
+          else if (isPrev || isNext) scale = 0.8;
 
           return (
-            <SwiperSlide key={index} className="flex justify-center pb-5">
+            <SwiperSlide
+              key={index}
+              className={`flex justify-center pb-5 ${
+                isNext ? "" : "" // 👉 add margin only for right-side card
+              }`}
+            >
               <motion.div
                 style={{ scale }}
-                className={`w-80 relative mx-auto flex flex-col justify-start items-center gap-6 transition-all duration-500  rounded-[20px] shadow-lg`}
+                className={`md:w-80 relative w-full  flex flex-col justify-start items-center  transition-all duration-500  rounded-[20px] shadow-lg`}
               >
                 {/* Top Blue Background */}
                 <div
                   className={`w-80 h-44 ${
                     isActive
-                      ? "bg-blue-600 relative rounded-bl-[100px]  rounded-br-[100px] border"
+                      ? "bg-blue-600 relative rounded-bl-[100px]   rounded-br-[100px] border"
                       : ""
                   }  overflow-hidden`}
                 ></div>

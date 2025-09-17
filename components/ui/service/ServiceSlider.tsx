@@ -20,7 +20,7 @@ const ServiceSlider = ({ services }: { services: Service[] }) => {
     <div className="mt-12">
       <Swiper
         modules={[Autoplay, EffectCoverflow]}
-        spaceBetween={20}
+        spaceBetween={10}
         slidesPerView={5}
         loop
         autoplay={{ delay: 2000, disableOnInteraction: false }}
@@ -38,8 +38,8 @@ const ServiceSlider = ({ services }: { services: Service[] }) => {
             className="!flex justify-center items-center"
           >
             {({ isActive, isPrev, isNext }) => {
-              let scale = 0.9;
-              if (isActive) scale = 1.1;
+              let scale = 0.8;
+              if (isActive) scale = 1.0;
               else if (isPrev || isNext) scale = 0.9;
 
               return (
