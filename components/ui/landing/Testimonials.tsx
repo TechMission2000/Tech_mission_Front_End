@@ -34,7 +34,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <div className="flex-shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
     <div className="bg-gray-100 p-8 rounded-lg h-full relative">
        <div className="absolute top-6 right-6 text-blue-500 text-5xl opacity-20">
-            “
+            
        </div>
       <div className="flex items-center gap-4 mb-4">
         <Image

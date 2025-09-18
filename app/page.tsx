@@ -9,6 +9,7 @@ import Footer from "@/components/ui/landing/footer";
 import { Header } from "@/components/ui/landing/header";
 import { Hero } from "@/components/ui/landing/hero";
 import { HowItWorks } from "@/components/ui/landing/HowItWorks";
+import OurPortfolioProjects from "@/components/ui/landing/OurPortfolioProjects";
 import { OurValue } from "@/components/ui/landing/OurValue";
 import Portfolio from "@/components/ui/landing/Portfolio";
 import { ServicesMarquee } from "@/components/ui/landing/services-marquee";
@@ -37,7 +38,7 @@ export default function Home() {
       <WorkProcess />
       <WhatWeDo />
       <ExperticeService/>
-      <Portfolio />
+      <OurPortfolioProjects />
       {/* <Team /> */}
       <Testimonials />
       <Faq />
