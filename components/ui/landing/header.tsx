@@ -23,7 +23,7 @@ const servicesLinks = [
   },
   {
     title: "Service Details",
-    href: "/service",
+    href: "/services-details",
   },
 
   // "UI/UX Design",
