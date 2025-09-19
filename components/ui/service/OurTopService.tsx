@@ -4,6 +4,7 @@ export default function OurTopService() {
   const topServicesData = [
     {
       title: "Website Development",
+      category: "Web Development & Design",
       description:
         "We build fast, secure, and scalable websites tailored to your business needs with modern technologies.",
       buttonText: "Read More",

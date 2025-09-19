@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import TopHeader from "@/components/ui/landing/topHeader";
 import { Header } from "@/components/ui/landing/header";
 import Footer from "@/components/ui/landing/footer";
+import ReduxProvider from "./redux/ReduxProvider";
+// ✅ Import provider
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -36,10 +38,12 @@ export default function RootLayout({
           lato.variable
         )}
       >
-        <TopHeader />
-        <Header />
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+        <ReduxProvider>
+          <TopHeader />
+          <Header />
+          <div className="min-h-screen">{children}</div>
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

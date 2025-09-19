@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import CustomButton from "../CustomButton";
 
 interface TopServiceHeroBannerProps {
@@ -6,17 +8,24 @@ interface TopServiceHeroBannerProps {
   buttonText?: string;
   imageUrl: string;
   backgroundColor?: string;
-  reverse?: boolean; // if true, image left, text right (desktop only)
+  category?: string;
+  reverse?: boolean;
+  // if true, image left, text right (desktop only)
 }
 
 const TopServiceHeroBanner: React.FC<TopServiceHeroBannerProps> = ({
   title,
+  category,
   description,
   buttonText = "Read More",
   imageUrl,
   backgroundColor = "bg-white",
   reverse = false,
 }) => {
+  const router = useRouter();
+  const handleClick = (category: string) => {
+    router.push(`/services-details?category=${encodeURIComponent(category)}`);
+  };
   return (
     <div className={`w-full py-10 ${backgroundColor}`}>
       <div
@@ -42,7 +51,14 @@ const TopServiceHeroBanner: React.FC<TopServiceHeroBannerProps> = ({
             {description}
           </p>
           <div>
-            <CustomButton variant="primary">{buttonText}</CustomButton>
+            <CustomButton
+              variant="primary"
+              onClick={() => {
+                handleClick(category || title);
+              }}
+            >
+              {buttonText}
+            </CustomButton>
           </div>
         </div>
       </div>
