@@ -3,23 +3,30 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+import { Menu, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown } from "lucide-react";
+} from "../dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger } from "../sheet";
+import { Button } from "../button";
 
 // Navigation links for the main menu
-const mainNavLinks = ["About", "Blog", "Work", "Contact", "Careers"];
+const mainNavLinks = [
+  { title: "About", link: "/about" },
+  { title: "Blog", link: "/blog" },
+  { title: "Work", link: "/work" },
+  { title: "Contact", link: "/contact" },
+  { title: "Careers", link: "/careers" },
+];
 // Links for the "Services" dropdown
 const servicesLinks = [
   {
     title: "ALL Services",
-    href: "/service",
+    href: "/services",
   },
   {
     title: "Service Details",
@@ -61,23 +68,29 @@ export function Header() {
                 Services <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="w-48 bg-white  rounded-md shadow-lg p-2">
               {servicesLinks.map((link) => (
-                <DropdownMenuItem key={link.title} asChild>
-                  <Link href={link.href}>{link.title}</Link>
+                <DropdownMenuItem
+                  key={link.title}
+                  asChild
+                  className="data-[highlighted]:bg-gradient-to-r data-[highlighted]:from-blue-900 data-[highlighted]:via-blue-500 data-[highlighted]:to-blue-600 data-[highlighted]:text-white"
+                >
+                  <Link href={link.href} className="w-full block">
+                    {link.title}
+                  </Link>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {mainNavLinks.map((link) => (
+          {mainNavLinks.map((item) => (
             <Link
-              key={link}
-              href="#"
+              key={item.link}
+              href={item.link}
               className="text-base font-semibold text-white hover:text-brand-light-blue transition-colors"
               prefetch={false}
             >
-              {link}
+              {item.title}
             </Link>
           ))}
         </nav>
@@ -127,13 +140,13 @@ export function Header() {
                 </Link>
               ))}
               <hr />
-              {mainNavLinks.map((link) => (
+              {mainNavLinks.map((item) => (
                 <Link
-                  key={link}
+                  key={item.link}
                   href="#"
                   className="text-lg font-medium hover:text-brand-primary"
                 >
-                  {link}
+                  {item.title}
                 </Link>
               ))}
               <Button className="w-full mt-4">Get In Touch</Button>

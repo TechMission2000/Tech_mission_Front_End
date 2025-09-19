@@ -3,11 +3,13 @@
 import type React from "react";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../button";
+import { useRouter } from "next/navigation";
 
 interface Service {
   id: number;
   title: string;
+  category?: string;
   description: string;
   icon: React.ReactNode;
 }
@@ -16,6 +18,7 @@ const services: Service[] = [
   {
     id: 1,
     title: "UX/UI",
+    category: "Design",
     description:
       "At Tech Mission, our design team is passionate about creating intuitive, user-friendly interfaces that enhance user experience and drive engagement.",
     icon: (
@@ -31,6 +34,7 @@ const services: Service[] = [
   {
     id: 2,
     title: "Web Development",
+    category: "Development",
     description:
       "Our developers build responsive, high-performance websites and web applications using the latest technologies and best practices.",
     icon: (
@@ -46,6 +50,7 @@ const services: Service[] = [
   {
     id: 3,
     title: "Mobile Apps",
+    category: "Development",
     description:
       "We create cross-platform mobile applications that provide seamless experiences across iOS and Android devices.",
     icon: (
@@ -61,6 +66,7 @@ const services: Service[] = [
   {
     id: 4,
     title: "Digital Marketing",
+    category: "Marketing",
     description:
       "Our marketing experts help you reach your target audience and grow your business through effective digital strategies.",
     icon: (
@@ -76,6 +82,7 @@ const services: Service[] = [
   {
     id: 5,
     title: "Cloud Solutions",
+    category: "IT Services",
     description:
       "We provide scalable cloud infrastructure solutions to help your business grow without technical limitations.",
     icon: (
@@ -91,6 +98,7 @@ const services: Service[] = [
   {
     id: 6,
     title: "Data Analytics",
+    category: "IT Services",
     description:
       "Turn your data into actionable insights with our comprehensive analytics and visualization services.",
     icon: (
@@ -106,6 +114,7 @@ const services: Service[] = [
   {
     id: 7,
     title: "Data Analytics",
+    category: "IT Services",
     description:
       "Turn your data into actionable insights with our comprehensive analytics and visualization services.",
     icon: (
@@ -121,6 +130,7 @@ const services: Service[] = [
   {
     id: 8,
     title: "Data Analytics",
+    category: "Web Development & Design",
     description:
       "Turn your data into actionable insights with our comprehensive analytics and visualization services.",
     icon: (
@@ -136,6 +146,7 @@ const services: Service[] = [
   {
     id: 9,
     title: "Data Analytics",
+    category: "Web Development & Design",
     description:
       "Turn your data into actionable insights with our comprehensive analytics and visualization services.",
     icon: (
@@ -151,6 +162,7 @@ const services: Service[] = [
   {
     id: 10,
     title: "Data Analytics",
+    category: "Web Development & Design",
     description:
       "Turn your data into actionable insights with our comprehensive analytics and visualization services.",
     icon: (
@@ -170,6 +182,7 @@ function ServicesOffer() {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [slidesToShow, setSlidesToShow] = useState(3);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   // Determine how many slides to show based on screen size
   useEffect(() => {
@@ -225,6 +238,17 @@ function ServicesOffer() {
     );
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const handleServiceClick = (service: Service) => {
+    if (service.category) {
+      router.push(
+        `/services-details?category=${encodeURIComponent(service.category)}`
+      );
+    } else {
+      // fallback (by id or title)
+      router.push(`/services-details?id=${service.id}`);
+    }
   };
 
   // Calculate the slide width based on number of slides to show
@@ -288,59 +312,57 @@ function ServicesOffer() {
                   className="px-2 sm:px-3 md:px-4"
                   style={{ width: `${slideWidth}%` }}
                 >
-                  
                   <div className="bg-white rounded-xl md:rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full shadow-lg ">
                     {/* Number Badge */}
-                   
-                 
-                      <button
-                        className="cursor-pointer  absolute top-2 right-0"
-                        aria-label="Learn more"
+
+                    <button
+                      onClick={() => handleServiceClick(service)}
+                      className="cursor-pointer  absolute top-2 right-0"
+                      aria-label="Learn more"
+                    >
+                      <svg
+                        width="40"
+                        height="40"
+                        viewBox="0 0 58 56"
+                        fill="none"
+                        className="w-8 h-8 md:w-10 md:h-10"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          width="40"
-                          height="40"
-                          viewBox="0 0 58 56"
-                          fill="none"
-                          className="w-8 h-8 md:w-10 md:h-10"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <path
+                          d="M57.5 29.7943C57.5 35.7421 57.5 38.7159 57.5 44.6636C55.75 48 52.959 49.8577 47.75 53C41.25 55 36.75 55.5 30.6292 55.2523C24.7403 54.4529 19.1555 52.1541 14.4102 48.5765C9.6648 44.9989 5.91795 40.2623 3.52878 34.8208C1.13962 29.3793 0.188232 23.4153 0.76583 17.5006C1.34343 11.5858 4.35325 4.93214 7.75 0.0556641C13.6977 0.0556641 13.8833 0.0556641 20.3267 0.0556641H51.0566C48.2322 1.42457 22.0552 7.82416 20.2612 10.3996C18.4673 12.975 17.365 15.968 17.06 19.0918C16.7549 22.2155 17.2574 25.3652 18.5191 28.239C19.7809 31.1129 21.7598 33.6144 24.2659 35.5038C26.7721 37.3933 29.7216 38.6073 32.8316 39.0295C35.9417 39.4518 39.1081 39.068 42.0273 37.9152C44.9465 36.7623 47.5206 34.8789 49.5029 32.4455C51.4853 30.0121 46.3659 20.667 46.9047 17.5749L39.25 3.62186L51.0566 0.0556641C51.0566 0.0556641 51.9752 0.323982 52.5435 0.551308C53.3472 0.872796 53.826 1.03346 54.5261 1.5426C55.1903 2.02561 56.013 3.02953 56.013 3.02953C56.013 3.02953 56.7076 4.19891 57.0043 5.01211C57.2779 5.76183 57.5 6.99468 57.5 6.99468V13.9337V29.7943Z"
+                          fill="#D9D9D9"
+                          fillOpacity="0.3"
+                        />
+                        <rect
+                          x="12.4805"
+                          y="2.05566"
+                          width="41.6341"
+                          height="41.6341"
+                          rx="20.8171"
+                          fill="#1A202C"
+                        />
+                        <g clipPath="url(#clip0_519_2306)">
                           <path
-                            d="M57.5 29.7943C57.5 35.7421 57.5 38.7159 57.5 44.6636C55.75 48 52.959 49.8577 47.75 53C41.25 55 36.75 55.5 30.6292 55.2523C24.7403 54.4529 19.1555 52.1541 14.4102 48.5765C9.6648 44.9989 5.91795 40.2623 3.52878 34.8208C1.13962 29.3793 0.188232 23.4153 0.76583 17.5006C1.34343 11.5858 4.35325 4.93214 7.75 0.0556641C13.6977 0.0556641 13.8833 0.0556641 20.3267 0.0556641H51.0566C48.2322 1.42457 22.0552 7.82416 20.2612 10.3996C18.4673 12.975 17.365 15.968 17.06 19.0918C16.7549 22.2155 17.2574 25.3652 18.5191 28.239C19.7809 31.1129 21.7598 33.6144 24.2659 35.5038C26.7721 37.3933 29.7216 38.6073 32.8316 39.0295C35.9417 39.4518 39.1081 39.068 42.0273 37.9152C44.9465 36.7623 47.5206 34.8789 49.5029 32.4455C51.4853 30.0121 46.3659 20.667 46.9047 17.5749L39.25 3.62186L51.0566 0.0556641C51.0566 0.0556641 51.9752 0.323982 52.5435 0.551308C53.3472 0.872796 53.826 1.03346 54.5261 1.5426C55.1903 2.02561 56.013 3.02953 56.013 3.02953C56.013 3.02953 56.7076 4.19891 57.0043 5.01211C57.2779 5.76183 57.5 6.99468 57.5 6.99468V13.9337V29.7943Z"
-                            fill="#D9D9D9"
-                            fillOpacity="0.3"
+                            d="M39.4804 18.1057C39.4804 17.8404 39.3751 17.5861 39.1875 17.3986C39 17.211 38.7456 17.1057 38.4804 17.1057L30.4804 17.0557C30.2152 17.0557 29.9608 17.161 29.7733 17.3486C29.5858 17.5361 29.4804 17.7904 29.4804 18.0557C29.4804 18.3209 29.5858 18.5752 29.7733 18.7628C29.9608 18.9503 30.2152 19.0557 30.4804 19.0557H36.0404L27.7704 27.3457C27.6767 27.4386 27.6023 27.5492 27.5515 27.6711C27.5007 27.7929 27.4746 27.9237 27.4746 28.0557C27.4746 28.1877 27.5007 28.3184 27.5515 28.4402C27.6023 28.5621 27.6767 28.6727 27.7704 28.7657C27.8634 28.8594 27.974 28.9338 28.0958 28.9846C28.2177 29.0353 28.3484 29.0615 28.4804 29.0615C28.6124 29.0615 28.7431 29.0353 28.865 28.9846C28.9868 28.9338 29.0974 28.8594 29.1904 28.7657L37.4804 20.4757V26.0557C37.4804 26.3209 37.5858 26.5752 37.7733 26.7628C37.9608 26.9503 38.2152 27.0557 38.4804 27.0557C38.7456 27.0557 39 26.9503 39.1875 26.7628C39.3751 26.5752 39.4804 26.3209 39.4804 26.0557V18.1057Z"
+                            fill="white"
                           />
-                          <rect
-                            x="12.4805"
-                            y="2.05566"
-                            width="41.6341"
-                            height="41.6341"
-                            rx="20.8171"
-                            fill="#1A202C"
-                          />
-                          <g clipPath="url(#clip0_519_2306)">
-                            <path
-                              d="M39.4804 18.1057C39.4804 17.8404 39.3751 17.5861 39.1875 17.3986C39 17.211 38.7456 17.1057 38.4804 17.1057L30.4804 17.0557C30.2152 17.0557 29.9608 17.161 29.7733 17.3486C29.5858 17.5361 29.4804 17.7904 29.4804 18.0557C29.4804 18.3209 29.5858 18.5752 29.7733 18.7628C29.9608 18.9503 30.2152 19.0557 30.4804 19.0557H36.0404L27.7704 27.3457C27.6767 27.4386 27.6023 27.5492 27.5515 27.6711C27.5007 27.7929 27.4746 27.9237 27.4746 28.0557C27.4746 28.1877 27.5007 28.3184 27.5515 28.4402C27.6023 28.5621 27.6767 28.6727 27.7704 28.7657C27.8634 28.8594 27.974 28.9338 28.0958 28.9846C28.2177 29.0353 28.3484 29.0615 28.4804 29.0615C28.6124 29.0615 28.7431 29.0353 28.865 28.9846C28.9868 28.9338 29.0974 28.8594 29.1904 28.7657L37.4804 20.4757V26.0557C37.4804 26.3209 37.5858 26.5752 37.7733 26.7628C37.9608 26.9503 38.2152 27.0557 38.4804 27.0557C38.7456 27.0557 39 26.9503 39.1875 26.7628C39.3751 26.5752 39.4804 26.3209 39.4804 26.0557V18.1057Z"
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_519_2306">
+                            <rect
+                              width="24"
+                              height="24"
                               fill="white"
+                              transform="translate(21.4805 11.0557)"
                             />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_519_2306">
-                              <rect
-                                width="24"
-                                height="24"
-                                fill="white"
-                                transform="translate(21.4805 11.0557)"
-                              />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </button>
-               
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
 
                     {/* Content */}
                     <div className=" p-5 md:p-6 lg:p-8  flex flex-col">
-                       <svg
+                      <svg
                         width="71"
                         height="70"
                         viewBox="0 0 71 70"

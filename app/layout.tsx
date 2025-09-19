@@ -1,12 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Raleway, Lato } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import TopHeader from "@/components/ui/landing/topHeader";
-import { Header } from "@/components/ui/landing/header";
-import Footer from "@/components/ui/landing/footer";
-import ReduxProvider from "./redux/ReduxProvider";
-// ✅ Import provider
+import ReduxProvider from "@/redux/ReduxProvider";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -26,9 +23,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
@@ -38,12 +35,7 @@ export default function RootLayout({
           lato.variable
         )}
       >
-        <ReduxProvider>
-          <TopHeader />
-          <Header />
-          <div className="min-h-screen">{children}</div>
-          <Footer />
-        </ReduxProvider>
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );

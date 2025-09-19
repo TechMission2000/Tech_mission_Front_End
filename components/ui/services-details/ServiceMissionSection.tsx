@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { useAppSelector } from "@/app/redux/hooks";
+
+import { ShieldCheck } from "lucide-react";
 
 interface MissionProps {
   initialCategory?: string;
@@ -116,7 +117,7 @@ const ServiceMissionSection: React.FC<MissionProps> = ({
                 className="flex justify-start items-start gap-4 sm:gap-6"
               >
                 <div className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 mt-1">
-                  <div className="w-full h-full bg-black rounded-sm" />
+                  <ShieldCheck className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-md" />
                 </div>
                 <div className="flex-1 text-black text-base sm:text-xl">
                   {item}
