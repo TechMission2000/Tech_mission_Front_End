@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main className="relative overflow-hidden">
    
-  
+    
       <Hero />
       <ServicesMarquee />
       <AboutUs />
@@ -42,18 +42,22 @@ export default function Home() {
       <WhyChooseUs />
       <WorkProcess />
       <WhatWeDo />
-      <ExperticeService/>
+      <ExperticeService />
+    
       <OurPortfolioProjects />
       {/* <Team /> */}
-           <Blog />
-      <Testimonials />
-      <Faq />
 
-
-      <Contact />
- 
-      {/* <CallToAction /> */}
     
+
+      {/* <Team /> */}
+         <Blog />
+      <Testimonials />
+   
+        <Faq />
+      <Contact />
+   
+    
+      {/* <Footer /> */}
     </main>
   );
 }
