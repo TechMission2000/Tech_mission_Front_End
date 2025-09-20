@@ -4,7 +4,6 @@ import Contact from "@/components/ui/landing/Contact";
 import ExperticeService from "@/components/ui/landing/ExperticeService";
 import Faq from "@/components/ui/landing/faq";
 
-
 import Footer from "@/components/ui/landing/footer";
 
 import { Header } from "@/components/ui/landing/header";
@@ -17,7 +16,6 @@ import { ServicesMarquee } from "@/components/ui/landing/services-marquee";
 import ServicesOffer from "@/components/ui/landing/ServicesOffer";
 import Testimonials from "@/components/ui/landing/Testimonials";
 
-
 import TopHeader from "@/components/ui/landing/topHeader";
 
 import WhatWeDo from "@/components/ui/landing/WhatWeDo";
@@ -27,12 +25,9 @@ import Team from "@/components/ui/service/Team";
 
 import ExpertiseService from "@/components/ui/landing/ExperticeService";
 
-
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
-   
-    
       <Hero />
       <ServicesMarquee />
       <AboutUs />
@@ -43,20 +38,15 @@ export default function Home() {
       <WorkProcess />
       <WhatWeDo />
       <ExperticeService />
-    
       <OurPortfolioProjects />
+      <Team />
       {/* <Team /> */}
-
-    
-
-      {/* <Team /> */}
-         <Blog />
+      <Blog />
       <Testimonials />
-   
-        <Faq />
+
+      <Faq />
       <Contact />
-   
-    
+
       {/* <Footer /> */}
     </main>
   );

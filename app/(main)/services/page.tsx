@@ -6,6 +6,7 @@ import OurPopularService from "@/components/ui/service/OurPopularService";
 import OurTopService from "@/components/ui/service/OurTopService";
 import Team from "@/components/ui/service/Team";
 import ExperticeService from "@/components/ui/landing/ExperticeService";
+import OurPortfolioProjects from "@/components/ui/landing/OurPortfolioProjects";
 
 export default function Servicespage() {
   const videoUrl =
@@ -22,8 +23,8 @@ export default function Servicespage() {
       <OurTopService />
       <ExperticeService />
       <Team />
+      <OurPortfolioProjects />
       <Contact />
-      <Portfolio />
     </div>
   );
 }
