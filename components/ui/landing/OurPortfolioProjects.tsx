@@ -68,7 +68,7 @@ const PortfolioCard = ({ category, imageUrl }: { category: string; imageUrl: str
       width={400}
       height={300}
       className="w-full h-full object-cover p-6 pt-16 transform group-hover:scale-105 transition-transform duration-300"
-      onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x300/e2e8f0/334155?text=Image+Error'; }}
+      
     />
   </div>
 );
