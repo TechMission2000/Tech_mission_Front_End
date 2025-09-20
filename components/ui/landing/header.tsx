@@ -17,17 +17,10 @@ import { Menu, ChevronDown } from "lucide-react";
 const mainNavLinks = ["About", "Blog", "Work", "Contact", "Careers"];
 // Links for the "Services" dropdown
 const servicesLinks = [
-  {
-    title: "ALL Services",
-    href: "/service",
-  },
-  {
-    title: "Service Details",
-    href: "/services-details",
-  },
-
-  // "UI/UX Design",
-  // "AI Solutions",
+  "Web Development",
+  "App Development",
+  "UI/UX Design",
+  "AI Solutions",
 ];
 
 export function Header() {
@@ -48,7 +41,7 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           <Link
-            href="/"
+            href="#"
             className="px-6 py-2 text-base font-semibold text-white bg-gradient-to-r from-brand-secondary to-brand-primary rounded-lg shadow-md transition-transform hover:scale-105"
             prefetch={false}
           >
@@ -63,8 +56,8 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               {servicesLinks.map((link) => (
-                <DropdownMenuItem key={link.title} asChild>
-                  <Link href={link.href}>{link.title}</Link>
+                <DropdownMenuItem key={link} asChild>
+                  <Link href="#">{link}</Link>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -119,11 +112,11 @@ export function Header() {
               <h4 className="font-semibold text-gray-500">Services</h4>
               {servicesLinks.map((link) => (
                 <Link
-                  key={link.title}
-                  href={link.href}
+                  key={link}
+                  href="#"
                   className="pl-4 text-lg text-gray-800 hover:text-brand-primary"
                 >
-                  {link.title}
+                  {link}
                 </Link>
               ))}
               <hr />
