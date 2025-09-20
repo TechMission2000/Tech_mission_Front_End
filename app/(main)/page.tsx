@@ -19,17 +19,20 @@ import Testimonials from "@/components/ui/landing/Testimonials";
 
 
 import TopHeader from "@/components/ui/landing/topHeader";
+
 import WhatWeDo from "@/components/ui/landing/WhatWeDo";
 import WhyChooseUs from "@/components/ui/landing/WhyChooseUs";
 import WorkProcess from "@/components/ui/landing/WorkProcess";
+import Team from "@/components/ui/service/Team";
+
+import ExpertiseService from "@/components/ui/landing/ExperticeService";
 
 
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
    
-      <TopHeader />
-      <Header />
+  
       <Hero />
       <ServicesMarquee />
       <AboutUs />
@@ -42,12 +45,15 @@ export default function Home() {
       <ExperticeService/>
       <OurPortfolioProjects />
       {/* <Team /> */}
+           <Blog />
       <Testimonials />
       <Faq />
+
+
       <Contact />
-      <Blog />
+ 
       {/* <CallToAction /> */}
-      <Footer />
+    
     </main>
   );
 }

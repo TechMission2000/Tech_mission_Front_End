@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { useAppSelector } from "@/app/redux/hooks";
-import { Play } from "lucide-react";
+
+import { BadgeCheck, Play } from "lucide-react";
 
 interface Props {
   servicesData: any[];
@@ -99,7 +99,8 @@ const VideoContentSection: React.FC<Props> = ({
               className="inline-flex justify-start items-center gap-2"
             >
               <div className="w-8 h-8 relative flex-shrink-0">
-                <div className="w-6 h-6 left-[3.20px] top-[3.20px] absolute bg-gradient-to-r from-blue-900 via-blue-500 to-blue-600/90 rounded-full" />
+                <BadgeCheck className="bg-gradient-to-r from-blue-900 via-blue-500 to-blue-600/90 text-white rounded-full left-[3.20px] top-[3.20px] absolute" />
+                {/* <div className="w-6 h-6 left-[3.20px] top-[3.20px] absolute  rounded-full" /> */}
               </div>
               <div className="text-sky-950 text-base sm:text-lg md:text-2xl font-normal font-['Lato'] leading-relaxed">
                 {feature}

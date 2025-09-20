@@ -1,5 +1,6 @@
 "use client";
 
+import { Minus, Plus } from "lucide-react";
 import React, { useState } from "react";
 
 const ExpandableSection = ({ servicesData }: any) => {
@@ -37,12 +38,8 @@ const ExpandableSection = ({ servicesData }: any) => {
                   {item.title}
                 </div>
                 {/* Icon */}
-                <div
-                  className={`transform transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-90" : ""
-                  }`}
-                >
-                  <div className="w-2.5 sm:w-3.5 h-0 outline-4 outline-offset-[-2px] outline-white"></div>
+                <div className="text-white transition-transform duration-300">
+                  {activeIndex === index ? <Minus /> : <Plus />}
                 </div>
               </div>
             </div>

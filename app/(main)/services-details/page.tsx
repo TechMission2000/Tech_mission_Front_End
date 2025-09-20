@@ -4,15 +4,15 @@ import ServiceMissionSection from "@/components/ui/services-details/ServiceMissi
 import ServiceSection from "@/components/ui/services-details/ServiceSection";
 import TechnologySection from "@/components/ui/services-details/TechnologySection";
 import VideoContentSection from "@/components/ui/services-details/VideoContentSection";
-
 import { servicesData } from "@/data/servicesData"; // ✅ Import your data
 
-export default function ServiceDetailspage({
-  searchParams,
-}: {
-  searchParams: { category?: string };
-}) {
-  const selectedCategory = searchParams.category || "Web Development & Design";
+interface PageProps {
+  searchParams: Promise<{ category?: string }>;
+}
+
+export default async function ServiceDetailspage({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const selectedCategory = params.category || "Web Development & Design";
 
   const videoUrl =
     "https://pro-bucket.s3.us-east-1.amazonaws.com/1758160755855_serviecs-details-for-ai-intregrated+web+and+moblie+web.mp4";

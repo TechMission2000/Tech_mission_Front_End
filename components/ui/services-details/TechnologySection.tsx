@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { technologyData } from "@/data/technologyData";
-import { useAppSelector } from "@/app/redux/hooks";
 
 interface TechnologySectionProps {
   servicesData: any[];
@@ -125,10 +124,10 @@ const TechnologySection: React.FC<TechnologySectionProps> = ({
 
             <div
               onClick={() => handleCategoryChange("All")}
-              className={`w-full h-14 rounded flex items-center justify-between px-4 mb-3 cursor-pointer transition ${
+              className={`w-full h-14 rounded flex items-center outline justify-between px-4 mb-3 cursor-pointer transition ${
                 selectedTechCategory === "All"
                   ? "bg-gradient-to-r from-blue-900 via-blue-500 to-blue-600/90 text-white"
-                  : "bg-white text-gray-900 border border-gray-200"
+                  : "bg-white text-gray-900 outline-blue-600"
               }`}
             >
               <span>All Technologies</span>
@@ -137,7 +136,7 @@ const TechnologySection: React.FC<TechnologySectionProps> = ({
                 className={
                   selectedTechCategory === "All"
                     ? "text-white"
-                    : "text-gray-600"
+                    : "text-blue-600"
                 }
               />
             </div>
@@ -146,10 +145,10 @@ const TechnologySection: React.FC<TechnologySectionProps> = ({
               <div
                 key={category.id}
                 onClick={() => handleCategoryChange(category.id)}
-                className={`w-full h-14 rounded flex items-center justify-between px-4 mb-3 cursor-pointer transition ${
+                className={`w-full h-14 rounded flex outline items-center justify-between px-4 mb-3 cursor-pointer transition ${
                   selectedTechCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white`
-                    : "bg-white text-gray-900 border border-gray-200"
+                    : "bg-white text-gray-900 outline-blue-600"
                 }`}
               >
                 <span>{category.name}</span>
@@ -158,7 +157,7 @@ const TechnologySection: React.FC<TechnologySectionProps> = ({
                   className={
                     selectedTechCategory === category.id
                       ? "text-white"
-                      : "text-gray-600"
+                      : "text-blue-600"
                   }
                 />
               </div>

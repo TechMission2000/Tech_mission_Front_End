@@ -1,7 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Raleway, Lato } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import ReduxProvider from "@/redux/ReduxProvider";
 
 const raleway = Raleway({ 
   subsets: ["latin"],
@@ -21,17 +23,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={cn(
-        "min-h-screen bg-background font-lato antialiased",
-        raleway.variable,
-        lato.variable
-      )}>
-        {children}
+      <body
+        className={cn(
+          "min-h-screen bg-background font-lato antialiased",
+          raleway.variable,
+          lato.variable
+        )}
+      >
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );

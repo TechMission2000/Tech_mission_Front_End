@@ -3,7 +3,8 @@
 import React from "react";
 import ExpandableSection from "./ExpandableSection";
 import CustomButton from "../CustomButton";
-import { useAppSelector } from "@/app/redux/hooks";
+
+import { BadgeCheck } from "lucide-react";
 
 const BenefitsDifferentiatorsSection = ({
   servicesData,
@@ -40,7 +41,8 @@ const BenefitsDifferentiatorsSection = ({
               <div className="w-full px-4 sm:px-6 lg:px-9 py-4 sm:py-5 flex justify-start items-center gap-4 sm:gap-6 lg:gap-8">
                 {/* Icon Box */}
                 <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 p-3 sm:p-4 bg-gradient-to-bl from-blue-700/20 to-lime-400/0 rounded-md flex justify-center items-center">
-                  <div className="w-5 h-7 sm:w-6 sm:h-8 lg:w-7 lg:h-9 bg-sky-700 rounded" />
+                  <BadgeCheck />
+                  {/* <div className="w-5 h-7 sm:w-6 sm:h-8 lg:w-7 lg:h-9 bg-sky-700 rounded" /> */}
                 </div>
 
                 {/* Texts */}
