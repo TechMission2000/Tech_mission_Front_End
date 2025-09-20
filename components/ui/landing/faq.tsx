@@ -137,6 +137,12 @@ function Faq(): JSX.Element {
                 You can ask anything you want to know.
               </p>
               <form className="mt-6">
+                {/* add a email input */}
+                <input 
+                  type="email" 
+                  placeholder="Enter Your Email"
+                  className="w-full px-4 my-2 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                />
                 <input 
                   type="text" 
                   placeholder="Enter Here"

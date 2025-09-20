@@ -56,8 +56,6 @@ export default function Home() {
         <Faq />
       <Contact />
    
-    
-      {/* <Footer /> */}
     </main>
   );
 }

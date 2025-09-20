@@ -13,13 +13,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Menu, ChevronDown } from "lucide-react";
 
-// Navigation links for the main menu
+
 const mainNavLinks = ["About", "Blog", "Work", "Contact", "Careers"];
-// Links for the "Services" dropdown
+
 const servicesLinks = [
   {
     title: "ALL Services",
-    href: "/service",
+    href: "/services",
   },
   {
     title: "Service Details",
@@ -37,7 +37,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center" prefetch={false}>
           <Image
-            src="/logo.png" // Make sure your logo is in the /public folder
+            src="/logo.png" 
             alt="Tech Logo"
             width={78}
             height={78}
@@ -73,7 +73,7 @@ export function Header() {
           {mainNavLinks.map((link) => (
             <Link
               key={link}
-              href="#"
+              href={`/${link.toLowerCase()}`}
               className="text-base font-semibold text-white hover:text-brand-light-blue transition-colors"
               prefetch={false}
             >

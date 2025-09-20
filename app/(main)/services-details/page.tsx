@@ -4,7 +4,7 @@ import ServiceMissionSection from "@/components/ui/services-details/ServiceMissi
 import ServiceSection from "@/components/ui/services-details/ServiceSection";
 import TechnologySection from "@/components/ui/services-details/TechnologySection";
 import VideoContentSection from "@/components/ui/services-details/VideoContentSection";
-import { servicesData } from "@/data/servicesData"; // ✅ Import your data
+import { servicesData } from "@/data/servicesData"; 
 
 interface PageProps {
   searchParams: Promise<{ category?: string }>;
