@@ -14,7 +14,7 @@ import {
 import { Menu, ChevronDown } from "lucide-react";
 
 
-const mainNavLinks = ["About", "Blog", "Work", "Contact", "Careers"];
+const mainNavLinks = ["About", "Blogs", "Work", "Contact", "Careers"];
 
 const servicesLinks = [
   {
@@ -104,9 +104,7 @@ export function Header() {
                 <path
                   d="M12 14H28M12 20H28M21 26H28"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                
                 />
               </svg>
             </button>
