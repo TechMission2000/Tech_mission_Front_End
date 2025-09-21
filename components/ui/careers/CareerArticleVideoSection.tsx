@@ -44,7 +44,7 @@ export default function CareerArticleVideoSection({
     <div className="w-full max-w-[1140px] mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-8 mt-40">
       {/* Article Column */}
       <div className="w-full lg:w-[569px] flex flex-col gap-6">
-        <div className="lg:self-start self-center lg:w-[40%] px-4 lg:px-0]">
+        <div className="lg:self-start self-center px-4 lg:px-0]">
           <SectionTitle title={title} textAlign="center" className="px-5" />
         </div>
         <p className="text-zinc-800 text-lg font-normal font-['Lato'] leading-relaxed lg:px-0 px-4">
