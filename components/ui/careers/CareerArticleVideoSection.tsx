@@ -41,17 +41,19 @@ export default function CareerArticleVideoSection({
   }, []);
 
   return (
-    <div className="w-full max-w-[1140px] mx-auto flex flex-col lg:flex-row justify-between items-center  gap-8 mt-40">
+    <div className="w-full max-w-[1140px] mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-8 mt-40">
       {/* Article Column */}
       <div className="w-full lg:w-[569px] flex flex-col gap-6">
-        <SectionTitle title={title} textAlign="left" />
-        <p className="text-zinc-800 text-lg font-normal font-['Lato'] leading-relaxed">
+        <div className="lg:self-start self-center lg:w-[40%] px-4 lg:px-0]">
+          <SectionTitle title={title} textAlign="center" className="px-5" />
+        </div>
+        <p className="text-zinc-800 text-lg font-normal font-['Lato'] leading-relaxed lg:px-0 px-4">
           {description}
         </p>
       </div>
 
       {/* Video Column */}
-      <div className="w-full lg:w-[522px] relative">
+      <div className="w-full lg:w-[522px] relative mt-8 lg:mt-0">
         <video
           ref={videoRef}
           className="w-full h-auto rounded-lg shadow-lg"
@@ -69,7 +71,7 @@ export default function CareerArticleVideoSection({
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <button
               onClick={handlePlay}
-              className="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-[#0E458E] via-[#2F82E8] to-[rgba(0,113,245,0.92)] shadow-lg hover:scale-110 transition-transform"
+              className="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-[#0E458E] via-[#2F82E8] to-[rgba(0,113,245,0.92)] shadow-lg hover:scale-110 transition-transform animate-pulse"
             >
               <Play size={40} className="text-white" />
             </button>

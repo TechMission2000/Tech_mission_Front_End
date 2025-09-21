@@ -29,7 +29,7 @@ const CustomButton: React.FC<ButtonProps> = ({
 
   return (
     <button type={type} onClick={onClick} className={finalClasses}>
-      <span className="text-lg font-medium font-raleway tracking-wide">
+      <span className="text-lg font-medium font-raleway tracking-wide flex items-center gap-2">
         {children}
       </span>
     </button>

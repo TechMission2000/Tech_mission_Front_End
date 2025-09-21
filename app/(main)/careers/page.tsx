@@ -8,7 +8,7 @@ import ServicBanner from "@/components/ui/service/Banner";
 
 export default function CareersPage() {
   const careervideoUrl =
-    "https://pro-bucket.s3.us-east-1.amazonaws.com/1758162106739_ai+intrgrated+business+website-development.mp4";
+    "https://pro-bucket.s3.us-east-1.amazonaws.com/1758399631250_Why+TechMission+is+the+Best+Place+to+Gro+%282%29.mp4";
 
   const careerTitle = "Shape Your Future with TachMission";
   const careerDescription =

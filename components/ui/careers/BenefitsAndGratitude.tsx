@@ -21,7 +21,7 @@ export default function BenefitsAndGratitude({
 }: BenefitsSectionProps) {
   return (
     <section
-      className="w-full py-16 bg-cover bg-center"
+      className="w-full py-0 lg:py-16 bg-cover  bg-center"
       style={{
         backgroundImage: backgroundImage ? `url(${backgroundImage})` : "none",
       }}
@@ -29,8 +29,10 @@ export default function BenefitsAndGratitude({
       <div className="max-w-[1140px] mx-auto flex flex-col gap-12 py-10">
         {/* Article Section */}
         <div className="flex flex-col gap-6 py-20">
-          <SectionTitle title={title} textAlign="center" />
-          <p className="text-black text-lg font-normal font-['Lato'] leading-relaxed mt-5">
+          <div className="lg:self-start self-center lg:w-[40%] px-4 lg:px-0]">
+            <SectionTitle title={title} textAlign="center" />
+          </div>
+          <p className="text-black text-lg font-normal font-['Lato'] leading-relaxed mt-5 lg:px-0 px-4">
             {description}
           </p>
         </div>
@@ -40,7 +42,7 @@ export default function BenefitsAndGratitude({
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="relative bg-neutral-50 rounded hover:shadow-lg shadow h-28 flex items-center p-4 gap-4 overflow-hidden"
+              className="relative bg-neutral-50 rounded hover:shadow-lg shadow h-28 flex items-center p-4 gap-4 overflow-hidden lg:mx-0 mx-4"
             >
               <div className="w-14 h-14 flex-shrink-0">
                 <Image
