@@ -166,7 +166,7 @@ import { Button } from "../button";
 // Navigation links for the main menu
 const mainNavLinks = [
   { title: "About", link: "/about" },
-  { title: "Blog", link: "/blog" },
+  { title: "Blog", link: "/blogs" },
   { title: "Work", link: "/work" },
   { title: "Contact", link: "/contact" },
   { title: "Careers", link: "/careers" },

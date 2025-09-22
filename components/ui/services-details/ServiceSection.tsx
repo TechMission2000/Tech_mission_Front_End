@@ -21,7 +21,7 @@ interface Category {
 interface Service {
   id: number;
   category: string;
-  article: {
+  article?: {
     title: string;
     description: string;
     image: string;
@@ -30,7 +30,7 @@ interface Service {
 
 interface Props {
   categoryList: Category[];
-  servicesData: Service[];
+  servicesData?: Service[];
   initialCategory?: string; // New prop for initial category
 }
 
@@ -44,7 +44,7 @@ const ServiceSection: React.FC<Props> = ({
   // Default selected category for UI display
   const selectedCategory = initialCategory || categoryList[0].name;
 
-  const selectedService = servicesData.find(
+  const selectedService = servicesData?.find(
     (service) => service.category === selectedCategory
   );
 
@@ -114,17 +114,17 @@ const ServiceSection: React.FC<Props> = ({
         {selectedService ? (
           <>
             <img
-              src={selectedService.article.image}
-              alt={selectedService.article.title}
+              src={selectedService?.article?.image}
+              alt={selectedService?.article?.title}
               className="w-full h-80 lg:h-96 object-cover rounded"
             />
 
             <div className="flex flex-col gap-3 px-2 lg:p-0">
               <h2 className="text-black text-4xl font-semibold font-['Raleway']">
-                {selectedService.article.title}
+                {selectedService?.article?.title}
               </h2>
               <p className="text-neutral-600 text-xl font-normal font-['Lato'] leading-snug">
-                {selectedService.article.description}
+                {selectedService?.article?.description}
               </p>
 
               {/* View Details Button */}
