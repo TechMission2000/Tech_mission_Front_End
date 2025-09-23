@@ -1,10 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
-import { GoArrowUpRight } from "react-icons/go";
 import GetIntouch from '@/components/about/GetIntouch';
+import WorkCard from '@/components/work/WorkCard';
 
-// --- Data for Portfolio Items ---
-// In a real application, you would likely fetch this data from an API or a CMS.
 const allWorkData = [
   { category: "E-Commerce Platform for Fashion Hub", imageSrc: "/blog.png", title: "Chic Boutique", link: "https://www.chicboutique.com", description: "We developed a visually stunning and user-friendly e-commerce platform for Chic Boutique, a renowned fashion retailer, resulting in increased online sales." },
   { category: "Mobile App for Food Delivery Service", imageSrc: "/blog.png", title: "HungryBites", link: "https://www.hungrybites.com", description: "HungryBites approached us to create a mobile app that streamlined their food delivery service with real-time order tracking and secure payment options." },
@@ -19,35 +16,7 @@ const allWorkData = [
 ];
 
 
-// --- Reusable Card Component ---
-const WorkCard = ({ category, imageSrc, title, link, description }: any) => {
-  return (
-    <div className="flex flex-col gap-8 px-6 sm:px-10 py-8">
-      <h2 className="text-xl font-semibold text-[#545454] font-lato">{category}</h2>
-      <div className="flex flex-col gap-6">
-        <Image src={imageSrc} alt={title} width={490} height={346} className="rounded-lg object-cover w-full h-auto shadow-md" />
-        <div className="flex justify-between items-center">
-          <div className="flex flex-col gap-2">
-            <h3 className="text-lg font-medium text-[#16192C] font-lato">{title}</h3>
-            <p className="text-sm text-[#545454] bg-gradient-to-b from-[#FBFBFB] to-[#FAFAFA] px-3 py-2 rounded-md inline-block border border-gray-200">
-              {link}
-            </p>
-          </div>
-          <button className="rounded-md hover:shadow-lg transition-shadow">
-            <div className="w-[26px] h-[26px] relative flex items-center justify-center">
-              <div className="p-2 bg-[#1963B9] rounded-md" >
-                <GoArrowUpRight className='text-2xl text-white' />
 
-
-              </div>
-            </div>
-          </button>
-        </div>
-        <p className="text-[#545454] text-base font-raleway leading-relaxed">{description}</p>
-      </div>
-    </div>
-  );
-};
 
 // --- Grid Container Component ---
 const WorkGrid = () => {
@@ -83,22 +52,7 @@ const WorkHero = () => {
   );
 };
 
-// --- Call-to-Action Component ---
-// const GetIntouch = () => {
-//   return (
-//     <div className="relative w-full min-h-[360px] bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('/getintouch.png')" }}>
-//       <div className="absolute inset-0 bg-[#16192C]/40" />
-//       <div className="relative z-10 flex flex-col justify-center items-center h-full gap-8 text-white p-4">
-//         <h2 className="text-3xl font-bold text-center text-[#F7F7F7] font-raleway max-w-4xl leading-snug">
-//           “Some of the History of Our Company is that<br className="hidden sm:block" />we are Catching up through Video”
-//         </h2>
-//         <button className="px-12 py-4 text-lg font-lato text-white bg-gradient-to-r from-[#0E458E] via-[#2F82E8] to-[#0070F5] rounded-lg hover:opacity-90 transition-opacity shadow-lg">
-//           Get In Touch
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
+
 
 
 // --- Main Page Component ---
