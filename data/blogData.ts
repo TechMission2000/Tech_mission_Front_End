@@ -72,7 +72,7 @@ export const blogPosts = [
     href: "/blogs/popular-business-2022",
   },
   {
-    id: 2,
+    id: 9,
     image:
       "https://pro-bucket.s3.us-east-1.amazonaws.com/1758533643702_f1fce73959721fa4b30e656199f3742981279805.jpg",
     category: "UX/UI Design",
@@ -81,7 +81,7 @@ export const blogPosts = [
     href: "/blogs/popular-business-2022",
   },
   {
-    id: 3,
+    id: 10,
     image: "",
     category: "Product Management",
     title: "The most Popular Business Of the Year",
@@ -89,7 +89,7 @@ export const blogPosts = [
     href: "/blogs/popular-business-2022",
   },
   {
-    id: 4,
+    id: 11,
     image: "",
     category: "Backend",
     title: "The most Popular Business Of the Year",
@@ -97,7 +97,7 @@ export const blogPosts = [
     href: "/blogs/popular-business-2022",
   },
   {
-    id: 5,
+    id: 12,
     image: "",
     category: "Web Development & Design",
     title: "The most Popular Business Of the Year",
@@ -105,7 +105,7 @@ export const blogPosts = [
     href: "/blogs/popular-business-2022",
   },
   {
-    id: 6,
+    id: 13,
     image: "",
     category: "Branding",
     title: "The most Popular Business Of the Year",
@@ -113,7 +113,7 @@ export const blogPosts = [
     href: "/blogs/popular-business-2022",
   },
   {
-    id: 7,
+    id: 14,
     image: "",
     category: "Branding",
     title: "The most Popular Business Of the Year",

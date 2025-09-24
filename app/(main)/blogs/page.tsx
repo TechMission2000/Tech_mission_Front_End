@@ -4,17 +4,13 @@ import LatestPostUpdates from "@/components/blog/LatestPostUpdates";
 import { blogPosts } from "@/data/blogData";
 
 interface PageProps {
-  searchParams?: { category?: string };
+  searchParams: Promise<{ category?: string }>;
 }
 
-export default function BlogPage({ searchParams }: PageProps) {
-  // Selected category from query params (default fallback)
-  const selectedCategory = searchParams?.category || "Web Development & Design";
-
-  // Filter blogPosts by category
-  const filteredPosts = blogPosts.filter(
-    (post) => post.category === selectedCategory
-  );
+export default async function BlogPage({ searchParams }: PageProps) {
+  // ✅ Await searchParams
+  const params = await searchParams;
+  const selectedCategory = params?.category || "All";
 
   return (
     <div className="max-w-[1140px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -38,8 +34,11 @@ export default function BlogPage({ searchParams }: PageProps) {
               </p>
             </div>
 
-            {filteredPosts.length > 0 ? (
-              <BlogGrid blogPosts={filteredPosts} />
+            {blogPosts.length > 0 ? (
+              <BlogGrid
+                blogPosts={blogPosts}
+                selectedCategory={selectedCategory}
+              />
             ) : (
               <p className="text-gray-500 italic">
                 No posts found for this category.
