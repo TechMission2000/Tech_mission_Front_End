@@ -37,7 +37,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center" prefetch={false}>
           <Image
-            src="/logo.png" 
+            src="/logo.png"
             alt="Tech Logo"
             width={78}
             height={78}
@@ -104,7 +104,7 @@ export function Header() {
                 <path
                   d="M12 14H28M12 20H28M21 26H28"
                   stroke="white"
-                
+
                 />
               </svg>
             </button>
