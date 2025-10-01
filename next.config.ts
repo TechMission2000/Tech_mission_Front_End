@@ -9,6 +9,8 @@ const nextConfig = {
       },
     ],
   },
+  // ADD THIS LINE TO HIDE THE DEVELOPMENT STATUS BADGE
+  // devIndicators: false,
 };
 
 module.exports = nextConfig;

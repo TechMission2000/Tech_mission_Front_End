@@ -266,9 +266,9 @@ export function Header() {
                 <path
                   d="M12 14H28M12 20H28M21 26H28"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
