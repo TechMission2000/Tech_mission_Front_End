@@ -30,7 +30,11 @@ export default function BenefitsAndGratitude({
         {/* Article Section */}
         <div className="flex flex-col gap-6 py-20">
           <div className="lg:self-start self-center lg:w-[40%] px-4 lg:px-0]">
-            <SectionTitle title={title} textAlign="center" />
+            <SectionTitle
+              title={title}
+              textAlign="center"
+              titleClassName="text-lg sm:text-xl lg:text-2xl"
+            />
           </div>
           <p className="text-black text-lg font-normal font-['Lato'] leading-relaxed mt-5 lg:px-0 px-4">
             {description}

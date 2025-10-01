@@ -45,7 +45,12 @@ export default function CareerArticleVideoSection({
       {/* Article Column */}
       <div className="w-full lg:w-[569px] flex flex-col gap-6">
         <div className="lg:self-start self-center px-4 lg:px-0]">
-          <SectionTitle title={title} textAlign="center" className="px-5" />
+          <SectionTitle
+            title={title}
+            textAlign="center"
+            className="px-5"
+            titleClassName="text-lg sm:text-xl lg:text-2xl"
+          />
         </div>
         <p className="text-zinc-800 text-lg font-normal font-['Lato'] leading-relaxed lg:px-0 px-4">
           {description}

@@ -92,12 +92,14 @@ interface SectionTitleProps {
   title: string;
   className?: string;
   textAlign?: "left" | "center" | "right";
+  titleClassName?: string;
 }
 
 export function SectionTitle({
   title,
   className,
   textAlign = "center",
+  titleClassName,
 }: SectionTitleProps) {
   const textAlignClass = {
     left: "text-left",
@@ -138,8 +140,10 @@ export function SectionTitle({
       {/* Title text */}
       <h2
         className={cn(
-          "text-gray-900 my-6 sm:my-8 text-lg sm:text-xl lg:text-2xl w-full font-semibold font-sans",
-          textAlignClass
+          // "text-gray-900 my-6 sm:my-8 text-lg sm:text-xl lg:text-2xl w-full font-semibold font-sans",
+          "text-gray-900 my-6 sm:my-8  w-full font-semibold font-sans",
+          textAlignClass,
+          titleClassName
         )}
       >
         {title}
