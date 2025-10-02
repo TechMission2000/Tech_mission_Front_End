@@ -24,6 +24,7 @@ import WorkProcess from "@/components/ui/landing/WorkProcess";
 import Team from "@/components/ui/service/Team";
 
 import ExpertiseService from "@/components/ui/landing/ExperticeService";
+import Chatbot from "@/components/chat/Chatbot";
 
 export default function Home() {
   return (
@@ -46,6 +47,9 @@ export default function Home() {
 
       <Faq />
       <Contact />
+      <div className="bg-black w-full">
+        <Chatbot />
+      </div>
     </main>
   );
 }

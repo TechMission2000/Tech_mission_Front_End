@@ -3,6 +3,7 @@
 import React from "react";
 import CustomButton from "../CustomButton";
 import { useRouter } from "next/navigation";
+import Chatbot from "@/components/chat/Chatbot";
 
 // --- TYPE DEFINITIONS ---
 interface Slide {
@@ -87,9 +88,8 @@ export function Hero() {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={slide.image}
@@ -104,9 +104,8 @@ export function Hero() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute bottom-0 left-0 right-0 md:left-auto md:right-auto w-full md:w-auto p-4 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute bottom-0 left-0 right-0 md:left-auto md:right-auto w-full md:w-auto p-4 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           >
             <div className="bg-[rgba(235,242,251,0.8)] backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-lg max-w-xl mx-auto md:mx-0">
               <div className="flex flex-col gap-8">
@@ -157,7 +156,9 @@ export default function App() {
             This is where the rest of your page content would go.
           </p>
         </div>
+
       </main>
+
     </div>
   );
 }
