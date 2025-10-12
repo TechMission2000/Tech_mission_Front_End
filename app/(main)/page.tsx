@@ -1,6 +1,6 @@
 import { AboutUs } from "@/components/ui/landing/about-us";
 import Blog from "@/components/ui/landing/Blog";
-import Contact from "@/components/ui/landing/Contact";
+
 import ExperticeService from "@/components/ui/landing/ExperticeService";
 import Faq from "@/components/ui/landing/faq";
 
@@ -25,6 +25,8 @@ import Team from "@/components/ui/service/Team";
 
 import ExpertiseService from "@/components/ui/landing/ExperticeService";
 import Chatbot from "@/components/chat/Chatbot";
+import ContactInFo from "@/components/ui/landing/Contect";
+import GetInTuch from "@/components/ui/landing/Contect";
 
 export default function Home() {
   return (
@@ -37,7 +39,7 @@ export default function Home() {
       <OurValue />
       <WhyChooseUs />
       <WorkProcess />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <ExperticeService />
       <OurPortfolioProjects />
       <Team />
@@ -46,10 +48,10 @@ export default function Home() {
       <Testimonials />
 
       <Faq />
-      <Contact />
-      <div className="bg-black w-full">
+
+      {/* <div className="bg-black w-full">
         <Chatbot />
-      </div>
+      </div> */}
     </main>
   );
 }

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { use } from "react";
@@ -15,6 +14,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "../sheet";
 import { Button } from "../button";
 import { useRouter } from "next/navigation";
+import { LogoLoader } from "../LogoLoader";
 
 // Navigation links for the main menu
 const mainNavLinks = [
@@ -41,18 +41,32 @@ const servicesLinks = [
 
 export function Header() {
   const router = useRouter();
+
+  const handleGetInTouch = () => {
+    if (window.location.pathname === "/") {
+      // Already on home page, scroll down to contact section
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      router.push("/contact");
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-[#072D5B] lg:h-24 md:h-20 h-16 ">
       <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center" prefetch={false}>
-          <Image
+        <Link href="/" className="flex items-center " prefetch={false}>
+          <LogoLoader />
+          {/* <Image
             src="/logo.png" // Make sure your logo is in the /public folder
             alt="Tech Logo"
             width={78}
             height={78}
             className="h-16 w-16 md:h-20 md:w-20"
-          />
+          /> */}
         </Link>
 
         {/* Desktop Navigation */}
@@ -100,7 +114,10 @@ export function Header() {
 
         {/* Get in Touch Button */}
         <div className="hidden lg:block">
-          <Button onClick={() => router.push('/contact')} className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-bold shadow-lg transition-transform hover:scale-105">
+          <Button
+            onClick={() => router.push("/contact")}
+            className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-bold shadow-lg transition-transform hover:scale-105"
+          >
             Get In Touch
           </Button>
         </div>
@@ -146,13 +163,18 @@ export function Header() {
               {mainNavLinks.map((item) => (
                 <Link
                   key={item.link}
-                  href="#"
+                  href={item.link}
                   className="text-lg font-medium hover:text-brand-primary"
                 >
                   {item.title}
                 </Link>
               ))}
-              <Button className="w-full mt-4">Get In Touch</Button>
+              <Button
+                className="w-full mt-4"
+                onClick={() => router.push("/contact")}
+              >
+                Get In Touch
+              </Button>
             </div>
           </SheetContent>
         </Sheet>

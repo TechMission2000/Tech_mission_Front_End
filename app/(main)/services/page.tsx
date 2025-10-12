@@ -1,4 +1,4 @@
-import Contact from "@/components/ui/landing/Contact";
+import Contact from "@/components/ui/landing/Contect";
 import Portfolio from "@/components/ui/landing/Portfolio";
 import WhatWeDo from "@/components/ui/landing/WhatWeDo";
 import ServicBanner from "@/components/ui/service/Banner";

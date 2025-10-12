@@ -27,7 +27,7 @@ export default function ContactInfo() {
             >
               <div className="flex items-center gap-2">
                 <Mail size={18} />
-                <span>example@gmail.com</span>
+                <span>techmissionglobe@gmail.com</span>
               </div>
               <ArrowUpRight size={18} className="text-yellow-400" />
             </a>
@@ -37,7 +37,7 @@ export default function ContactInfo() {
             >
               <div className="flex items-center gap-2">
                 <Phone size={18} />
-                <span>+1 (123) 456-7890</span>
+                <span>+88 01 838 801 853</span>
               </div>
               <ArrowUpRight size={18} className="text-yellow-400" />
             </a>

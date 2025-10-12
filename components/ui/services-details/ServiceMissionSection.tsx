@@ -9,30 +9,30 @@ interface MissionProps {
   servicesData: {
     id: number;
     category: string;
-    article: {
+    article?: {
       title: string;
       description: string;
       image: string;
     };
-    coreText: {
+    coreText?: {
       title: string;
       video: string;
       features: string[];
     };
-    benefits: {
+    benefits?: {
       title: string;
       description: string;
       icon: string;
     }[];
-    whatMakesUsDifferent: {
+    whatMakesUsDifferent?: {
       title: string;
       description: string;
     }[];
-    mission: {
+    mission?: {
       imageUrl: string;
       items: string[];
     };
-    technologies: {
+    technologies?: {
       frontend: string[];
       backend: string[];
       database: string[];
@@ -63,7 +63,10 @@ const ServiceMissionSection: React.FC<MissionProps> = ({
     );
   }
 
-  const { imageUrl, items } = selectedService.mission;
+  const { imageUrl, items } = selectedService?.mission || {
+    imageUrl: "",
+    items: [],
+  };
 
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 bg-white">

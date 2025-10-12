@@ -4,7 +4,7 @@ import ServiceMissionSection from "@/components/ui/services-details/ServiceMissi
 import ServiceSection from "@/components/ui/services-details/ServiceSection";
 import TechnologySection from "@/components/ui/services-details/TechnologySection";
 import VideoContentSection from "@/components/ui/services-details/VideoContentSection";
-import { servicesData } from "@/data/servicesData"; 
+import { servicesData } from "@/data/servicesData";
 
 interface PageProps {
   searchParams: Promise<{ category?: string }>;
@@ -20,13 +20,12 @@ export default async function ServiceDetailspage({ searchParams }: PageProps) {
   const subtitle = "Home / Services Details";
 
   const categoryList = [
-    { id: 1, name: "Web Development & Design", active: true },
-    { id: 2, name: "Backend", active: false },
-    { id: 3, name: "Product Management", active: false },
-    { id: 4, name: "UX/UI Design", active: false },
-    { id: 5, name: "Cloud Services", active: false },
-    { id: 6, name: "AI & ML Services", active: false },
-    { id: 7, name: "Digital Marketing", active: false },
+    { id: 1, name: "AI & ML Services", active: true },
+    { id: 2, name: "App Development", active: false },
+    { id: 3, name: "Website Development", active: false },
+    { id: 4, name: "Digital Marketing", active: false },
+    { id: 5, name: "Graphics Design", active: false },
+    { id: 6, name: "Custom Software", active: false },
   ];
 
   return (

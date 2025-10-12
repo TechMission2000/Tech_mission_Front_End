@@ -1,10 +1,19 @@
 import TopServiceHeroBanner from "./TopServiceHeroBanner";
 
+const categoryList = [
+  { id: 1, name: "AI & ML Services", active: true },
+  { id: 2, name: "App Development", active: false },
+  { id: 3, name: "Website Development", active: false },
+  { id: 4, name: "Digital Marketing", active: false },
+  { id: 5, name: "Graphics Design", active: false },
+  { id: 6, name: "Custom Software", active: false },
+];
+
 export default function OurTopService() {
   const topServicesData = [
     {
-      title: "Website Development",
-      category: "Web Development & Design",
+      title: "AI & ML Services",
+      category: "AI & ML Services",
       description:
         "We build fast, secure, and scalable websites tailored to your business needs with modern technologies.",
       buttonText: "Read More",
@@ -14,7 +23,8 @@ export default function OurTopService() {
       reverse: false,
     },
     {
-      title: "WordPress Development",
+      title: "App Development",
+      category: "App Development",
       description:
         "Get custom WordPress solutions for blogs, business sites, and e-commerce with SEO-friendly designs.",
       buttonText: "Read More",
@@ -24,7 +34,8 @@ export default function OurTopService() {
       reverse: true,
     },
     {
-      title: "All-in-One IT Services",
+      title: "Website Development",
+      category: "Website Development",
       description:
         "Comprehensive IT solutions including cloud, infrastructure, and managed services for seamless operations.",
       buttonText: "Read More",
@@ -34,7 +45,8 @@ export default function OurTopService() {
       reverse: false,
     },
     {
-      title: "Cybersecurity",
+      title: "Digital Marketing",
+      category: "Digital Marketing",
       description:
         "Protect your digital assets with enterprise-grade security solutions and 24/7 monitoring.",
       buttonText: "Read More",
@@ -54,7 +66,7 @@ export default function OurTopService() {
       reverse: false,
     },
     {
-      title: "E-commerce Development",
+      title: "Graphics Design",
       description:
         "Create powerful e-commerce platforms that deliver seamless shopping experiences across devices.",
       buttonText: "Read More",
@@ -64,7 +76,7 @@ export default function OurTopService() {
       reverse: true,
     },
     {
-      title: "Mobile App Development",
+      title: "Custom Software",
       description:
         "Build cross-platform mobile apps with engaging UI/UX, optimized for performance and scalability.",
       buttonText: "Read More",
