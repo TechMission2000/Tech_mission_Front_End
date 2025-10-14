@@ -1,5 +1,6 @@
-
 import React from "react";
+import { LogoLoader } from "../LogoLoader";
+import TechMissionLogo from "../TechMissionLogo";
 
 // --- Icon Components for Social Links ---
 const TwitterIcon = ({ className = "w-6 h-6" }) => (
@@ -59,20 +60,19 @@ function Footer() {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8"
       >
         {/* Newsletter Section */}
-        <div style={{
-          backgroundImage: `url(/subscribe.png)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-          className="relative mb-24 p-8 rounded-2xl bg-gradient-to-r from-[#0E458E] via-[#2F82E8] to-[rgba(0,113,245,0.92)] text-white overflow-hidden">
+        <div
+          style={{
+            backgroundImage: `url(/subscribe.png)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="relative mb-24 p-8 rounded-2xl bg-gradient-to-r from-[#0E458E] via-[#2F82E8] to-[rgba(0,113,245,0.92)] text-white overflow-hidden"
+        >
           {/* Background decorative elements */}
           <div className="absolute -top-14 -right-16 w-60 h-60 rounded-full border-[6px] border-gray-300/50" />
           <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full border-[7px] border-slate-100/30" />
 
-          <div
-
-            className="relative z-10 flex flex-col mx-auto text-center  items-center gap-8"
-          >
+          <div className="relative z-10 flex flex-col mx-auto text-center  items-center gap-8">
             <h2
               className="text-3xl text-center font-bold  lg:text-left"
               style={{ fontFamily: "'Raleway', sans-serif" }}
@@ -105,8 +105,32 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-3xl font-bold text-zinc-800">Logo</h3>
-            <p className="mt-4 text-zinc-600 max-w-xs">
+            <div className="">
+              <LogoLoader
+                logoColor="#155DFC"
+                customClass="h-10 w-10 md:h-14 md:w-14"
+              ></LogoLoader>
+              <p
+                className="text-2xl md:text-2xl lg:text-3xl font-bold m-0 p-0 translate-y-1 text-blue-600"
+                style={{
+                  fontFamily: "BellMT, 'Bell MT'",
+                  // fontSize: "40px",
+                  // margin: 0,
+                  // padding: 0,
+                  // color: "blue",
+
+                  //   fill: fillColor,
+                }}
+              >
+                TechMission
+              </p>
+              {/* <TechMissionLogo
+                fillColor="red"
+                textClassName=" font-bold text-2xl"
+              ></TechMissionLogo> */}
+            </div>
+
+            <p className=" text-zinc-600 max-w-xs">
               Clarity gives you the blocks and components you need to create a
               truly professional website.
             </p>
@@ -219,7 +243,14 @@ function Footer() {
         </div>
       </div>
       {/* Copyright section */}
-      <div style={{ backgroundImage: "url(/copyrightbg.png)", backgroundSize: "cover", backgroundPosition: "center" }} className="mt-16 py-8 border-t border-zinc-200 text-center text-zinc-500">
+      <div
+        style={{
+          backgroundImage: "url(/copyrightbg.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="mt-16 py-8 border-t border-zinc-200 text-center text-zinc-500"
+      >
         <p>© {new Date().getFullYear()} all Rights Reserved</p>
       </div>
     </footer>

@@ -48,7 +48,7 @@ export default function ContactInfo() {
         <div className="flex-1 flex flex-col gap-6 px-6">
           <h3 className="text-xl font-semibold text-gray-900">Our Office</h3>
           <p className="text-gray-700">
-            Address: 123 AI Tech Avenue, Techville, 54321
+            Address: H#180/6, R#Titas Road, East Rampura, Dhaka, Bangladesh
           </p>
           <a
             href="https://maps.google.com"

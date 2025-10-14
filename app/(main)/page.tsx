@@ -27,6 +27,7 @@ import ExpertiseService from "@/components/ui/landing/ExperticeService";
 import Chatbot from "@/components/chat/Chatbot";
 import ContactInFo from "@/components/ui/landing/Contect";
 import GetInTuch from "@/components/ui/landing/Contect";
+import Contect from "@/components/ui/landing/Contect";
 
 export default function Home() {
   return (
@@ -48,7 +49,7 @@ export default function Home() {
       <Testimonials />
 
       <Faq />
-
+      <Contect></Contect>
       {/* <div className="bg-black w-full">
         <Chatbot />
       </div> */}
