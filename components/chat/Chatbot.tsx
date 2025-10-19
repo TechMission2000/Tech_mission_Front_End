@@ -127,14 +127,14 @@ const Chatbot: FC = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-[999] flex flex-col items-end">
+    <div className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-[9999] flex flex-col items-end pointer-events-none">
       {/* Chat Modal */}
       <div
         className={`
-                    w-80 sm:w-96 h-[600px] flex flex-col bg-white rounded-2xl shadow-2xl transition-all duration-300 ease-in-out mb-4 origin-bottom-right
+                    w-80 sm:w-96 h-[500px] flex flex-col bg-white rounded-2xl shadow-2xl transition-all duration-300 ease-in-out mb-4 origin-bottom-right
                     ${
                       isOpen
-                        ? "opacity-100 scale-100"
+                        ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-95 pointer-events-none"
                     }
                 `}
@@ -224,7 +224,7 @@ const Chatbot: FC = () => {
                     w-16 h-16 bg-gradient-to-r from-[#0E458E] via-[#2F82E8] to-[rgba(0,113,245,0.92)] text-white hover:opacity-90 rounded-full 
                     flex justify-center items-center shadow-2xl 
                     hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-                    transition-all transform duration-200
+                    transition-all transform duration-200 pointer-events-auto
                 `}
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >

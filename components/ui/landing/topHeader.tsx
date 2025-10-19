@@ -1,4 +1,3 @@
-import React from "react";
 import {
   MapPin,
   Mail,
@@ -7,7 +6,6 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
-import Link from "next/link";
 
 export default function TopHeader() {
   return (
@@ -27,18 +25,38 @@ export default function TopHeader() {
 
         {/* Social Icons */}
         <div className="flex items-center gap-4 ml-auto">
-          <Link href="#" aria-label="Twitter">
-            <Twitter className="h-5 w-5 hover:opacity-80 transition-opacity" />
-          </Link>
-          <Link href="#" aria-label="Facebook">
-            <Facebook className="h-5 w-5 hover:opacity-80 transition-opacity" />
-          </Link>
-          <Link href="#" aria-label="Instagram">
-            <Instagram className="h-5 w-5 hover:opacity-80 transition-opacity" />
-          </Link>
-          <Link href="#" aria-label="LinkedIn">
-            <Linkedin className="h-5 w-5 hover:opacity-80 transition-opacity" />
-          </Link>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
+            <Twitter className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
+          </a>
+          <a
+            href="https://www.facebook.com/techmissionglobe"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Instagram className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/techmissionglobe/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
+          </a>
         </div>
       </div>
     </div>
