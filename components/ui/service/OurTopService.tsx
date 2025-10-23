@@ -5,7 +5,7 @@ const categoryList = [
   { id: 2, name: "App Development", active: false },
   { id: 3, name: "Website Development", active: false },
   { id: 4, name: "Digital Marketing", active: false },
-  { id: 5, name: "Graphics Design", active: false },
+  { id: 5, name: "Graphics Design", active: false },
   { id: 6, name: "Custom Software", active: false },
 ];
 
@@ -29,7 +29,7 @@ export default function OurTopService() {
         "Get custom WordPress solutions for blogs, business sites, and e-commerce with SEO-friendly designs.",
       buttonText: "Read More",
       imageUrl:
-        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074829907_WordPress%20Development.png",
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074811490_Mobile%20App%20Development.png",
       backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
       reverse: true,
     },
@@ -44,17 +44,7 @@ export default function OurTopService() {
       backgroundColor: "bg-white",
       reverse: false,
     },
-    {
-      title: "Digital Marketing",
-      category: "Digital Marketing",
-      description:
-        "Protect your digital assets with enterprise-grade security solutions and 24/7 monitoring.",
-      buttonText: "Read More",
-      imageUrl:
-        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074808163_Cybersecurity.png",
-      backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
-      reverse: true,
-    },
+
     {
       title: "Digital Marketing",
       description:
@@ -66,7 +56,7 @@ export default function OurTopService() {
       reverse: false,
     },
     {
-      title: "Graphics Design",
+      title: "Graphics Design",
       description:
         "Create powerful e-commerce platforms that deliver seamless shopping experiences across devices.",
       buttonText: "Read More",
@@ -81,7 +71,7 @@ export default function OurTopService() {
         "Build cross-platform mobile apps with engaging UI/UX, optimized for performance and scalability.",
       buttonText: "Read More",
       imageUrl:
-        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074811490_Mobile%20App%20Development.png",
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074806726_all-services.png",
       backgroundColor: "bg-white",
       reverse: false,
     },
@@ -91,10 +81,10 @@ export default function OurTopService() {
     <div className="px-4">
       {/* Section Header */}
       <div className="w-full flex flex-col items-center text-center">
-        <h2 className="font-['Roboto_Condensed'] font-medium text-black text-3xl sm:text-4xl lg:text-5xl leading-tight">
+        <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
           Our Top <span className="text-sky-700">Services</span>
         </h2>
-        <p className="mt-4 max-w-[752px] text-black/60 text-sm sm:text-base lg:text-lg font-['Lato'] font-semibold leading-relaxed">
+        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
           We ensure you have every functionality you need to build, run, and
           expand your marketplace
         </p>

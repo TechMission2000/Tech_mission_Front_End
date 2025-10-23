@@ -147,7 +147,7 @@ const TeamSlider = () => {
                 <div
                   className={`w-80 h-44 ${
                     isActive
-                      ? "bg-blue-600 relative rounded-bl-[100px]   rounded-br-[100px] border"
+                      ? "bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white relative rounded-bl-[100px]   rounded-br-[100px] border"
                       : ""
                   }  overflow-hidden`}
                 ></div>
@@ -193,9 +193,9 @@ const TeamSlider = () => {
                       </div>
 
                       {/* Social Icons */}
-                      {/* Social Icons */}
-                      <div className="flex justify-center py-5 space-x-4">
-                        {/* Twitter */}
+
+                      {/* <div className="flex justify-center py-5 space-x-4">
+                      
                         <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center cursor-pointer hover:bg-blue-200 transition-colors">
                           <svg
                             className="w-5 h-5 text-blue-600"
@@ -206,7 +206,6 @@ const TeamSlider = () => {
                           </svg>
                         </div>
 
-                        {/* GitHub */}
                         <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center cursor-pointer hover:bg-blue-200 transition-colors">
                           <svg
                             className="w-5 h-5 text-blue-600"
@@ -221,7 +220,7 @@ const TeamSlider = () => {
                           </svg>
                         </div>
 
-                        {/* LinkedIn */}
+                       
                         <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center cursor-pointer hover:bg-blue-200 transition-colors">
                           <svg
                             className="w-5 h-5 text-blue-600"
@@ -232,7 +231,7 @@ const TeamSlider = () => {
                           </svg>
                         </div>
 
-                        {/* Dribbble */}
+                        
                         <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center cursor-pointer hover:bg-blue-200 transition-colors">
                           <svg
                             className="w-5 h-5 text-blue-600"
@@ -242,7 +241,7 @@ const TeamSlider = () => {
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.6 4.61a8.5 8.5 0 011.93 5.31c-.28-.05-3.1-.63-5.94-.27-.07-.14-.12-.29-.18-.44a25.4 25.4 0 00-.56-1.23c3.14-1.28 4.57-3.12 4.76-3.36zM12 3.48c2.17 0 4.15.81 5.66 2.15-.15.22-1.44 1.94-4.48 3.08-1.4-2.57-2.95-4.68-3.19-5A8.69 8.69 0 0112 3.48z" />
                           </svg>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

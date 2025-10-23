@@ -21,7 +21,7 @@ const ContactInfoItem = ({ icon, title, details }: any) => (
 const SocialIcon = ({ icon }: any) => (
   <a
     href="#"
-    className="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+    className="w-14 h-14 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-lg flex items-center justify-center   transition-colors hover:bg-blue-700 hover:cursor-pointer"
   >
     {icon}
   </a>
@@ -39,10 +39,10 @@ function Contect() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-raleway font-bold text-4xl text-[#072D5B]">
+          <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
             Get In Touch
           </h2>
-          <p className="font-lato font-semibold text-2xl text-gray-700 mt-2">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Hey! Let’s Talk
           </p>
         </div>
@@ -75,7 +75,7 @@ function Contect() {
               <div>
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-md hover:bg-blue-700 transition-colors"
+                  className="bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white font-semibold py-3 px-8 rounded-md hover:bg-blue-700 transition-colors hover:cursor-pointer"
                 >
                   Send Now
                 </button>
@@ -102,7 +102,7 @@ function Contect() {
                 </svg>
               }
               title="Call Anytime"
-              details={["+ 91 23678 27867", "+ 91 67678 92878"]}
+              details={["+880 1 838 801 853"]}
             />
             <ContactInfoItem
               icon={
@@ -121,7 +121,10 @@ function Contect() {
                 </svg>
               }
               title="Send Email"
-              details={["connect@itfirms.com", "hello@itfirms.com"]}
+              details={[
+                "techmissiongloba@gmail.com",
+                "office.techmission@gmail.com",
+              ]}
             />
             <ContactInfoItem
               icon={
@@ -146,7 +149,10 @@ function Contect() {
                 </svg>
               }
               title="Visit Us"
-              details={["20 Island Park Road,", "New Jearsy, New York, USA"]}
+              details={[
+                "H#180/6, R#Titas Road, East Rampura",
+                "Dhaka-1219, Bangladesh",
+              ]}
             />
 
             <div className="pt-6 border-t border-gray-200">

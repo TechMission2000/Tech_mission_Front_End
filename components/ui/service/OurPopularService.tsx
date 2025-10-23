@@ -101,10 +101,10 @@ const OurPopularService: React.FC = () => {
   return (
     <div className="w-full pb-10 pt-20 bg-white">
       <div className="text-center">
-        <h2 className="text-5xl font-['Roboto_Condensed'] font-medium text-zinc-800">
+        <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
           Our Popular <span className="text-sky-700">Services</span>
         </h2>
-        <p className="mt-2 text-lg text-zinc-800 font-['Lato']">
+        <p className=" text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
           We ensure you have every functionality you need to build, run, and
           expand your marketplace
         </p>

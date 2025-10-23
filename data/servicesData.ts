@@ -9,7 +9,8 @@ export const servicesData = [
       title: "Artificial Intelligence & Machine Learning Solutions",
       description:
         "We empower businesses through AI-driven automation, predictive analytics, and intelligent systems that streamline processes, improve decision-making, and increase efficiency. Our AI experts create solutions tailored to your business model, leveraging the latest machine learning and deep learning technologies.",
-      image: "https://pro-bucket.s3.us-east-1.amazonaws.com/ai-ml-service.jpg",
+      image:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758182545169_webdevelopment-service-image.jpg",
     },
     coreText: {
       title: "Building Intelligent Systems for a Smarter Tomorrow",
@@ -49,6 +50,12 @@ export const servicesData = [
           "Our solutions adapt to your growing data and evolving business needs with ease.",
         icon: "https://placehold.co/80x80",
       },
+      {
+        title: "Faster Time-to-Market",
+        description:
+          "Leverage AI solutions to accelerate product launches and stay ahead of the competition.",
+        icon: "https://placehold.co/80x80",
+      },
     ],
     whatMakesUsDifferent: [
       {
@@ -66,6 +73,11 @@ export const servicesData = [
         description:
           "We ensure transparent, explainable, and responsible AI model development and deployment.",
       },
+      {
+        title: "Domain Expertise",
+        description:
+          "Our team has specialized knowledge in multiple industries, allowing AI solutions tailored to your business domain.",
+      },
     ],
     mission: {
       imageUrl: "https://placehold.co/100x100",
@@ -75,6 +87,9 @@ export const servicesData = [
         "Develop ethical and explainable AI models.",
         "Enhance customer experiences using predictive systems.",
         "Build scalable ML models that evolve with data.",
+        "Enable real-time decision making with intelligent systems.",
+        "Integrate AI solutions seamlessly with existing workflows.",
+        "Continuously innovate AI capabilities to keep up with emerging technologies.",
       ],
     },
     technologies: {
@@ -87,7 +102,6 @@ export const servicesData = [
       languages: ["Python", "TypeScript", "Java", "R"],
     },
   },
-
   // ================== 2. APP DEVELOPMENT ==================
   {
     id: 2,
@@ -95,85 +109,113 @@ export const servicesData = [
     article: {
       title: "Mobile App Design & Development",
       description:
-        "We build powerful, user-friendly mobile applications for Android and iOS platforms using the latest cross-platform and native technologies. Our apps are optimized for speed, usability, and engagement.",
-      image: "https://pro-bucket.s3.us-east-1.amazonaws.com/appdev-service.jpg",
+        "We build high-performance, user-friendly mobile applications for Android and iOS platforms. Leveraging native and cross-platform technologies, our apps are optimized for speed, usability, and engagement on mobile devices.",
+      image:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758182545169_webdevelopment-service-image.jpg",
     },
     coreText: {
-      title: "Delivering Scalable & Engaging App Experiences",
+      title: "Delivering Scalable & Engaging Mobile Experiences",
       video:
         "https://pro-bucket.s3.us-east-1.amazonaws.com/app-development-video.mp4",
       features: [
-        "Native & cross-platform mobile apps",
-        "User-centric design with high engagement rate",
-        "Integration with APIs, cloud & payment systems",
-        "Offline functionality for better accessibility",
-        "End-to-end testing and app store deployment",
-        "App maintenance, updates, and scaling support",
+        "Native iOS (Swift/SwiftUI) and Android (Kotlin) app development",
+        "Cross-platform apps with React Native & Flutter",
+        "User-centric mobile design for high retention and engagement",
+        "Offline mode and push notifications for accessibility & retention",
+        "API, cloud, and third-party service integrations",
+        "App store deployment, end-to-end testing, and post-launch support",
       ],
     },
     benefits: [
       {
         title: "Cross-Platform Support",
         description:
-          "Develop apps that run seamlessly on Android, iOS, and tablets using React Native and Flutter.",
+          "We develop apps that run smoothly on Android and iOS using React Native and Flutter.",
         icon: "https://placehold.co/80x80",
       },
       {
         title: "Optimized Performance",
         description:
-          "Our apps deliver lightning-fast performance and low battery usage across all devices.",
+          "Mobile apps with fast load times, minimal battery usage, and smooth animations.",
         icon: "https://placehold.co/80x80",
       },
       {
-        title: "Custom Integrations",
+        title: "Custom API Integrations",
         description:
-          "We integrate apps with third-party APIs, payment systems, and analytics tools.",
+          "Seamlessly connect your app with cloud services, payment gateways, and analytics tools.",
         icon: "https://placehold.co/80x80",
       },
       {
         title: "Long-Term Maintenance",
         description:
-          "We provide continuous support, feature updates, and performance monitoring.",
+          "We provide continuous updates, monitoring, and feature enhancements to keep your app current.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Enhanced User Engagement",
+        description:
+          "Use analytics-driven design and personalized features to improve retention and satisfaction on mobile devices.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Push Notifications & Offline Access",
+        description:
+          "Keep users engaged and informed even without an active internet connection.",
         icon: "https://placehold.co/80x80",
       },
     ],
     whatMakesUsDifferent: [
       {
-        title: "User-First Design Philosophy",
+        title: "Seamless Cross-Platform Experience",
         description:
-          "We prioritize user experience from wireframe to launch to maximize engagement.",
+          "Consistent UI/UX, performance, and features across both Android and iOS devices.",
       },
       {
-        title: "Agile Development Cycle",
+        title: "Performance-First Mobile Development",
         description:
-          "Rapid prototyping, iterative design, and continuous deployment ensure quality.",
+          "Apps are optimized for battery efficiency, memory management, and smooth animations.",
       },
       {
-        title: "Security-Driven Development",
+        title: "Continuous Improvement & Support",
         description:
-          "We apply best practices to protect user data and ensure app security.",
+          "Post-launch updates, monitoring, and rapid iteration to enhance app value and user satisfaction.",
+      },
+      {
+        title: "User-Centered Innovation",
+        description:
+          "We focus on research-driven design and real mobile user feedback to deliver apps that solve real-world challenges.",
+      },
+      {
+        title: "Mobile Security & Compliance",
+        description:
+          "We implement encryption, secure authentication, and adhere to platform guidelines to protect user data.",
       },
     ],
     mission: {
       imageUrl: "https://placehold.co/100x100",
       items: [
-        "Deliver modern, fast, and engaging mobile apps.",
-        "Ensure seamless performance across all devices.",
-        "Integrate apps with cloud and backend systems.",
-        "Provide long-term maintenance and updates.",
+        "Deliver fast, responsive, and engaging mobile apps.",
+        "Ensure seamless performance across Android and iOS devices.",
+        "Integrate APIs, cloud services, and secure backends.",
+        "Implement push notifications and offline functionality for accessibility.",
+        "Provide long-term maintenance, updates, and feature improvements.",
+
+        "Optimize apps for battery efficiency, memory usage, and performance.",
+        "Ensure app security and compliance with platform standards.",
+
+        "Support multiple languages and accessibility options for global reach.",
       ],
     },
     technologies: {
-      frontend: ["React Native", "Flutter", "SwiftUI", "Next.js"],
-      backend: ["Node.js", "Express.js", "Django", "Firebase"],
-      database: ["MongoDB", "SQLite", "PostgreSQL", "Firebase"],
-      devops: ["Docker", "AWS", "Azure", "GitLab CI"],
-      uiux: ["Figma", "Adobe XD", "Sketch", "InVision"],
-      security: ["OAuth", "JWT", "2FA", "SSL/TLS"],
-      languages: ["JavaScript", "TypeScript", "Kotlin", "Swift"],
+      frontend: ["React Native", "Flutter", "SwiftUI", "Jetpack Compose"],
+      backend: ["Node.js", "Express.js", "Django", "Firebase", "AWS Lambda"],
+      database: ["MongoDB", "PostgreSQL", "SQLite", "Firebase Realtime DB"],
+      devops: ["Docker", "AWS", "Azure", "GitLab CI/CD", "Fastlane"],
+      uiux: ["Figma", "Adobe XD", "Sketch", "InVision", "Lottie Animations"],
+      security: ["OAuth2", "JWT", "2FA", "SSL/TLS", "Data Encryption"],
+      languages: ["JavaScript", "TypeScript", "Kotlin", "Swift", "Dart"],
     },
   },
-
   // ================== 3. WEBSITE DEVELOPMENT ==================
   // (same as your provided one)
   {
@@ -182,7 +224,7 @@ export const servicesData = [
     article: {
       title: "Web Development & Design Services",
       description:
-        "We deliver high-performing, modern websites that are scalable, SEO-optimized, and designed to convert visitors into customers...",
+        "We deliver high-performing, modern websites that are scalable, SEO-optimized, and designed to convert visitors into customers. From small business sites to enterprise-level platforms, we ensure your online presence drives real results.",
       image:
         "https://pro-bucket.s3.us-east-1.amazonaws.com/1758182545169_webdevelopment-service-image.jpg",
     },
@@ -201,27 +243,41 @@ export const servicesData = [
     },
     benefits: [
       {
-        title: "Cross-Platform Support",
+        title: "Cross-Platform Compatibility",
         description:
-          "Develop apps that run seamlessly on Android, iOS, and tablets using React Native and Flutter.",
+          "Websites that perform flawlessly on desktops, tablets, and mobile devices.",
         icon: "https://placehold.co/80x80",
       },
       {
         title: "Optimized Performance",
         description:
-          "Our apps deliver lightning-fast performance and low battery usage across all devices.",
+          "We ensure your website loads quickly and efficiently, improving user experience and SEO.",
         icon: "https://placehold.co/80x80",
       },
       {
         title: "Custom Integrations",
         description:
-          "We integrate apps with third-party APIs, payment systems, and analytics tools.",
+          "We connect your site with CRMs, APIs, payment gateways, and marketing tools.",
         icon: "https://placehold.co/80x80",
       },
       {
         title: "Long-Term Maintenance",
         description:
-          "We provide continuous support, feature updates, and performance monitoring.",
+          "Our team provides continuous updates, monitoring, and optimization post-launch.",
+        icon: "https://placehold.co/80x80",
+      },
+
+      {
+        title: "Conversion-Focused Design",
+        description:
+          "Our designs are data-informed to guide users toward key actions like signups or purchases.",
+        icon: "https://placehold.co/80x80",
+      },
+
+      {
+        title: "AI & Automation Integration",
+        description:
+          "Integrate AI chatbots, personalized recommendations, and automated workflows into your website.",
         icon: "https://placehold.co/80x80",
       },
     ],
@@ -241,14 +297,28 @@ export const servicesData = [
         description:
           "We apply best practices to protect user data and ensure app security.",
       },
+      {
+        title: "SEO & Performance Excellence",
+        description:
+          "Our websites are optimized for Core Web Vitals, search ranking, and lightning-fast speed.",
+      },
+      {
+        title: "Scalable Architecture Planning",
+        description:
+          "We design every project to scale seamlessly as your traffic and business grow.",
+      },
     ],
     mission: {
       imageUrl: "https://placehold.co/100x100",
       items: [
-        "Deliver modern, fast, and engaging mobile apps.",
-        "Ensure seamless performance across all devices.",
-        "Integrate apps with cloud and backend systems.",
-        "Provide long-term maintenance and updates.",
+        "Deliver modern, fast, and engaging websites for all industries.",
+        "Ensure seamless performance across all browsers and devices.",
+        "Integrate powerful backend systems with frontend excellence.",
+        "Provide long-term maintenance and continuous feature updates.",
+        "Empower businesses with strong digital presence and brand identity.",
+        "Implement sustainable coding practices and accessibility standards.",
+        "Use AI tools and analytics to enhance user experience and conversions.",
+        "Maintain the highest standards of security, design, and performance.",
       ],
     },
     technologies: {
@@ -261,7 +331,6 @@ export const servicesData = [
       languages: ["JavaScript", "TypeScript", "Python", "PHP"],
     },
   },
-
   // ================== 4. DIGITAL MARKETING ==================
   {
     id: 4,
@@ -271,7 +340,7 @@ export const servicesData = [
       description:
         "We help brands grow online through SEO, content marketing, PPC, social media, and email automation. Our strategies drive measurable results, improving traffic, conversions, and engagement.",
       image:
-        "https://pro-bucket.s3.us-east-1.amazonaws.com/digitalmarketing-service.jpg",
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758182545169_webdevelopment-service-image.jpg",
     },
     coreText: {
       title: "Empowering Brands with Digital Strategies",
@@ -305,6 +374,30 @@ export const servicesData = [
           "Turn visitors into loyal customers with targeted marketing strategies.",
         icon: "https://placehold.co/80x80",
       },
+      {
+        title: "ROI-Focused Campaigns",
+        description:
+          "We design campaigns that focus on measurable business outcomes, not just vanity metrics.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Multi-Channel Strategy",
+        description:
+          "Our team integrates SEO, PPC, and social media for consistent brand performance.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Brand Awareness & Credibility",
+        description:
+          "We help build trust and brand recognition across digital platforms.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Advanced Analytics & Insights",
+        description:
+          "Leverage data tracking and AI-powered insights to optimize every campaign.",
+        icon: "https://placehold.co/80x80",
+      },
     ],
     whatMakesUsDifferent: [
       {
@@ -317,6 +410,21 @@ export const servicesData = [
         description:
           "We focus on awareness, acquisition, conversion, and retention equally.",
       },
+      {
+        title: "Personalized Campaigns",
+        description:
+          "Every marketing campaign is uniquely tailored to match your brand’s voice and audience behavior.",
+      },
+      {
+        title: "Continuous Optimization",
+        description:
+          "We consistently test, measure, and refine strategies for better ROI.",
+      },
+      {
+        title: "Experienced Cross-Platform Team",
+        description:
+          "Our experts manage campaigns across Google, Meta, LinkedIn, and emerging ad networks.",
+      },
     ],
     mission: {
       imageUrl: "https://placehold.co/100x100",
@@ -324,6 +432,11 @@ export const servicesData = [
         "Help brands grow visibility and authority online.",
         "Boost engagement and customer retention through creative campaigns.",
         "Optimize performance through data analytics.",
+        "Empower small and large businesses with digital transformation.",
+        "Utilize AI and automation to maximize marketing efficiency.",
+        "Deliver measurable ROI through transparent reporting.",
+        "Strengthen brand storytelling through multi-channel content.",
+        "Stay ahead of digital trends to maintain competitive advantage.",
       ],
     },
     technologies: {
@@ -336,7 +449,6 @@ export const servicesData = [
       languages: ["JavaScript", "PHP", "Python", "TypeScript"],
     },
   },
-
   // ================== 5. GRAPHICS DESIGN ==================
   {
     id: 5,
@@ -346,7 +458,7 @@ export const servicesData = [
       description:
         "Our design team crafts visually appealing, memorable, and consistent brand experiences across digital and print platforms. From logos to product packaging, we bring creativity that inspires.",
       image:
-        "https://pro-bucket.s3.us-east-1.amazonaws.com/graphicsdesign-service.jpg",
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758182545169_webdevelopment-service-image.jpg",
     },
     coreText: {
       title: "Transforming Ideas into Visual Masterpieces",
@@ -380,6 +492,30 @@ export const servicesData = [
           "We design for both digital and print mediums with perfect precision.",
         icon: "https://placehold.co/80x80",
       },
+      {
+        title: "Faster Turnaround Time",
+        description:
+          "We deliver high-quality designs quickly without compromising creativity.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Custom Design Solutions",
+        description:
+          "Every project is uniquely crafted to reflect your brand’s identity.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Revisions & Client Feedback",
+        description:
+          "We refine designs based on your feedback until perfection is achieved.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Expert Design Consultation",
+        description:
+          "Our experienced designers guide you through color, typography, and layout choices.",
+        icon: "https://placehold.co/80x80",
+      },
     ],
     whatMakesUsDifferent: [
       {
@@ -392,6 +528,21 @@ export const servicesData = [
         description:
           "We deliver assets suitable for all digital platforms and marketing channels.",
       },
+      {
+        title: "Attention to Detail",
+        description:
+          "Every pixel matters — we ensure designs are perfectly balanced and visually consistent.",
+      },
+      {
+        title: "Experienced Creative Team",
+        description:
+          "Our talented designers bring years of professional experience across various industries.",
+      },
+      {
+        title: "Data-Driven Design Decisions",
+        description:
+          "We combine creativity with research and analytics to create designs that perform effectively.",
+      },
     ],
     mission: {
       imageUrl: "https://placehold.co/100x100",
@@ -399,6 +550,11 @@ export const servicesData = [
         "Create meaningful and visually appealing designs.",
         "Establish strong brand presence through visuals.",
         "Deliver top-quality designs optimized for both print and web.",
+        "Empower businesses with impactful brand communication.",
+        "Encourage innovation and creativity in every design project.",
+        "Build long-term relationships through design excellence.",
+        "Ensure every design aligns with client goals and audience needs.",
+        "Maintain consistency and integrity in brand representation.",
       ],
     },
     technologies: {
@@ -411,7 +567,6 @@ export const servicesData = [
       languages: ["N/A"],
     },
   },
-
   // ================== 6. CUSTOM SOFTWARE ==================
   {
     id: 6,
@@ -421,7 +576,7 @@ export const servicesData = [
       description:
         "We design and develop tailor-made software solutions that solve unique business challenges. From enterprise systems to SaaS products, our software ensures scalability, security, and efficiency.",
       image:
-        "https://pro-bucket.s3.us-east-1.amazonaws.com/customsoftware-service.jpg",
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758182545169_webdevelopment-service-image.jpg",
     },
     coreText: {
       title: "Tailor-Made Software for Unique Business Needs",
@@ -455,6 +610,25 @@ export const servicesData = [
           "We implement advanced security protocols and scalable architectures.",
         icon: "https://placehold.co/80x80",
       },
+
+      {
+        title: "User-Centric Design",
+        description:
+          "Our solutions are intuitive and designed with end-users in mind for better adoption.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Cross-Platform Compatibility",
+        description:
+          "We ensure your application performs flawlessly across web, desktop, and mobile platforms.",
+        icon: "https://placehold.co/80x80",
+      },
+      {
+        title: "Continuous Improvement & Support",
+        description:
+          "We provide post-deployment updates, performance tuning, and feature enhancements.",
+        icon: "https://placehold.co/80x80",
+      },
     ],
     whatMakesUsDifferent: [
       {
@@ -467,6 +641,21 @@ export const servicesData = [
         description:
           "Our systems are designed to grow with your company’s needs.",
       },
+      {
+        title: "Agile Development Process",
+        description:
+          "We follow agile methodologies ensuring faster delivery, flexibility, and transparency.",
+      },
+      {
+        title: "Cutting-Edge Technology Stack",
+        description:
+          "We use the latest frameworks, cloud technologies, and security standards for modern software.",
+      },
+      {
+        title: "Dedicated QA & Testing Team",
+        description:
+          "Our rigorous testing process ensures your software is reliable, bug-free, and ready for production.",
+      },
     ],
     mission: {
       imageUrl: "https://placehold.co/100x100",
@@ -475,6 +664,10 @@ export const servicesData = [
         "Automate workflows and improve productivity.",
         "Deliver long-term maintenance and support.",
         "Ensure data security and performance optimization.",
+        "Provide flexible and cloud-ready architecture.",
+        "Empower businesses through intelligent automation.",
+        "Adopt emerging technologies for competitive advantage.",
+        "Deliver measurable business value through innovation.",
       ],
     },
     technologies: {

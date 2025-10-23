@@ -6,10 +6,15 @@ import Image from "next/image";
 // It's a best practice to keep content separate from the component's structure.
 // This makes it easy to update text and images later without changing the code.
 const aboutData = {
-  title: "About Us",
-  subtitle: "One of the Fastest Ways to Business Growth",
+  title: "About Us: The TechMission Advantage",
+  subtitle: "Driving Business Growth with Strategic Innovation",
   paragraph:
-    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
+    "Our mission is to solve challenging technical problems in partnership with our clients. At TechMission, we don't just build products; we deploy strategic technology solutions—from predictive AI models to enterprise-grade Custom Software—that cut costs, boost efficiency, and secure a competitive advantage for your business. We empower organizations with products that people love to use.",
+  proof_Points: [
+    "200+ Successful Projects Delivered",
+    "10+ Years of Expertise in Digital Transformation",
+    "95% Client Satisfaction Rate for Long-Term Partnerships",
+  ],
   cta: {
     title: "Get Instant Professional Advice",
     text: "Ready to Help:",
@@ -40,7 +45,7 @@ export function AboutUs() {
               <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
                 {aboutData.title}
               </h2>
-              <h3 className="text-xl font-semibold text-gray-800 font-lato">
+              <h3 className="text-base md:text-lg text-gray-600 max-w-2xl ">
                 {aboutData.subtitle}
               </h3>
             </div>
@@ -48,6 +53,16 @@ export function AboutUs() {
             <p className="text-gray-600 leading-relaxed font-raleway">
               {aboutData.paragraph}
             </p>
+
+            <div>
+              <ul className="list-disc list-inside space-y-2 mb-6">
+                {aboutData.proof_Points.map((point, index) => (
+                  <li key={index} className="text-gray-600 font-raleway">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Call to Action Box */}
             <div className="mt-4 p-6 bg-gray-50 rounded-lg flex items-center gap-6 border border-gray-200">

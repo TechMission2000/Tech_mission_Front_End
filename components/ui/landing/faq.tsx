@@ -1,5 +1,6 @@
 "use client";
 
+import { HomePagefaqData } from "@/data/homePageFAQdata";
 import Image from "next/image";
 import React, { JSX, useState } from "react";
 
@@ -9,39 +10,10 @@ type FaqItem = {
   answer: string;
 };
 
-// Data for the FAQ section
-const faqData: FaqItem[] = [
-  {
-    question: "What services does Tech Mission provide?",
-    answer:
-      "Tech Mission offers a comprehensive suite of digital services, including web design and development, mobile app development, UI/UX design, website migration, HubSpot integration, and email marketing solutions.",
-  },
-  {
-    question: "How can Tech Mission help my business grow?",
-    answer:
-      "We focus on delivering results-driven solutions. By combining creativity and technical expertise, we create digital products that drive business growth, enhance user experiences, and provide a competitive advantage in the market.",
-  },
-  {
-    question: "What is your process for starting a new project?",
-    answer:
-      "Our process begins with a deep dive into your business goals. We then move to strategy, design, development, testing, and launch, maintaining transparent communication with you at every stage to ensure the final product exceeds your expectations.",
-  },
-  {
-    question: "How long does it take to build a website?",
-    answer:
-      "The timeline for a website project varies depending on its complexity. A simple informational site might take 4-6 weeks, while a more complex e-commerce platform could take 3-6 months. We provide a detailed timeline after our initial consultation.",
-  },
-  {
-    question: "Do you provide ongoing support and maintenance?",
-    answer:
-      "Yes, we value long-term partnerships. We offer ongoing support, maintenance, and updates to ensure your digital products continue to perform optimally and stay secure long after the initial launch.",
-  },
-  {
-    question: "How much does a new website or app cost?",
-    answer:
-      "The cost is dependent on the scope and features of the project. We provide a detailed, custom quote after understanding your specific requirements. Contact us for a free consultation and estimate.",
-  },
-];
+// Define the props type for the Faq component
+interface FaqProps {
+  HomePagefaqData: FaqItem[];
+}
 
 // Reusable component for a single accordion item
 const AccordionItem = ({
@@ -65,7 +37,7 @@ const AccordionItem = ({
       className="w-full flex justify-between items-center text-left p-6"
     >
       <div className="flex items-center gap-6">
-        <div className="flex-shrink-0 w-14 h-14 bg-blue-500 text-white rounded-lg flex items-center justify-center">
+        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-lg flex items-center justify-center">
           <span className="font-barlow font-bold text-2xl">{`0${
             index + 1
           }`}</span>
@@ -107,7 +79,7 @@ const AccordionItem = ({
   </div>
 );
 
-function Faq(): JSX.Element {
+function Faq({ HomePagefaqData }: FaqProps): JSX.Element {
   const [openIndex, setOpenIndex] = useState<number | null>(1); // Set the second item to be open by default
 
   const handleToggle = (index: number) => {
@@ -122,10 +94,10 @@ function Faq(): JSX.Element {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-raleway font-bold text-4xl text-[#072D5B]">
+          <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
             Frequently Asked Questions
           </h2>
-          <p className="font-lato font-semibold text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-2">
             Still have any questions? Contact our team via{" "}
             <a
               href="mailto:hello@TechMission.com"
@@ -141,7 +113,7 @@ function Faq(): JSX.Element {
           {/* Accordion Section */}
           <div className="lg:col-span-2">
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-              {faqData.map((faq, index) => (
+              {HomePagefaqData.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   index={index}
@@ -183,7 +155,7 @@ function Faq(): JSX.Element {
                 />
                 <button
                   type="submit"
-                  className="mt-4 w-full bg-blue-600 text-white font-semibold py-3 rounded-md hover:bg-blue-700 transition-colors"
+                  className="mt-4 w-full bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white font-semibold py-3 rounded-md  transition-colors hover:bg-blue-700 hover:cursor-pointer"
                 >
                   Submit
                 </button>

@@ -8,14 +8,16 @@ import {
   ShieldCheck,
   Briefcase,
 } from "lucide-react";
+import { FaAndroid } from "react-icons/fa";
 
 const services = [
-  { name: "Design", icon: <Brush className="h-6 w-6" /> },
-  { name: "Development", icon: <Code className="h-6 w-6" /> },
-  { name: "AI", icon: <BrainCircuit className="h-6 w-6" /> },
+  { name: "(UI/UX) Design", icon: <Brush className="h-6 w-6" /> },
+  { name: "App Development", icon: <FaAndroid className="h-6 w-6" /> },
+  { name: "Web Development", icon: <Code className="h-6 w-6" /> },
+  { name: "AI/ML", icon: <BrainCircuit className="h-6 w-6" /> },
   { name: "Marketing", icon: <Megaphone className="h-6 w-6" /> },
   { name: "Cybersecurity", icon: <ShieldCheck className="h-6 w-6" /> },
-  { name: "Consultancy", icon: <Briefcase className="h-6 w-6" /> },
+  { name: "Custom Software", icon: <Briefcase className="h-6 w-6" /> },
 ];
 
 export function ServicesMarquee() {

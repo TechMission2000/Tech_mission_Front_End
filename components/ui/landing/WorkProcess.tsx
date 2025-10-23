@@ -142,7 +142,9 @@ const ServiceCard = ({
 }) => (
   <div className="flex flex-col gap-y-6">
     <div className="flex items-center gap-x-5">
-      <div className="flex-shrink-0 p-4 bg-[#4089E0] rounded-lg">{icon}</div>
+      <div className="flex-shrink-0 p-4 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-lg">
+        {icon}
+      </div>
       <h3 className="flex-1 text-2xl font-medium text-gray-900">{title}</h3>
     </div>
     <p className="text-lg text-gray-600">{description}</p>
@@ -162,7 +164,7 @@ function WorkProcess() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header section */}
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#072D5B] tracking-tight">
+          <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
             What We Do
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">

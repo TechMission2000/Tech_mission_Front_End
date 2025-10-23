@@ -22,6 +22,7 @@ import WorkProcess from "@/components/ui/landing/WorkProcess";
 import Team from "@/components/ui/service/Team";
 import Chatbot from "@/components/chat/Chatbot";
 import Contect from "@/components/ui/landing/Contect";
+import { HomePagefaqData } from "@/data/homePageFAQdata";
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
       <Blog />
       <Testimonials />
 
-      <Faq />
+      <Faq HomePagefaqData={HomePagefaqData} />
       <Contect></Contect>
       {/* <div className="bg-black w-full">
         <Chatbot />

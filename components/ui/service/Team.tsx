@@ -14,10 +14,10 @@ export default function Team() {
     <>
       <div>
         <div className="py-20">
-          <div className="self-stretch text-center justify-start text-sky-950 text-4xl font-semibold font-['Raleway'] leading-10">
+          <div className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway text-center ">
             Team
           </div>
-          <div className="self-stretch text-center justify-start text-zinc-800 text-2xl font-semibold font-['Lato'] leading-7">
+          <div className="self-stretch text-center justify-starttext-base md:text-lg text-gray-600  mx-auto">
             Our Leaders
           </div>
         </div>

@@ -5,6 +5,7 @@ import { CompanyProfileCard } from "@/components/ui/careers/CompanyProfileCard";
 import Faq from "@/components/ui/landing/faq";
 
 import ServicBanner from "@/components/ui/service/Banner";
+import { CareersPageFaqData } from "@/data/CareersPageFaqData";
 
 export default function CareersPage() {
   const careervideoUrl =
@@ -85,7 +86,7 @@ export default function CareersPage() {
         backgroundImage={backgroundImage}
       />
       <AvailableJobs />
-      <Faq />
+      <Faq HomePagefaqData={CareersPageFaqData} />
     </>
   );
 }

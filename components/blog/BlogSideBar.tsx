@@ -95,12 +95,12 @@ const ServicesWidget = ({ initialCategory }: { initialCategory: string }) => {
   const router = useRouter();
 
   const categoryList = [
-    { id: 1, name: "All", active: true },
-    { id: 2, name: "Web Development & Design", active: false },
-    { id: 3, name: "UX/UI Design", active: false },
-    { id: 4, name: "Backend", active: false },
-    { id: 5, name: "Product Management", active: false },
-    { id: 6, name: "Branding", active: false },
+    { id: 1, name: "AI & ML Services", active: true },
+    { id: 2, name: "App Development", active: false },
+    { id: 3, name: "Website Development", active: false },
+    { id: 4, name: "Digital Marketing", active: false },
+    { id: 5, name: "Graphics Design", active: false },
+    { id: 6, name: "Custom Software", active: false },
   ];
 
   // Default selected category for UI display

@@ -26,7 +26,7 @@ export function OurValue() {
   return (
     <section className="py-12 lg:py-24 bg-brand-background">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl lg:text-4xl font-semibold text-brand-secondary font-raleway text-[#072D5B]">
+        <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
           Our Values
         </h2>
         <p className="mt-4 text-lg text-gray-600">

@@ -122,7 +122,7 @@ export function Header() {
         <div className="hidden lg:block">
           <Button
             onClick={handleGetInTouch}
-            className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-bold shadow-lg transition-transform hover:scale-105"
+            className="bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white font-bold shadow-lg transition-transform hover:scale-105"
           >
             Get In Touch
           </Button>

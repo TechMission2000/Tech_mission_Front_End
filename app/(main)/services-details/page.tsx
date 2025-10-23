@@ -24,7 +24,7 @@ export default async function ServiceDetailspage({ searchParams }: PageProps) {
     { id: 2, name: "App Development", active: false },
     { id: 3, name: "Website Development", active: false },
     { id: 4, name: "Digital Marketing", active: false },
-    { id: 5, name: "Graphics Design", active: false },
+    { id: 5, name: "Graphics Design", active: false },
     { id: 6, name: "Custom Software", active: false },
   ];
 
