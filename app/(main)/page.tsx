@@ -1,6 +1,6 @@
 import { AboutUs } from "@/components/ui/landing/about-us";
 import Blog from "@/components/ui/landing/Blog";
-import Contact from "@/components/ui/landing/Contact";
+
 import ExperticeService from "@/components/ui/landing/ExperticeService";
 import Faq from "@/components/ui/landing/faq";
 
@@ -16,15 +16,13 @@ import { ServicesMarquee } from "@/components/ui/landing/services-marquee";
 import ServicesOffer from "@/components/ui/landing/ServicesOffer";
 import Testimonials from "@/components/ui/landing/Testimonials";
 
-import TopHeader from "@/components/ui/landing/topHeader";
-
 import WhatWeDo from "@/components/ui/landing/WhatWeDo";
 import WhyChooseUs from "@/components/ui/landing/WhyChooseUs";
 import WorkProcess from "@/components/ui/landing/WorkProcess";
 import Team from "@/components/ui/service/Team";
-
-import ExpertiseService from "@/components/ui/landing/ExperticeService";
 import Chatbot from "@/components/chat/Chatbot";
+import Contect from "@/components/ui/landing/Contect";
+import { HomePagefaqData } from "@/data/homePageFAQdata";
 
 export default function Home() {
   return (
@@ -37,7 +35,7 @@ export default function Home() {
       <OurValue />
       <WhyChooseUs />
       <WorkProcess />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <ExperticeService />
       <OurPortfolioProjects />
       {/* <Team /> */}
@@ -45,11 +43,11 @@ export default function Home() {
       <Blog />
       <Testimonials />
 
-      <Faq />
-      <Contact />
-      <div className="bg-black w-full">
+      <Faq HomePagefaqData={HomePagefaqData} />
+      <Contect></Contect>
+      {/* <div className="bg-black w-full">
         <Chatbot />
-      </div>
+      </div> */}
     </main>
   );
 }

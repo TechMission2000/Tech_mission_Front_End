@@ -24,7 +24,7 @@ const BenefitsDifferentiatorsSection = ({
       <p className="text-gray-600">No benefits available for this service.</p>
     );
   }
-
+  console.log(selectedService);
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-start items-start gap-12 py-12 sm:py-16 bg-white">
       {/* Left Column - Benefits */}
@@ -62,7 +62,7 @@ const BenefitsDifferentiatorsSection = ({
 
       {/* Right Column - What Makes Us Different */}
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-6 sm:gap-8 mt-8 lg:mt-0">
-        <ExpandableSection servicesData={servicesData} />
+        <ExpandableSection servicesData={selectedService} />
         <div className="w-full flex justify-center my-6 sm:my-8">
           <div className="w-full sm:w-80 lg:w-96 h-auto sm:h-[360px] lg:h-[400px] relative bg-white rounded-xl shadow-[0px_4px_30px_0px_rgba(0,0,0,0.10)] overflow-hidden">
             <div className="w-full h-full flex flex-col justify-center items-center gap-4 sm:gap-6 p-4 sm:p-6">

@@ -20,9 +20,9 @@ const CustomButton: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      "bg-gradient-to-r from-[#0E458E] via-[#2F82E8] to-[rgba(0,113,245,0.92)] text-white hover:opacity-90",
+      "bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white hover:bg-blue-700 hover:cursor-pointer",
     outline:
-      "bg-transparent text-black border border-[#106CD8] hover:bg-[#106CD8] hover:text-white",
+      "bg-transparent text-black border border-[#106CD8] hover:bg-[#106CD8] hover:text-white hover:cursor-pointer",
   };
 
   const finalClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;

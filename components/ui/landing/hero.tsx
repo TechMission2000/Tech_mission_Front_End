@@ -23,9 +23,10 @@ const slides: Slide[] = [
   {
     image:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
-    pretitle: "Better Insights For Business Growth",
-    title: "Creative Services for your Company",
+    pretitle: "Engineer the Future. Deliver Tangible Results.",
+    title: "Innovative Tech Solutions for Modern Businesses",
   },
+
   {
     image:
       "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2070&auto=format&fit=crop",
@@ -37,6 +38,13 @@ const slides: Slide[] = [
       "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop",
     pretitle: "Your Partner in Success",
     title: "Expert Strategy & Consulting",
+  },
+
+  {
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
+    pretitle: "Better Insights For Business Growth",
+    title: "Creative Services for your Company",
   },
 ];
 
@@ -88,8 +96,9 @@ export function Hero() {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out ${
+            index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
         >
           <img
             src={slide.image}
@@ -104,8 +113,9 @@ export function Hero() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute bottom-0 left-0 right-0 md:left-auto md:right-auto w-full md:w-auto p-4 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
+            className={`absolute bottom-0 left-0 right-0 md:left-auto md:right-auto w-full md:w-auto p-4 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
           >
             <div className="bg-[rgba(235,242,251,0.8)] backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-lg max-w-xl mx-auto md:mx-0">
               <div className="flex flex-col gap-8">
@@ -124,7 +134,12 @@ export function Hero() {
                   >
                     OUR SERVICES
                   </CustomButton>
-                  <Button variant="outline">GET A QUOTE</Button>
+                  <CustomButton
+                    variant="outline"
+                    onClick={() => router.push("/quote")}
+                  >
+                    GET A QUOTE
+                  </CustomButton>
                 </div>
               </div>
             </div>
@@ -156,9 +171,7 @@ export default function App() {
             This is where the rest of your page content would go.
           </p>
         </div>
-
       </main>
-
     </div>
   );
 }

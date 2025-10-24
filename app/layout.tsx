@@ -5,20 +5,34 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import ReduxProvider from "@/redux/ReduxProvider";
 
-const raleway = Raleway({ 
+const raleway = Raleway({
   subsets: ["latin"],
-  variable: "--font-raleway" 
+  variable: "--font-raleway",
 });
 
-const lato = Lato({ 
+const lato = Lato({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
-  variable: "--font-lato"
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
   title: "Tech Mission",
   description: "Make your Digital presence matter",
+  icons: {
+    icon: [
+      {
+        url: "/logos/blue_logo.svg",
+        sizes: "32x32",
+        media: "(prefers-color-scheme: light)", // Light theme → blue
+      },
+      {
+        url: "/logos/white-logo-svg.svg",
+        sizes: "32x32",
+        media: "(prefers-color-scheme: dark)", // Dark theme → white
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

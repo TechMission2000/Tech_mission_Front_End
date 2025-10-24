@@ -1,4 +1,3 @@
-import React from "react";
 import {
   MapPin,
   Mail,
@@ -8,6 +7,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import Link from "next/link";
+import { FaWhatsapp, FaWhatsappSquare, FaYoutube } from "react-icons/fa";
 
 export default function TopHeader() {
   return (
@@ -21,23 +21,52 @@ export default function TopHeader() {
           </div>
           <div className="flex items-center gap-2">
             <Mail className="h-4 w-4" />
-            <span>techmissionglobe@gmail.com</span>
+            <span>office.techmission@gmail.com</span>
           </div>
         </div>
 
         {/* Social Icons */}
         <div className="flex items-center gap-4 ml-auto">
-          <Link href="#" aria-label="Twitter">
-            <Twitter className="h-5 w-5 hover:opacity-80 transition-opacity" />
+          <Link
+            href="https://www.facebook.com/techmissionglobe"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
           </Link>
-          <Link href="#" aria-label="Facebook">
-            <Facebook className="h-5 w-5 hover:opacity-80 transition-opacity" />
+          <Link
+            href="https://www.linkedin.com/company/techmissionglobe/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
           </Link>
-          <Link href="#" aria-label="Instagram">
-            <Instagram className="h-5 w-5 hover:opacity-80 transition-opacity" />
+
+          <Link
+            href="https://wa.me/8801838801853?text=Hi%2C%20I%20want%20to%20discuss%20a%20project"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
           </Link>
-          <Link href="#" aria-label="LinkedIn">
-            <Linkedin className="h-5 w-5 hover:opacity-80 transition-opacity" />
+          <Link
+            href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
+            <Twitter className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
+          </Link>
+          <Link
+            href="https://www.youtube.com/@techmissionglove"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <FaYoutube className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
           </Link>
         </div>
       </div>

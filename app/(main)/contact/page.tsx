@@ -26,7 +26,7 @@ export default function contectPage() {
         <ContactSection />
       </div>
       <ContactInfo />
-      <Faq></Faq>
+      {/* <Faq></Faq> */}
     </div>
   );
 }

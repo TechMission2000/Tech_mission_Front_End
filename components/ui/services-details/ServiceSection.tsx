@@ -53,9 +53,9 @@ const ServiceSection: React.FC<Props> = ({
   };
 
   return (
-    <div className="mx-auto max-w-7xl lg:px-8 flex flex-col lg:flex-row justify-between items-start">
+    <div className="mx-auto max-w-7xl lg:px-8 flex flex-col lg:flex-row justify-between items-center">
       {/* Desktop: Left Column Categories */}
-      <div className="hidden lg:flex w-96 p-2 mt-20 mx-auto bg-neutral-50 rounded-lg flex-col gap-3">
+      <div className="hidden lg:flex w-96 p-2 mt-20 mx-auto bg-neutral-50 rounded-lg flex-col gap-3 py-5">
         <div className="text-black text-2xl font-medium font-['Inter'] flex items-center gap-2">
           <Image src={star} alt="Star Icon" width={24} height={24} />
           All Services
@@ -128,14 +128,14 @@ const ServiceSection: React.FC<Props> = ({
               </p>
 
               {/* View Details Button */}
-              <div className="mt-4">
+              {/* <div className="mt-4">
                 <CustomButton
                   variant="primary"
                   onClick={() => handleServiceClick(selectedService.category)}
                 >
                   View Details
                 </CustomButton>
-              </div>
+              </div> */}
             </div>
           </>
         ) : (

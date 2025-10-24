@@ -1,8 +1,11 @@
 import { ReactNode } from "react";
 
-import TopHeader from "@/components/ui/landing/topHeader";
 import Footer from "@/components/ui/landing/footer";
+
+import Chatbot from "@/components/chat/Chatbot";
+
 import { Header } from "@/components/ui/landing/header";
+import TopHeader from "@/components/ui/landing/TopHeader";
 
 export default function MainLayoutContent({
   children,
@@ -11,9 +14,12 @@ export default function MainLayoutContent({
 }) {
   return (
     <>
-      <TopHeader />
-      <Header />
+      <TopHeader></TopHeader>
+      <Header></Header>
       <div className="min-h-screen">{children}</div>
+
+      <Chatbot />
+
       <Footer />
     </>
   );

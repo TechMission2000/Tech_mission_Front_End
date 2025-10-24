@@ -179,10 +179,10 @@ const StoryItem = ({
 }) => (
   <div className="p-8 md:p-12 h-full border border-blue-200 rounded-lg bg-white/80 backdrop-blur-sm">
     <div className="flex items-end gap-4 mb-8">
-      <span className="text-8xl md:text-9xl text-[#387FD2] font-['Roboto_Condensed'] leading-none">
+      <span className="text-4xl md:text-6xl text-[#387FD2] font-['Roboto_Condensed'] leading-none">
         {number}
       </span>
-      <h3 className="flex-1 text-4xl md:text-5xl text-[#387FD2] font-raleway pb-4 border-b border-blue-200">
+      <h3 className="flex-1 text-2xl md:text-3xl text-[#387FD2] font-raleway pb-4 border-b border-blue-200">
         {title}
       </h3>
     </div>
@@ -224,22 +224,29 @@ export default function OurStory() {
     >
       <div className="container mx-auto px-4">
         {/* Title Section */}
-        <div className="flex flex-col items-start mb-12">
+        <div className="flex flex-col justify-center mb-12">
           {/* <div className="flex items-center justify-center gap-2">
-                <div className="w-14 h-1 bg-zinc-800"></div>
-                <div className="w-14 h-1 bg-zinc-800"></div>
-            </div>
-            <h2 className="text-5xl md:text-6xl text-[#16192C] font-normal my-3"> From our Customers </h2>
-            <div className="flex items-center justify-center gap-2">
-                <div className="w-14 h-1 bg-zinc-800"></div>
-                <div className="w-14 h-1 bg-zinc-800"></div>
-            </div> */}
-          <SectionTitle
+            <div className="w-14 h-1 bg-zinc-800"></div>
+            <div className="w-14 h-1 bg-zinc-800"></div>
+          </div> */}
+          <h2 className="text-4xl text-center font-semibold text-brand-secondary text-[#072D5B] font-raleway">
+            {" "}
+            Testimonials{" "}
+          </h2>
+
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-2">
+            From our Customers
+          </p>
+          {/* <div className="flex items-center justify-center gap-2">
+            <div className="w-14 h-1 bg-zinc-800"></div>
+            <div className="w-14 h-1 bg-zinc-800"></div>
+          </div> */}
+          {/* <SectionTitle
             title="From our Customers"
             textAlign="center"
             className=" mx-0 "
-            titleClassName="text-5xl md:text-6xl"
-          />
+            titleClassName="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway"
+          /> */}
         </div>
 
         {/* Manual Slider */}
@@ -288,7 +295,9 @@ export default function OurStory() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  currentIndex === index ? "bg-blue-600 w-6" : "bg-gray-300"
+                  currentIndex === index
+                    ? "bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  w-6"
+                    : "bg-gray-300"
                 }`}
               />
             ))}

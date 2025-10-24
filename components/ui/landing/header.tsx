@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { use } from "react";
@@ -15,6 +14,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "../sheet";
 import { Button } from "../button";
 import { useRouter } from "next/navigation";
+import { LogoLoader } from "../LogoLoader";
 
 // Navigation links for the main menu
 const mainNavLinks = [
@@ -34,25 +34,45 @@ const servicesLinks = [
     title: "Service Details",
     href: "/services-details",
   },
-
-  // "UI/UX Design",
-  // "AI Solutions",
 ];
 
 export function Header() {
   const router = useRouter();
+
+  const handleGetInTouch = () => {
+    console.log("click button");
+    router.push("/contact");
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#072D5B] lg:h-24 md:h-20 h-16 ">
-      <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6">
+    <header className="sticky top-0 z-50 w-full bg-[#072D5B] lg:h-24 md:h-20 h-16">
+      <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6 bg-opacity-10">
         {/* Logo */}
-        <Link href="/" className="flex items-center" prefetch={false}>
-          <Image
-            src="/logo.png" // Make sure your logo is in the /public folder
-            alt="Tech Logo"
-            width={78}
-            height={78}
-            className="h-16 w-16 md:h-20 md:w-20"
-          />
+        <Link
+          href="/"
+          className="flex items-center gap-0.5 md:gap-1"
+          prefetch={false}
+        >
+          <div className="flex-shrink-0">
+            <LogoLoader
+              logoColor="white"
+              customClass="h-10 w-10 md:h-14 md:w-14"
+            />
+          </div>
+          <p
+            className="text-2xl md:text-2xl lg:text-3xl font-bold m-0 p-0 translate-y-1 text-white"
+            style={{
+              fontFamily: "BellMT, 'Bell MT'",
+              // fontSize: "40px",
+              // margin: 0,
+              // padding: 0,
+              // color: "blue",
+
+              //   fill: fillColor,
+            }}
+          >
+            TechMission
+          </p>
         </Link>
 
         {/* Desktop Navigation */}
@@ -71,7 +91,7 @@ export function Header() {
                 Services <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-48 bg-white  rounded-md shadow-lg p-2">
+            <DropdownMenuContent className="w-48 bg-white rounded-md shadow-lg p-2">
               {servicesLinks.map((link) => (
                 <DropdownMenuItem
                   key={link.title}
@@ -100,7 +120,10 @@ export function Header() {
 
         {/* Get in Touch Button */}
         <div className="hidden lg:block">
-          <Button onClick={() => router.push('/contact')} className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-bold shadow-lg transition-transform hover:scale-105">
+          <Button
+            onClick={handleGetInTouch}
+            className="bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white font-bold shadow-lg transition-transform hover:scale-105"
+          >
             Get In Touch
           </Button>
         </div>
@@ -146,13 +169,15 @@ export function Header() {
               {mainNavLinks.map((item) => (
                 <Link
                   key={item.link}
-                  href="#"
+                  href={item.link}
                   className="text-lg font-medium hover:text-brand-primary"
                 >
                   {item.title}
                 </Link>
               ))}
-              <Button className="w-full mt-4">Get In Touch</Button>
+              <Button className="w-full mt-4" onClick={handleGetInTouch}>
+                Get In Touch
+              </Button>
             </div>
           </SheetContent>
         </Sheet>

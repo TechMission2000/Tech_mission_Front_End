@@ -10,6 +10,8 @@ import {
   Facebook,
   Twitter,
 } from "lucide-react";
+import Link from "next/link";
+import { FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 export default function ContactInfo() {
   return (
@@ -21,26 +23,26 @@ export default function ContactInfo() {
             General Inquiries
           </h3>
           <div className="flex flex-col gap-3">
-            <a
+            <Link
               href="mailto:example@gmail.com"
-              className="flex items-center justify-between bg-zinc-800 text-white px-5 py-3 rounded-md hover:bg-zinc-700 transition"
+              className="flex items-center justify-between bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white px-5 py-3 rounded-md hover:bg-blue-700 hover:cursor-pointer transition"
             >
               <div className="flex items-center gap-2">
                 <Mail size={18} />
-                <span>example@gmail.com</span>
+                <span>techmissionglobe@gmail.com</span>
               </div>
-              <ArrowUpRight size={18} className="text-yellow-400" />
-            </a>
-            <a
+              <ArrowUpRight size={18} className="text-white font-medium" />
+            </Link>
+            <Link
               href="tel:+11234567890"
-              className="flex items-center justify-between bg-zinc-800 text-white px-5 py-3 rounded-md hover:bg-zinc-700 transition"
+              className="flex items-center justify-between bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white px-5 py-3 rounded-md hover:bg-blue-700 hover:cursor-pointer transition"
             >
               <div className="flex items-center gap-2">
                 <Phone size={18} />
-                <span>+1 (123) 456-7890</span>
+                <span>+88 01 838 801 853</span>
               </div>
-              <ArrowUpRight size={18} className="text-yellow-400" />
-            </a>
+              <ArrowUpRight size={18} className="text-white font-medium" />
+            </Link>
           </div>
         </div>
 
@@ -48,7 +50,7 @@ export default function ContactInfo() {
         <div className="flex-1 flex flex-col gap-6 px-6">
           <h3 className="text-xl font-semibold text-gray-900">Our Office</h3>
           <p className="text-gray-700">
-            Address: 123 AI Tech Avenue, Techville, 54321
+            Address: H#180/6, R#Titas Road, East Rampura, Dhaka, Bangladesh
           </p>
           <a
             href="https://maps.google.com"
@@ -67,30 +69,42 @@ export default function ContactInfo() {
             Connect with Us
           </h3>
           <div className="flex gap-4">
-            <a
-              href="https://linkedin.com"
-              className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition"
-            >
-              <Linkedin size={22} />
-            </a>
-            <a
-              href="https://instagram.com"
-              className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500 text-white hover:bg-pink-500 transition"
-            >
-              <Instagram size={22} />
-            </a>
-            <a
-              href="https://facebook.com"
-              className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500 text-white hover:bg-blue-700 transition"
+            <Link
+              href="https://www.facebook.com/techmissionglobe"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
             >
               <Facebook size={22} />
-            </a>
-            <a
-              href="https://twitter.com"
-              className="w-12 h-12 flex items-center justify-center rounded-lg bg-blue-500 text-white hover:bg-sky-500 transition"
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/techmissionglobe/"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+            >
+              <Linkedin size={22} />
+            </Link>
+            <Link
+              href="https://wa.me/8801838801853?text=Hi%2C%20I%20want%20to%20discuss%20a%20project"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+            >
+              <FaWhatsapp size={22} />
+            </Link>
+            <Link
+              href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
             >
               <Twitter size={22} />
-            </a>
+            </Link>
+
+            <Link
+              href="https://www.youtube.com/@techmissionglove"
+              target="_blank"
+              className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+            >
+              <FaYoutube size={22} />
+            </Link>
           </div>
         </div>
       </div>

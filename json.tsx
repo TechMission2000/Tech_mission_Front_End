@@ -1,6 +1,6 @@
 export const howItWorksData = {
   title: "How Tech-Mission Works For You",
-  subtitle: "Empowering Your Success Through Innovation",
+  subtitle: "Empowering Your Success Through a Proven Process",
   steps: [
     {
       icon: (
@@ -8,7 +8,7 @@ export const howItWorksData = {
           width="86"
           height="86"
           viewBox="0 0 86 86"
-          fill="none"
+          fill="bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white"
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect
@@ -106,9 +106,9 @@ export const howItWorksData = {
           </defs>
         </svg>
       ),
-      title: "Research",
+      title: "Research & Strategy",
       description:
-        "We dive deep to understand your market, audience, and challenges, ensuring every decision is data-driven.",
+        "We dive deep to understand your market, audience, and challenges, ensuring every decision is data-driven. This phase defines the scope, tech stack, and roadmap for guaranteed success.",
       isActive: false,
     },
     {
@@ -151,9 +151,9 @@ export const howItWorksData = {
           </defs>
         </svg>
       ),
-      title: "Design",
+      title: "Design & UX/UI",
       description:
-        "Our team crafts intuitive, engaging, and beautiful user interfaces that solve real problems and delight users.",
+        "Our team crafts intuitive, engaging, and beautiful user interfaces that solve real problems and delight users. We focus on accessibility and modern design trends to deliver a flawless user experience.",
       isActive: true, // This card will be highlighted
     },
     {
@@ -260,9 +260,9 @@ export const howItWorksData = {
           </defs>
         </svg>
       ),
-      title: "Develop",
+      title: "Develop & Integrate",
       description:
-        "Using cutting-edge technology, we build robust, scalable, and secure solutions tailored to your business needs.",
+        "Using cutting-edge technology (like React, Node.js, Django), we build robust, scalable, and secure solutions tailored to your business needs. We ensure seamless integration with your existing systems.",
       isActive: false,
     },
     {
@@ -419,7 +419,7 @@ export const howItWorksData = {
       ),
       title: "Test & Launch",
       description:
-        "Rigorous testing ensures a flawless final product. We then manage the launch for a smooth and successful deployment.",
+        "Rigorous Quality Assurance (QA) testing ensures a flawless final product. We then manage the launch for a smooth and successful deployment, providing post-deployment support and enhancements.",
       isActive: false,
     },
   ],

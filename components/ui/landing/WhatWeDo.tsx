@@ -196,10 +196,10 @@ function WhatWeDo(): JSX.Element {
           {/* Content Section */}
           <div className="flex flex-col gap-8">
             <div>
-              <h2 className="font-raleway font-bold text-4xl text-[#072D5B]">
+              <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
                 What We Do
               </h2>
-              <p className="font-lato font-semibold text-2xl text-gray-700 mt-2">
+              <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
                 We Develop Products That People Love to Use.
               </p>
               <p className="font-raleway text-gray-600 mt-4 leading-relaxed">
@@ -218,11 +218,11 @@ function WhatWeDo(): JSX.Element {
             </div>
 
             {/* View More Button */}
-            <div>
+            {/* <div>
               <button className="bg-[#106CD8] text-white font-lato text-lg px-8 py-3 rounded-md hover:bg-blue-700 transition-colors">
                 View More
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import BlogCard from "./BlogCard";
 import BlogPagination from "./BlogPagination";
+import BlogPostPage from "@/app/(main)/blogs/[slug]/page";
+import { useRouter } from "next/navigation";
 
 export default function BlogGrid({
   blogPosts,
@@ -12,6 +14,7 @@ export default function BlogGrid({
   selectedCategory: string;
 }) {
   const postsPerPage = 6;
+  const router = useRouter();
 
   // 1️⃣ Handle "All" case or mismatched categories
   const filteredPosts =
@@ -37,19 +40,25 @@ export default function BlogGrid({
     setCurrentPosts(filteredPosts.slice(start, end));
   };
 
+  const handleClick = (slug: string) => {
+    router.push(`/blogs/${slug}`);
+  };
+
   return (
     <div className="max-w-6xl mx-auto p-6">
       {/* Blog cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
         {currentPosts.length > 0 ? (
           currentPosts.map((post) => (
             <BlogCard
+              onReadMore={handleClick}
               key={post.id}
               image={post.image}
               category={post.category}
               title={post.title}
               date={post.date}
               href={post.href}
+              slug={post.slug}
             />
           ))
         ) : (
