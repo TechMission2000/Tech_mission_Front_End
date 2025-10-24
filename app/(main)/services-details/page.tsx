@@ -12,7 +12,7 @@ interface PageProps {
 
 export default async function ServiceDetailspage({ searchParams }: PageProps) {
   const params = await searchParams;
-  const selectedCategory = params.category || "Web Development & Design";
+  const selectedCategory = params.category || "Website Development";
 
   const videoUrl =
     "https://pro-bucket.s3.us-east-1.amazonaws.com/1758160755855_serviecs-details-for-ai-intregrated+web+and+moblie+web.mp4";
