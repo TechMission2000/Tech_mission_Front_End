@@ -1,29 +1,46 @@
+
 "use client";
 
-import React from "react";
+import React, { use } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+import { Menu, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown } from "lucide-react";
+} from "../dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger } from "../sheet";
+import { Button } from "../button";
+import { useRouter } from "next/navigation";
 
 // Navigation links for the main menu
-const mainNavLinks = ["About", "Blog", "Work", "Contact", "Careers"];
+const mainNavLinks = [
+  { title: "About", link: "/about" },
+  { title: "Blog", link: "/blogs" },
+  { title: "Work", link: "/work" },
+  { title: "Contact", link: "/contact" },
+  { title: "Careers", link: "/careers" },
+];
 // Links for the "Services" dropdown
 const servicesLinks = [
-  "Web Development",
-  "App Development",
-  "UI/UX Design",
-  "AI Solutions",
+  {
+    title: "ALL Services",
+    href: "/services",
+  },
+  {
+    title: "Service Details",
+    href: "/services-details",
+  },
+
+  // "UI/UX Design",
+  // "AI Solutions",
 ];
 
 export function Header() {
+  const router = useRouter();
   return (
     <header className="sticky top-0 z-50 w-full bg-[#072D5B] lg:h-24 md:h-20 h-16 ">
       <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6">
@@ -41,7 +58,7 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           <Link
-            href="#"
+            href="/"
             className="px-6 py-2 text-base font-semibold text-white bg-gradient-to-r from-brand-secondary to-brand-primary rounded-lg shadow-md transition-transform hover:scale-105"
             prefetch={false}
           >
@@ -54,30 +71,36 @@ export function Header() {
                 Services <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="w-48 bg-white  rounded-md shadow-lg p-2">
               {servicesLinks.map((link) => (
-                <DropdownMenuItem key={link} asChild>
-                  <Link href="#">{link}</Link>
+                <DropdownMenuItem
+                  key={link.title}
+                  asChild
+                  className="data-[highlighted]:bg-gradient-to-r data-[highlighted]:from-blue-900 data-[highlighted]:via-blue-500 data-[highlighted]:to-blue-600 data-[highlighted]:text-white"
+                >
+                  <Link href={link.href} className="w-full block">
+                    {link.title}
+                  </Link>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {mainNavLinks.map((link) => (
+          {mainNavLinks.map((item) => (
             <Link
-              key={link}
-              href="#"
+              key={item.link}
+              href={item.link}
               className="text-base font-semibold text-white hover:text-brand-light-blue transition-colors"
               prefetch={false}
             >
-              {link}
+              {item.title}
             </Link>
           ))}
         </nav>
 
         {/* Get in Touch Button */}
         <div className="hidden lg:block">
-          <Button className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-bold shadow-lg transition-transform hover:scale-105">
+          <Button onClick={() => router.push('/contact')} className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white font-bold shadow-lg transition-transform hover:scale-105">
             Get In Touch
           </Button>
         </div>
@@ -97,9 +120,9 @@ export function Header() {
                 <path
                   d="M12 14H28M12 20H28M21 26H28"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
@@ -112,21 +135,21 @@ export function Header() {
               <h4 className="font-semibold text-gray-500">Services</h4>
               {servicesLinks.map((link) => (
                 <Link
-                  key={link}
-                  href="#"
+                  key={link.title}
+                  href={link.href}
                   className="pl-4 text-lg text-gray-800 hover:text-brand-primary"
                 >
-                  {link}
+                  {link.title}
                 </Link>
               ))}
               <hr />
-              {mainNavLinks.map((link) => (
+              {mainNavLinks.map((item) => (
                 <Link
-                  key={link}
+                  key={item.link}
                   href="#"
                   className="text-lg font-medium hover:text-brand-primary"
                 >
-                  {link}
+                  {item.title}
                 </Link>
               ))}
               <Button className="w-full mt-4">Get In Touch</Button>

@@ -1,6 +1,13 @@
-import React from 'react';
-import { MapPin, Mail, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
-import Link from 'next/link';
+import React from "react";
+import {
+  MapPin,
+  Mail,
+  Twitter,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function TopHeader() {
   return (
@@ -14,7 +21,7 @@ export default function TopHeader() {
           </div>
           <div className="flex items-center gap-2">
             <Mail className="h-4 w-4" />
-            <span>example@gmail.com</span>
+            <span>techmissionglobe@gmail.com</span>
           </div>
         </div>
 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 // Data for blog posts. This makes it easy to add, remove, or edit posts.
@@ -27,7 +28,9 @@ const blogPosts = [
 
 // Reusable component for a single blog post card
 const BlogPostCard = ({ post }: { post: typeof blogPosts[number] }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+  <Link href={'/blogs/blogdetails'}>
+  
+  <div  className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
     <img src={post.postImage} alt={post.title} className="w-full h-48 object-cover" />
     <div className="p-6">
       <h3 className="font-raleway font-bold text-xl text-indigo-600 h-20">
@@ -44,6 +47,7 @@ const BlogPostCard = ({ post }: { post: typeof blogPosts[number] }) => (
       </div>
     </div>
   </div>
+  </Link>
 );
 
 function Blog() {

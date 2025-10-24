@@ -1,0 +1,99 @@
+import TopServiceHeroBanner from "./TopServiceHeroBanner";
+
+export default function OurTopService() {
+  const topServicesData = [
+    {
+      title: "Website Development",
+      category: "Web Development & Design",
+      description:
+        "We build fast, secure, and scalable websites tailored to your business needs with modern technologies.",
+      buttonText: "Read More",
+      imageUrl:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074828916_website%20development.png",
+      backgroundColor: "bg-white",
+      reverse: false,
+    },
+    {
+      title: "WordPress Development",
+      description:
+        "Get custom WordPress solutions for blogs, business sites, and e-commerce with SEO-friendly designs.",
+      buttonText: "Read More",
+      imageUrl:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074829907_WordPress%20Development.png",
+      backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
+      reverse: true,
+    },
+    {
+      title: "All-in-One IT Services",
+      description:
+        "Comprehensive IT solutions including cloud, infrastructure, and managed services for seamless operations.",
+      buttonText: "Read More",
+      imageUrl:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074806726_all-services.png",
+      backgroundColor: "bg-white",
+      reverse: false,
+    },
+    {
+      title: "Cybersecurity",
+      description:
+        "Protect your digital assets with enterprise-grade security solutions and 24/7 monitoring.",
+      buttonText: "Read More",
+      imageUrl:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074808163_Cybersecurity.png",
+      backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
+      reverse: true,
+    },
+    {
+      title: "Digital Marketing",
+      description:
+        "Boost your online presence with SEO, social media marketing, PPC, and content strategies.",
+      buttonText: "Read More",
+      imageUrl:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074809248_digital-marketing.png",
+      backgroundColor: "bg-white",
+      reverse: false,
+    },
+    {
+      title: "E-commerce Development",
+      description:
+        "Create powerful e-commerce platforms that deliver seamless shopping experiences across devices.",
+      buttonText: "Read More",
+      imageUrl:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074810317_E-commerce.png",
+      backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
+      reverse: true,
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "Build cross-platform mobile apps with engaging UI/UX, optimized for performance and scalability.",
+      buttonText: "Read More",
+      imageUrl:
+        "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074811490_Mobile%20App%20Development.png",
+      backgroundColor: "bg-white",
+      reverse: false,
+    },
+  ];
+
+  return (
+    <div className="px-4">
+      {/* Section Header */}
+      <div className="w-full flex flex-col items-center text-center">
+        <h2 className="font-['Roboto_Condensed'] font-medium text-black text-3xl sm:text-4xl lg:text-5xl leading-tight">
+          Our Top <span className="text-sky-700">Services</span>
+        </h2>
+        <p className="mt-4 max-w-[752px] text-black/60 text-sm sm:text-base lg:text-lg font-['Lato'] font-semibold leading-relaxed">
+          We ensure you have every functionality you need to build, run, and
+          expand your marketplace
+        </p>
+      </div>
+
+      {/* Service Banners */}
+      <div className="mt-12 flex flex-col gap-12">
+        {topServicesData.map((service, index) => (
+          <TopServiceHeroBanner key={index} {...service} />
+        ))}
+      </div>
+    </div>
+  );
+}
