@@ -2,6 +2,7 @@
 
 import { HomePagefaqData } from "@/data/homePageFAQdata";
 import Image from "next/image";
+import Link from "next/link";
 import React, { JSX, useState } from "react";
 
 // Define the type for a single FAQ item
@@ -100,10 +101,12 @@ function Faq({ HomePagefaqData }: FaqProps): JSX.Element {
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-2">
             Still have any questions? Contact our team via{" "}
             <a
-              href="mailto:hello@TechMission.com"
+              href="mailto:contact.techmission@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
-              techmissionglobe@gmail.com
+              contact.techmission@gmail.com
             </a>
           </p>
         </div>

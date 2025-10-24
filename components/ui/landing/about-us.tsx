@@ -2,6 +2,7 @@
 
 import { PhoneCall } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 // It's a best practice to keep content separate from the component's structure.
 // This makes it easy to update text and images later without changing the code.
@@ -95,12 +96,13 @@ export function AboutUs() {
                 </p>
                 <p className="text-gray-700">
                   {aboutData.cta.text}
-                  <a
-                    href={`tel:${aboutData.cta.phone.replace(/\s/g, "")}`}
+                  <Link
+                    target="_blank"
+                    href="https://wa.me/8801838801853?text=Hi%2C%20I%20want%20to%20discuss%20a%20project"
                     className="font-bold text-brand-secondary hover:underline ml-1"
                   >
                     {aboutData.cta.phone}
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

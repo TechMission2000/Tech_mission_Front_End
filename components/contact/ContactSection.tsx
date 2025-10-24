@@ -61,7 +61,7 @@ export default function ContactSection() {
             ></textarea>
             <button
               type="submit"
-              className="h-12 rounded-lg bg-blue-500 text-white font-medium hover:bg-blue-600 transition"
+              className="h-12 rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer font-semibold transition"
             >
               Send Now
             </button>

@@ -46,7 +46,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#072D5B] lg:h-24 md:h-20 h-16">
-      <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6 bg-opacity-10">
         {/* Logo */}
         <Link
           href="/"

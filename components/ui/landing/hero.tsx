@@ -134,7 +134,12 @@ export function Hero() {
                   >
                     OUR SERVICES
                   </CustomButton>
-                  <Button variant="outline">GET A QUOTE</Button>
+                  <CustomButton
+                    variant="outline"
+                    onClick={() => router.push("/quote")}
+                  >
+                    GET A QUOTE
+                  </CustomButton>
                 </div>
               </div>
             </div>
