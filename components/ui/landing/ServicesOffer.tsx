@@ -150,7 +150,7 @@ function ServicesOffer() {
                         {/* Arrow Button */}
                         <button
                           onClick={() => handleServiceClick(service)}
-                          className="cursor-pointer absolute top-2 right-0 z-10 hover:scale-110 transition-transform duration-300"
+                          className="cursor-pointer absolute  right-0 z-10 hover:scale-110 transition-transform duration-300"
                           aria-label="Learn more"
                         >
                           <svg
