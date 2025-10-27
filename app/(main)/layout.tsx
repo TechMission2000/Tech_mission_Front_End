@@ -14,8 +14,14 @@ export default function MainLayoutContent({
 }) {
   return (
     <>
-      <TopHeader></TopHeader>
-      <Header></Header>
+      <div className="sticky top-0 z-100 -mt-30 -mb-30">
+        {" "}
+        <TopHeader></TopHeader>
+      </div>
+      <div className="sticky top-10 z-50 -mt-30">
+        <Header></Header>
+      </div>
+
       <div className="min-h-screen">{children}</div>
 
       <Chatbot />

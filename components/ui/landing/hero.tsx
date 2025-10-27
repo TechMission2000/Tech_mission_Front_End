@@ -4,6 +4,7 @@ import React from "react";
 import CustomButton from "../CustomButton";
 import { useRouter } from "next/navigation";
 import Chatbot from "@/components/chat/Chatbot";
+import { Header } from "./header";
 
 // --- TYPE DEFINITIONS ---
 interface Slide {
@@ -92,7 +93,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[calc(100vh-150px)] w-full overflow-hidden bg-white">
+    <section className="relative h-screen w-full overflow-hidden bg-white">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -161,16 +162,17 @@ export default function App() {
           .font-lato { font-family: 'Lato', sans-serif; }
         `}
       </style>
-      <main>
-        {/* Fake header for 80px offset */}
-        <header className="h-[80px] bg-white shadow-md"></header>
-        <Hero />
-        <div className="py-20 px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Content After Hero</h2>
-          <p className="text-lg text-gray-700">
-            This is where the rest of your page content would go.
-          </p>
-        </div>
+      <main className="relative overflow-hidden">
+        <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Welcome to TechMission
+            </h1>
+            <p className="text-lg text-gray-600">
+              Your header with background image is ready!
+            </p>
+          </div>
+        </section>
       </main>
     </div>
   );
