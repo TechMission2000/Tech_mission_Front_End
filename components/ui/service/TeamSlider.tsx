@@ -224,9 +224,7 @@ const TeamSlider = () => {
           return (
             <SwiperSlide
               key={index}
-              className={`flex justify-center pb-5 ${
-                isNext ? "" : "" // 👉 add margin only for right-side card
-              }`}
+              className={`flex justify-center pb-5 ${isNext ? "" : ""}`}
             >
               <motion.div
                 style={{ scale }}
