@@ -354,7 +354,7 @@ function Footer() {
 
             {/* Middle Column - Explore and Legal */}
             <div className="lg:col-span-1 pl-8 relative">
-              <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90 hidden md:block" />
+              <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 hidden md:block" />
 
               {/* Explore Section */}
               <div className="pb-6 mb-6 relative">
@@ -421,7 +421,7 @@ function Footer() {
 
             {/* Right Column - CTA and Social */}
             <div className="lg:col-span-1 pl-8 relative">
-              <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90 hidden md:block" />
+              <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 hidden md:block" />
 
               <div className="mb-12">
                 <h4 className="font-semibold text-zinc-900 text-base mb-6">
@@ -445,14 +445,14 @@ function Footer() {
                   <Link
                     href="https://www.facebook.com/techmissionglobe"
                     target="_blank"
-                    className="p-2 rounded-full bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaFacebook size={16} />
                   </Link>
                   <Link
                     href="https://www.linkedin.com/company/techmissionglobe/"
                     target="_blank"
-                    className="p-2 rounded-full bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaLinkedin size={16} />
                   </Link>
@@ -460,7 +460,7 @@ function Footer() {
                   <Link
                     href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
                     target="_blank"
-                    className="p-2 rounded-full bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaTwitter size={16} />
                   </Link>
@@ -468,14 +468,14 @@ function Footer() {
                   <Link
                     href="https://www.youtube.com/@techmissionglove"
                     target="_blank"
-                    className="p-2 rounded-full  bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full  bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaYoutube size={16} />
                   </Link>
                   <Link
                     href="https://wa.me/8801838801853?text=Hi%2C%20I%20want%20to%20discuss%20a%20project"
                     target="_blank"
-                    className="p-2 rounded-full  bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full  bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaWhatsapp size={16} />
                   </Link>

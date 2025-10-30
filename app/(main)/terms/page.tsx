@@ -86,7 +86,7 @@ const TermsAndConditionsPage = () => {
         title="Terms & Conditions"
         lastUpdated="January 2025"
         sections={termsAndConditionsSections}
-        contactEmail="legal@example.com"
+        contactEmail="contact.techmission@gmail.com"
         companyName="TechMission"
       />
     </main>

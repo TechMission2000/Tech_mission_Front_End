@@ -30,10 +30,10 @@ export function ServicesMarquee() {
   }, []);
 
   return (
-    <div className="w-full bg-gradient-to-r from-blue-50 to-indigo-50 py-8 overflow-hidden relative">
+    <div className="w-full  py-8 overflow-hidden relative bg-gray-50">
       {/* Marquee container with gradient fades */}
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-blue-50 to-transparent z-10"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-20  z-10"></div>
         <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-indigo-50 to-transparent z-10"></div>
 
         {/* Marquee track */}
@@ -50,7 +50,7 @@ export function ServicesMarquee() {
               key={index}
               className="mx-3 flex items-center justify-center gap-3 rounded-xl bg-white p-4 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="text-blue-600">{service.icon}</div>
+              <div className="text-black">{service.icon}</div>
               <span className="text-base font-semibold text-gray-800">
                 {service.name}
               </span>

@@ -35,4 +35,21 @@ export const HomePagefaqData: FaqItem[] = [
     answer:
       "The cost is dependent on the scope and features of the project. We provide a detailed, custom quote after understanding your specific requirements. Contact us for a free consultation and estimate.",
   },
+  // --- New Data Added Below ---
+  {
+    question:
+      "What technologies do you specialize in for web and app development?",
+    answer:
+      "We build modern solutions using cutting-edge technologies. Our expertise includes React, Next.js, and Vue.js for front-end web, Node.js and Python (Django/Flask) for back-end; and native/hybrid frameworks like React Native and Flutter for mobile apps.",
+  },
+  {
+    question: "Can you integrate AI into our existing business processes?",
+    answer:
+      "Absolutely. Our AI & ML Services team specializes in integrating custom AI models—such as predictive analytics, natural language processing (NLP), and computer vision—into your existing infrastructure (e.g., CRM, ERP) to automate tasks and provide actionable insights.",
+  },
+  {
+    question: "Is data security included in your development process?",
+    answer:
+      "Yes, security is paramount and is built into every stage of our development lifecycle (DevSecOps). We follow industry best practices for data encryption, secure code review, and compliance to protect your application and user data from vulnerabilities.",
+  },
 ];

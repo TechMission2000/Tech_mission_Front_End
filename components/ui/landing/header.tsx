@@ -183,7 +183,7 @@ export function Header() {
     //     </Sheet>
     //   </div>
     // </header>
-    <header className="sticky top-0 z-50 w-full lg:h-24 md:h-20 h-16 bg-black/50">
+    <header className="sticky top-0 z-50 w-full lg:h-24 md:h-20 h-16 bg-[#072D5B]/50">
       <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6 ">
         {/* Logo */}
         <Link
@@ -211,7 +211,7 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           <Link
             href="/"
-            className="px-6 py-2 text-base font-semibold text-white bg-gradient-to-r from-brand-secondary to-brand-primary rounded-lg shadow-md transition-transform hover:scale-105"
+            className="px-6 py-2 text-base font-semibold text-white bg-gradient-to-r from-brand-secondary to-brand-primary rounded-lg shadow-md transition-transform hover:scale-105 hover:text-gray-300"
             prefetch={false}
           >
             Home
@@ -219,16 +219,16 @@ export function Header() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-base font-semibold text-white hover:text-brand-light-blue transition-colors outline-none">
+              <button className="flex items-center gap-1 text-base font-semibold text-white hover:text-brand-light-blue transition-colors outline-none hover:text-gray-300">
                 Services <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-48 bg-white rounded-md shadow-lg p-2">
+            <DropdownMenuContent className="w-48 bg-black/50 text-white rounded-md shadow-lg p-2">
               {servicesLinks.map((link) => (
                 <DropdownMenuItem
                   key={link.title}
                   asChild
-                  className="data-[highlighted]:bg-gradient-to-r data-[highlighted]:from-blue-900 data-[highlighted]:via-blue-500 data-[highlighted]:to-blue-600 data-[highlighted]:text-white"
+                  className="data-[highlighted]:bg-gradient-to-r data-[highlighted]:from-blue-600 data-[highlighted]:via-blue-400 data-[highlighted]:to-blue-500 data-[highlighted]:text-white"
                 >
                   <Link href={link.href} className="w-full block">
                     {link.title}
@@ -242,7 +242,7 @@ export function Header() {
             <Link
               key={item.link}
               href={item.link}
-              className="text-base font-semibold text-white hover:text-brand-light-blue transition-colors"
+              className="text-base font-semibold text-white hover:text-brand-light-blue transition-colors   hover:text-gray-300 "
               prefetch={false}
             >
               {item.title}
@@ -254,7 +254,7 @@ export function Header() {
         <div className="hidden lg:block">
           <Button
             onClick={handleGetInTouch}
-            className="bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white font-bold shadow-lg transition-transform hover:scale-105"
+            className="bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white font-bold shadow-lg transition-transform hover:scale-105"
           >
             Get In Touch
           </Button>

@@ -30,7 +30,7 @@ const ExpandableSection = ({ servicesData }: any) => {
           >
             {/* Accordion Header */}
             <div
-              className="self-stretch h-12 sm:h-14 relative bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white font-bold rounded overflow-hidden cursor-pointer"
+              className="self-stretch h-12 sm:h-14 relative bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white font-bold rounded overflow-hidden cursor-pointer"
               onClick={() => toggleItem(index)}
             >
               <div className="absolute left-4 sm:left-6 top-1/2 transform -translate-y-1/2 inline-flex justify-between items-center w-[calc(100%-32px)] sm:w-[calc(100%-48px)]">

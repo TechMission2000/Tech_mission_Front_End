@@ -41,13 +41,13 @@ export const portfolioData = [
   },
   {
     id: 5,
-    title: "Custom Workflow Automation Software",
-    projectName: "ProTech Solutions",
-    category: "Custom Software",
+    title: "Enterprise Network Security Monitoring System",
+    projectName: "ProTech Shield",
+    category: "Cybersecurity",
     imageUrl: "/portfolio2.png",
     description:
-      "We developed a custom workflow automation system that unified multiple internal tools for ProTech Solutions. It reduced manual work by 60% and improved operational efficiency using Node.js and PostgreSQL.",
-    liveLink: "https://protechsolutions.vercel.app/",
+      "We built an advanced network security monitoring solution for ProTech Shield, integrating real-time threat detection, automated incident alerts, and intrusion prevention systems to safeguard enterprise data.",
+    liveLink: "https://protechshield.vercel.app/",
   },
   {
     id: 6,
@@ -72,14 +72,14 @@ export const portfolioData = [
   },
   {
     id: 8,
-    title: "Supply Chain Management Dashboard",
-    projectName: "Global Logistics",
-    category: "Custom Software",
+    title: "Cyber Threat Intelligence Dashboard",
+    projectName: "Global Cyber Defense",
+    category: "Cybersecurity",
     image:
       "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=800&q=80",
     description:
-      "We built a scalable logistics management dashboard for Global Logistics that automated order processing and real-time shipment tracking using Prisma ORM and Next.js API routes.",
-    liveLink: "https://globallogistics.vercel.app/",
+      "We designed a real-time cyber threat intelligence dashboard for Global Cyber Defense, offering malware tracking, phishing detection, and vulnerability reporting powered by AI analytics.",
+    liveLink: "https://globalcyberdefense.vercel.app/",
   },
   {
     id: 9,
@@ -105,12 +105,47 @@ export const portfolioData = [
   },
   {
     id: 11,
-    title: "E-Commerce Platform for Fashion Brand",
-    projectName: "Chic Boutique",
-    category: "Website Development",
+    title: "Secure Web Application Firewall Implementation",
+    projectName: "Chic Boutique Security",
+    category: "Cybersecurity",
     imageUrl: "/portfolio3.png",
     description:
-      "We designed and developed a stunning e-commerce website for Chic Boutique using Next.js and Tailwind CSS. It includes advanced filtering, product reviews, and smooth checkout integration.",
-    liveLink: "https://chicboutique-store.vercel.app/",
+      "We enhanced Chic Boutique’s online platform with a web application firewall and DDoS protection, ensuring their customer data and transactions remain safe from modern cyber threats.",
+    liveLink: "https://chicboutique-security.vercel.app/",
+  },
+
+  // 🎨 New Graphics Design Projects
+  {
+    id: 12,
+    title: "Brand Identity Design for Tech Startup",
+    projectName: "NovaTech Visuals",
+    category: "Graphics Design",
+    image:
+      "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=800&q=80",
+    description:
+      "We crafted a complete brand identity for NovaTech Visuals, including logo design, typography system, and marketing materials that reflect innovation and trust.",
+    liveLink: "https://novatech-visuals.vercel.app/",
+  },
+  {
+    id: 13,
+    title: "Creative Social Media Campaign Design",
+    projectName: "PixelWave Studio",
+    category: "Graphics Design",
+    image:
+      "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?w=800&q=80",
+    description:
+      "PixelWave Studio collaborated with us to design visually engaging social media graphics that enhanced their online engagement and brand recognition.",
+    liveLink: "https://pixelwave-studio.vercel.app/",
+  },
+  {
+    id: 14,
+    title: "Corporate Brochure and UI Design",
+    projectName: "EliteCorp Branding",
+    category: "Graphics Design",
+    image:
+      "https://images.unsplash.com/photo-1587613865760-ec72b12a04e5?w=800&q=80",
+    description:
+      "We designed an elegant corporate brochure and user interface kit for EliteCorp Branding, aligning with their minimalist and premium brand image.",
+    liveLink: "https://elitecorp-branding.vercel.app/",
   },
 ];
