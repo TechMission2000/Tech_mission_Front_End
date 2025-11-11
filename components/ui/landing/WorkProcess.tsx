@@ -41,7 +41,7 @@ const ServiceCard = ({
 }) => (
   <div className="flex flex-col gap-y-6">
     <div className="flex items-center gap-x-5">
-      <div className="flex-shrink-0 p-4 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white rounded-lg">
+      <div className="flex-shrink-0 p-4 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-lg">
         {icon}
       </div>
       <h3 className="flex-1 text-2xl font-medium text-gray-900">{title}</h3>

@@ -40,7 +40,7 @@ export function HowItWorks() {
 
       <div className="relative container mx-auto px-4 z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12 lg:mb-16">
           <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
             {howItWorksData.title}
           </h2>

@@ -101,7 +101,7 @@ function ServicesOffer() {
   };
 
   return (
-    <section className="relative py-12 md:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
+    <section className="relative py-12 md:py-16 lg:py-24 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-20 h-20 md:w-32 md:h-32 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white rounded-full opacity-20 transform translate-x-10 -translate-y-10 md:translate-x-16 md:-translate-y-16"></div>
       <div className="absolute bottom-0 left-0 w-16 h-16 md:w-24 md:h-24 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white rounded-full opacity-20 transform -translate-x-8 translate-y-8 md:-translate-x-12 md:translate-y-12"></div>
@@ -154,11 +154,11 @@ function ServicesOffer() {
             {services.map((service) => (
               <SwiperSlide key={service.id} className="!h-auto">
                 {({ isActive, isPrev, isNext }) => {
-                  const scale = isActive ? 1.05 : isPrev || isNext ? 0.95 : 0.9;
+                  const scale = isActive ? 1.1 : isPrev || isNext ? 0.95 : 0.9;
 
                   return (
                     <div
-                      className="h-full transition-transform duration-500"
+                      className="h-full transition-transform duration-700"
                       style={{ transform: `scale(${scale})` }}
                     >
                       <div className="bg-white rounded-xl md:rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full shadow-lg relative">

@@ -126,9 +126,9 @@ export default function Testimonials() {
 
   return (
     <div className="bg-white font-raleway py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         {/* Title Section */}
-        <div className="flex flex-col justify-center mb-12 text-center">
+        <div className="flex flex-col justify-center mb-10 md:mb-12 lg:mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold text-[#072D5B]">
             From our Customers
           </h2>

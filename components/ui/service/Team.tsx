@@ -12,8 +12,8 @@ interface TeamMember {
 export default function Team() {
   return (
     <>
-      <div>
-        <div className="py-20">
+      <div className=" py-12 lg:py-24">
+        <div className="mb-10 md:mb-12 lg:mb-16">
           <div className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway text-center ">
             Team
           </div>

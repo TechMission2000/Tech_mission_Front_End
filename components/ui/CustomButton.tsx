@@ -57,13 +57,13 @@ const CustomButton: React.FC<ButtonProps> = ({
   type = "button",
 }) => {
   const baseClasses =
-    " font-bold    transition-all duration-300 hover:scale-105 hover:cursor-pointer active:scale-95";
+    " font-bold    transition-all duration-300 hover:scale-105 hover:cursor-pointer active:scale-95 ";
 
   const variantClasses = {
     primary:
-      "bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white hover:shadow-lg hover:from-blue-700 hover:via-blue-500 hover:to-blue-700",
+      "bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white hover:shadow-lg",
     outline:
-      "bg-transparent text-blue-600 border-2 border-blue-600 hover:bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 hover:text-white hover:shadow-lg transition-colors hover:border-transparent",
+      "bg-transparent text-blue-600 border-2 border-blue-600 hover:border-none hover:bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 hover:text-white hover:shadow-lg transition-colors hover:border-transparent",
   };
 
   const finalClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;

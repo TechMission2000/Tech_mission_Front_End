@@ -230,7 +230,7 @@ const AccordionItem = ({
 
       {/* Accordion Content with Smooth Transition */}
       <div
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`transition-all duration-1200 ease-in-out overflow-hidden ${
           isOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
         }`}
       >
@@ -252,11 +252,11 @@ function Faq({ HomePagefaqData }: FaqProps): JSX.Element {
   return (
     <section
       style={{ backgroundImage: `url(/faqbg.png)`, backgroundSize: "cover" }}
-      className="py-16 sm:py-24"
+      className="py-16 md:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-12 lg:mb-16">
           <h2 className="text-4xl font-semibold text-[#072D5B] font-raleway">
             Frequently Asked Questions
           </h2>

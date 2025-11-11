@@ -30,7 +30,7 @@ export function ServicesMarquee() {
   }, []);
 
   return (
-    <div className="w-full  py-8 overflow-hidden relative bg-gray-50">
+    <div className="w-full  py-8 overflow-hidden relative bg-gray-300">
       {/* Marquee container with gradient fades */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-20  z-10"></div>
@@ -41,7 +41,7 @@ export function ServicesMarquee() {
           ref={marqueeRef}
           className="flex animate-marquee whitespace-nowrap"
           style={{
-            animation: "marquee 30s linear infinite",
+            animation: "marquee 55s linear infinite",
             width: "fit-content",
           }}
         >

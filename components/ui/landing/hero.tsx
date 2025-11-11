@@ -244,17 +244,17 @@ export function Hero() {
       {/* Content - Only render active slide */}
       <div className="absolute inset-0 h-full w-full flex items-end">
         <div className="w-full md:w-auto p-4 md:p-0">
-          <div className="bg-[rgba(235,242,251,0.8)] backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-lg max-w-xl mx-auto md:mx-0">
+          <div className="bg-[rgba(235,242,251,0.8)] backdrop-blur-sm rounded-lg p-2 md:p-5 shadow-lg max-w-xl mx-auto md:mx-0">
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-4">
-                <h2 className="text-[#072D5B] text-2xl font-semibold font-lato">
+                <h2 className="text-[#072D5B] text-xl font-semibold font-lato">
                   {slides[currentSlide].pretitle}
                 </h2>
-                <h1 className="text-[#16192C] text-4xl md:text-5xl font-bold font-raleway leading-tight">
+                <h1 className="text-[#16192C] text-2xl md:text-3xl font-bold font-raleway leading-tight">
                   {slides[currentSlide].title}
                 </h1>
               </div>
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+              <div className="flex flex-col sm:flex-row items-center gap-2">
                 <CustomButton
                   variant="primary"
                   onClick={() => router.push("/services")}

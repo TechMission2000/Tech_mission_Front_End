@@ -194,7 +194,7 @@ const teamMembers: TeamMember[] = [
 const TeamSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="w-full mx-auto py-12 ">
+    <div className="w-full mx-auto  ">
       <Swiper
         modules={[Autoplay]}
         loop
@@ -234,7 +234,7 @@ const TeamSlider = () => {
                 <div
                   className={`w-80 h-44 ${
                     isActive
-                      ? "bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white relative rounded-bl-[100px]   rounded-br-[100px] border"
+                      ? "bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white relative rounded-bl-[100px]   rounded-br-[100px] border"
                       : ""
                   }  overflow-hidden`}
                 ></div>
@@ -270,8 +270,8 @@ const TeamSlider = () => {
                         </p>
 
                         <div className="flex justify-center items-center space-x-1 mt-4">
-                          <div className="w-14 h-1.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-md"></div>
-                          <div className="w-5 h-1.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-md"></div>
+                          <div className="w-14 h-1.5 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 rounded-md"></div>
+                          <div className="w-5 h-1.5 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 rounded-md"></div>
                         </div>
                       </div>
 

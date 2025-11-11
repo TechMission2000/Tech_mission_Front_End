@@ -38,7 +38,7 @@ function Contect() {
         backgroundImage: "url('/contactimg.png')",
         backgroundSize: "cover",
       }}
-      className=" py-16 sm:py-24 font-raleway"
+      className=" py-16 md:py-24 font-raleway"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
@@ -77,7 +77,11 @@ function Contect() {
                 className="w-full p-4 rounded-lg border bg-white "
               ></textarea>
               <div>
-                <CustomButton variant="primary" type="submit" className="">
+                <CustomButton
+                  variant="primary"
+                  type="submit"
+                  className="py-3 px-6 flex items-center gap-2"
+                >
                   Send Now
                 </CustomButton>
               </div>
@@ -164,28 +168,28 @@ function Contect() {
                 <Link
                   href="https://www.facebook.com/techmissionglobe"
                   target="_blank"
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
                 >
                   <FaFacebook size={22} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/company/techmissionglobe/"
                   target="_blank"
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
                 >
                   <Linkedin size={22} />
                 </Link>
                 <Link
                   href="https://wa.me/8801838801853?text=Hi%2C%20I%20want%20to%20discuss%20a%20project"
                   target="_blank"
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
                 >
                   <FaWhatsapp size={22} />
                 </Link>
                 <Link
                   href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
                   target="_blank"
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
                 >
                   <Twitter size={22} />
                 </Link>
@@ -193,7 +197,7 @@ function Contect() {
                 <Link
                   href="https://www.youtube.com/@techmissionglove"
                   target="_blank"
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition"
+                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
                 >
                   <FaYoutube size={22} />
                 </Link>

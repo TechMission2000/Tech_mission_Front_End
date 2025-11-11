@@ -17,7 +17,7 @@ function Blog() {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="bg-slate-50 py-16 sm:py-24">
+    <section className="bg-slate-50 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -43,7 +43,11 @@ function Blog() {
 
         {/* View More Button */}
         <div className="text-center mt-12 flex justify-center">
-          <CustomButton variant="primary" onClick={() => router.push("/blogs")}>
+          <CustomButton
+            variant="primary"
+            onClick={() => router.push("/blogs")}
+            className="py-3 px-6 flex items-center gap-2"
+          >
             View More
           </CustomButton>
           {/* <button

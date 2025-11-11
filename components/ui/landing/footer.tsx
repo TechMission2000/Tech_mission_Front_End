@@ -445,14 +445,14 @@ function Footer() {
                   <Link
                     href="https://www.facebook.com/techmissionglobe"
                     target="_blank"
-                    className="p-2 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaFacebook size={16} />
                   </Link>
                   <Link
                     href="https://www.linkedin.com/company/techmissionglobe/"
                     target="_blank"
-                    className="p-2 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaLinkedin size={16} />
                   </Link>
@@ -460,7 +460,7 @@ function Footer() {
                   <Link
                     href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
                     target="_blank"
-                    className="p-2 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaTwitter size={16} />
                   </Link>
@@ -468,14 +468,14 @@ function Footer() {
                   <Link
                     href="https://www.youtube.com/@techmissionglove"
                     target="_blank"
-                    className="p-2 rounded-full  bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full  bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaYoutube size={16} />
                   </Link>
                   <Link
                     href="https://wa.me/8801838801853?text=Hi%2C%20I%20want%20to%20discuss%20a%20project"
                     target="_blank"
-                    className="p-2 rounded-full  bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
+                    className="p-2 rounded-full  bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition-colors"
                   >
                     <FaWhatsapp size={16} />
                   </Link>

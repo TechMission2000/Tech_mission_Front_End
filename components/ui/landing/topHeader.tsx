@@ -72,7 +72,7 @@ export default function TopHeader() {
     //   </div>
     // </div>
 
-    <div className="w-full bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white overflow-hidden">
+    <div className="w-full bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500 text-white overflow-hidden">
       <div className="container mx-auto flex h-10 items-center justify-between px-4 md:px-6">
         {/* Contact Info - Hidden on mobile */}
         <div className="hidden md:flex items-center gap-x-8 text-sm">

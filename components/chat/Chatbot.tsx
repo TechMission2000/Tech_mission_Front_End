@@ -10,7 +10,7 @@ interface Message {
 
 // --- SVG Icon Components ---
 const BotIcon: FC = () => (
-  <div className="bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white hover:opacity-90 rounded-full flex-shrink-0 flex items-center justify-center">
+  <div className="bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white hover:opacity-90 rounded-full flex-shrink-0 flex items-center justify-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -140,7 +140,7 @@ const Chatbot: FC = () => {
                 `}
       >
         {/* Modal Header */}
-        <div className="bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white  p-4 flex justify-between items-center rounded-t-2xl">
+        <div className="bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white  p-4 flex justify-between items-center rounded-t-2xl">
           <div className="flex items-center gap-3">
             <BotIcon />
             <div>
@@ -221,7 +221,7 @@ const Chatbot: FC = () => {
       <button
         onClick={toggleChat}
         className={`
-                    w-16 h-16 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white hover:opacity-90 rounded-full 
+                    w-16 h-16 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white hover:opacity-90 rounded-full 
                     flex justify-center items-center shadow-2xl 
                     hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
                     transition-all transform duration-200 pointer-events-auto

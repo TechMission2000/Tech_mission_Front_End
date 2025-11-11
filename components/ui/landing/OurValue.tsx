@@ -26,12 +26,15 @@ export function OurValue() {
   return (
     <section className="py-12 lg:py-24 bg-brand-background">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
-          Our Values
-        </h2>
-        <p className="mt-4 text-lg text-gray-600">
-          Core Beliefs and Guiding Principles
-        </p>
+        <div className="text-center mb-10 md:mb-12 lg:mb-16">
+          <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
+            Our Values
+          </h2>
+          <p className=" text-lg text-gray-600">
+            Core Beliefs and Guiding Principles
+          </p>
+        </div>
+
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {values.map((value, index) => (
             <Card

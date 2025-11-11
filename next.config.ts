@@ -7,6 +7,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "pro-bucket.s3.us-east-1.amazonaws.com",
       },
+
       // {
       //   protocol: "https",
       //   hostname: "https://ibb.co.com",

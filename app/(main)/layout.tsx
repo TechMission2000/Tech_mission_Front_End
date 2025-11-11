@@ -14,13 +14,9 @@ export default function MainLayoutContent({
 }) {
   return (
     <>
-      <div className="sticky top-0 z-100 -mt-30 -mb-30">
-        {" "}
-        <TopHeader></TopHeader>
-      </div>
-      <div className="sticky top-10 z-50 -mt-30">
-        <Header></Header>
-      </div>
+      <TopHeader></TopHeader>
+
+      <Header></Header>
 
       <div className="min-h-screen">{children}</div>
 

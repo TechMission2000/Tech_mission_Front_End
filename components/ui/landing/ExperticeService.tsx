@@ -224,7 +224,7 @@ const ServiceCard = ({ service }: { service: Service }) => (
     <h3 className="font-lato text-2xl font-semibold text-gray-800 h-16">
       {service.title}
     </h3>
-    <div className="w-28 h-1.5 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white rounded-full my-4" />
+    <div className="w-28 h-1.5 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-full my-4" />
     <p className="font-raleway text-gray-600 leading-relaxed">
       {service.description}
     </p>
