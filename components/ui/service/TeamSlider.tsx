@@ -47,7 +47,9 @@ const teamMembers: TeamMember[] = [
   {
     name: "Md Moniruzzaman",
     role: "Full Stack Developer (Web Solutions)",
-    image: "https://i.postimg.cc/4ybTznJf/full-stack-developer.png",
+    image:
+      "https://i.postimg.cc/5NdcnBG5/Gemini-Generated-Image-mlj9l2mlj9l2mlj9.png",
+    // image: "https://i.postimg.cc/4ybTznJf/full-stack-developer.png",
     description:
       "Full stack MERN and PERN developer building secure, scalable web apps. Skilled in TypeScript, Prisma, and PostgreSQL for modern enterprise-grade solutions.",
   },

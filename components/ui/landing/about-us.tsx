@@ -195,7 +195,8 @@ const aboutData = {
     text: "Ready to Help:",
     phone: "+88 01 838 801 853",
   },
-  video: "https://app.weet.co/embed/cc4231fd/create-video-tutorials-with-weet", // use embed URL
+  video: "", // use embed URL
+  // video: "https://app.weet.co/embed/cc4231fd/create-video-tutorials-with-weet", // use embed URL
 };
 
 export function AboutUs() {
