@@ -80,11 +80,11 @@ function WhyChooseUs() {
   return (
     // Section container with a subtle background and responsive padding
     <div
+      className="py-12 lg:py-24"
       style={{
         backgroundImage: "url('/whychoose.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        padding: "40px",
       }}
     >
       {/* Header section */}

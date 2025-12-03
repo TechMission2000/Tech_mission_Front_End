@@ -1,132 +1,31 @@
+import { Crown, Medal, ShieldCheck, UserStar } from "lucide-react";
 import React from "react";
 
 // Data for the feature cards, including new SVG icons. This keeps the component clean and easy to update.
 const services = [
   {
-    icon: (
-      <svg
-        className="w-10 h-10 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M13 10V3L4 14h7v7l9-11h-7z"
-        />
-      </svg>
-    ),
-    title: "AI & ML Services",
+    icon: <Medal />,
+    title: "Expertise",
     description:
-      "We develop intelligent AI and machine learning solutions that automate processes, enhance analytics, and improve business decision-making.",
+      "Our team brings years of industry experience and technical mastery, ensuring every project meets the highest standards of innovation and quality.",
   },
   {
-    icon: (
-      <svg
-        className="w-10 h-10 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-        />
-      </svg>
-    ),
-    title: "App Development",
+    icon: <UserStar />,
+    title: "Client-Centric Approach",
     description:
-      "From concept to deployment, we build fast, secure, and user-friendly mobile apps that enhance customer engagement and business reach.",
+      "We prioritize understanding your unique goals and challenges, delivering personalized solutions that align perfectly with your business vision.",
   },
   {
-    icon: (
-      <svg
-        className="w-10 h-10 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4h18"
-        />
-      </svg>
-    ),
-    title: "Website Development",
+    icon: <ShieldCheck />,
+    title: "Results-Driven Solutions",
     description:
-      "We design and develop modern, responsive, and SEO-friendly websites optimized for performance and user experience across all devices.",
+      "We focus on measurable outcomes — building digital products that drive performance, enhance user engagement, and deliver real business impact.",
   },
   {
-    icon: (
-      <svg
-        className="w-10 h-10 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M16 8c0-1.105-.895-2-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2h9c1.105 0 2-.895 2-2v-1h4v-6h-4V8z"
-        />
-      </svg>
-    ),
-    title: "Digital Marketing",
+    icon: <Crown />,
+    title: "Collaborative Partnership",
     description:
-      "We help you grow your brand online with data-driven digital marketing, including SEO, paid ads, and social media campaigns.",
-  },
-  {
-    icon: (
-      <svg
-        className="w-10 h-10 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    ),
-    title: "Graphics Design",
-    description:
-      "Our creative team designs visually appealing logos, brand identities, and marketing assets that communicate your story effectively.",
-  },
-  {
-    icon: (
-      <svg
-        className="w-10 h-10 text-white"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 20h9M3 4h18M4 8v8a2 2 0 002 2h12a2 2 0 002-2V8"
-        />
-      </svg>
-    ),
-    title: "Custom Software",
-    description:
-      "We build custom software solutions tailored to your unique business needs, integrating automation and scalability for long-term success.",
+      "We believe in long-term collaboration, working closely with you at every step to ensure transparency, trust, and shared success.",
   },
 ];
 
@@ -163,7 +62,7 @@ function WorkProcess() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header section */}
-        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+        {/* <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
             What We Do
           </h2>
@@ -171,7 +70,7 @@ function WorkProcess() {
             We specialize in creating bespoke digital solutions that empower
             businesses to succeed in an ever-evolving technological landscape.
           </p>
-        </div>
+        </div> */}
 
         {/* Responsive grid for services, mirroring the layout of the WhyChooseUs component */}
         <div className="mx-auto max-w-6xl border-t border-gray-200">

@@ -49,9 +49,10 @@ export default function ContactInfo() {
         {/* Our Office */}
         <div className="flex-1 flex flex-col gap-6 px-6">
           <h3 className="text-xl font-semibold text-gray-900">Our Office</h3>
-          <p className="text-gray-700">
+          <p className="text-gray-700">Address: Dhaka, Bangladesh</p>
+          {/* <p className="text-gray-700">
             Address: H#180/6, R#Titas Road, East Rampura, Dhaka, Bangladesh
-          </p>
+          </p> */}
           <a
             href="https://maps.google.com"
             target="_blank"
@@ -90,21 +91,21 @@ export default function ContactInfo() {
             >
               <FaWhatsapp size={22} />
             </Link>
-            <Link
+            {/* <Link
               href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
               target="_blank"
               className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
             >
               <Twitter size={22} />
-            </Link>
+            </Link> */}
 
-            <Link
+            {/* <Link
               href="https://www.youtube.com/@techmissionglove"
               target="_blank"
               className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-b from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
             >
               <FaYoutube size={22} />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

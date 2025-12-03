@@ -2,10 +2,22 @@
 const nextConfig = {
   images: {
     remotePatterns: [
+      // KEEPING your existing allowed domain
       {
         protocol: "https",
-        // hostname: "placehold.co",
         hostname: "pro-bucket.s3.us-east-1.amazonaws.com",
+      },
+
+      // {
+      //   protocol: "https",
+      //   hostname: "https://ibb.co.com",
+      // },
+      // ADD THIS NEW OBJECT for the testimonial images
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+        port: "",
+        pathname: "/**",
       },
     ],
   },

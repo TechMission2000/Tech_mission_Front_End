@@ -11,9 +11,11 @@ import {
   Code,
   Megaphone,
   ArrowRight,
+  ShieldCheck,
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 import { FaAndroid } from "react-icons/fa";
+import CustomButton from "../CustomButton";
 
 // --- Reusable Button Component ---
 
@@ -29,11 +31,10 @@ const FilterButton = ({
   onClick: () => void;
 }) => {
   const baseClasses =
-    "flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500";
+    "flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 focus:outline-none   hover:cursor-pointer";
   const activeClasses =
     "bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white";
-  const inactiveClasses =
-    "bg-white text-gray-800 border border-[#106CD8] hover:bg-blue-50";
+  const inactiveClasses = "bg-white text-gray-800  hover:bg-blue-50";
 
   return (
     <button
@@ -56,7 +57,7 @@ const PortfolioCard = ({
   imageUrl?: string;
 }) => (
   <div className="group relative w-full h-[350px] bg-gray-200/50 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
-    <div className="absolute top-2 left-0 bg-white shadow-lg rounded-r-full py-2 px-6 z-10">
+    {/* <div className="absolute top-2 left-0 bg-white shadow-lg rounded-r-full py-2 px-6 z-10">
       <span className="text-gray-800 text-lg font-semibold tracking-wide">
         <div className="flex items-center gap-1">
           <LogoLoader logoColor="#155DFC" customClass="h-6 w-6"></LogoLoader>
@@ -70,13 +71,13 @@ const PortfolioCard = ({
           </p>
         </div>
       </span>
-    </div>
+    </div> */}
     <Image
       src={imageUrl || "/placeholder.jpg"}
       alt={`${category} project`}
       width={400}
       height={300}
-      className="w-full h-full object-cover p-6 pt-16 transform group-hover:scale-105 transition-transform duration-300"
+      className="w-full h-full object-cover   transform group-hover:scale-105 transition-transform duration-300"
       onError={(e) => {
         const target = e.target as HTMLImageElement;
         target.src =
@@ -99,7 +100,7 @@ function OurPortfolioProjects() {
     { name: "Website Development", icon: <Code className="h-6 w-6" /> },
     { name: "Digital Marketing", icon: <Megaphone className="h-6 w-6" /> },
     { name: "Graphics Design", icon: <Brush className="h-6 w-6" /> },
-    { name: "Custom Software", icon: <Briefcase className="h-6 w-6" /> },
+    { name: "Cybersecurity", icon: <ShieldCheck className="h-6 w-6" /> },
   ];
 
   // Filter portfolio data based on active filter
@@ -125,9 +126,9 @@ function OurPortfolioProjects() {
 
   return (
     <section className="w-full min-h-screen bg-[#F2F2F2] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col items-center gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col items-center ">
         {/* Header Section */}
-        <div className="text-center">
+        <div className="text-center mb-10 md:mb-12 lg:mb-16">
           <h1
             className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway"
             style={{ fontFamily: "'Raleway', sans-serif" }}
@@ -143,7 +144,7 @@ function OurPortfolioProjects() {
         </div>
 
         {/* Filter Buttons Section */}
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
           {filters.map((filter) => (
             <FilterButton
               key={filter.name}
@@ -178,13 +179,13 @@ function OurPortfolioProjects() {
           {/* View More Button */}
           {filteredData.length > 3 && (
             <div className="flex justify-center mt-12">
-              <button
+              <CustomButton
+                variant="primary"
                 onClick={handleViewMore}
-                className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                className="py-3 px-6 flex items-center gap-2"
               >
-                <span>View More Projects</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+                View More
+              </CustomButton>
             </div>
           )}
         </div>

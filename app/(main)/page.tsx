@@ -27,6 +27,7 @@ import { HomePagefaqData } from "@/data/homePageFAQdata";
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
+      {/* <Header></Header> */}
       <Hero />
       <ServicesMarquee />
       <AboutUs />

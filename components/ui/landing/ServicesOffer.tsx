@@ -2,13 +2,14 @@
 
 import type React from "react";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BrainCircuit, BrainCircuitIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 interface Service {
   id: number;
@@ -19,17 +20,26 @@ interface Service {
   icon?: React.ReactNode;
 }
 
-//  { id: 1, name: "AI & ML Services", active: true },
-//     { id: 2, name: "App Development", active: false },
-//     { id: 3, name: "Website Development", active: false },
-//     { id: 4, name: "Digital Marketing", active: false },
-//     { id: 5, name: "Graphics Design", active: false },
-//     { id: 6, name: "Custom Software", active: false },
+const Aiicon = () => <BrainCircuitIcon className="w-12 h-12 text-blue-600" />;
+const Appicon = () => <BrainCircuitIcon className="w-12 h-12 text-blue-600" />;
+const Websiteicon = () => (
+  <BrainCircuitIcon className="w-12 h-12 text-blue-600" />
+);
+const Securityicon = () => (
+  <BrainCircuitIcon className="w-12 h-12 text-blue-600" />
+);
+const Marketingicon = () => (
+  <BrainCircuitIcon className="w-12 h-12 text-blue-600" />
+);
+const Graphicsicon = () => (
+  <BrainCircuitIcon className="w-12 h-12 text-blue-600" />
+);
 
 const services = [
   {
     id: 1,
     title: "AI & ML Services",
+    icon: <Aiicon />,
     subtitle:
       "Unlock the power of data with intelligent automation and predictive analytics.",
     category: "AI & ML Services",
@@ -37,6 +47,7 @@ const services = [
   {
     id: 2,
     title: "App Development",
+    icon: <Appicon />,
     subtitle:
       "Build high-performance, cross-platform mobile apps that dominate their category.",
     category: "App Development",
@@ -44,20 +55,23 @@ const services = [
   {
     id: 3,
     title: "Website Development",
+    icon: <Websiteicon />,
     subtitle:
       "Launch modern, scalable web platforms designed for high conversion and speed.",
     category: "Website Development",
   },
   {
     id: 4,
-    title: "Custom Software",
+    title: "Cybersecurity Services",
+    icon: <Securityicon />,
     subtitle:
-      "Digitize and optimize core business operations with purpose-built systems.",
-    category: "Custom Software",
+      "Protect your digital assets with advanced cybersecurity solutions, risk assessments, and continuous monitoring.",
+    category: "Cybersecurity",
   },
   {
     id: 5,
     title: "Digital Marketing",
+    icon: <Marketingicon />,
     subtitle:
       "Drive qualified traffic and accelerate lead generation across all digital channels.",
     category: "Digital Marketing",
@@ -65,6 +79,7 @@ const services = [
   {
     id: 6,
     title: "Graphics Design",
+    icon: <Graphicsicon />,
     subtitle:
       "Elevate your brand with captivating visual identities and stunning creative assets.",
     category: "Graphics Design",
@@ -86,11 +101,11 @@ function ServicesOffer() {
   };
 
   return (
-    <section className="relative py-12 md:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
+    <section className="relative py-12 md:py-16 lg:py-24 px-4 sm:px-6 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-20 h-20 md:w-32 md:h-32 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-full opacity-20 transform translate-x-10 -translate-y-10 md:translate-x-16 md:-translate-y-16"></div>
-      <div className="absolute bottom-0 left-0 w-16 h-16 md:w-24 md:h-24 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-full opacity-20 transform -translate-x-8 translate-y-8 md:-translate-x-12 md:translate-y-12"></div>
-      <div className="absolute bottom-0 right-0 w-24 h-24 md:w-40 md:h-40 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 text-white rounded-full opacity-20 transform translate-x-12 translate-y-12 md:translate-x-20 md:translate-y-20"></div>
+      <div className="absolute top-0 right-0 w-20 h-20 md:w-32 md:h-32 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white rounded-full opacity-20 transform translate-x-10 -translate-y-10 md:translate-x-16 md:-translate-y-16"></div>
+      <div className="absolute bottom-0 left-0 w-16 h-16 md:w-24 md:h-24 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white rounded-full opacity-20 transform -translate-x-8 translate-y-8 md:-translate-x-12 md:translate-y-12"></div>
+      <div className="absolute bottom-0 right-0 w-24 h-24 md:w-40 md:h-40 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white rounded-full opacity-20 transform translate-x-12 translate-y-12 md:translate-x-20 md:translate-y-20"></div>
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
@@ -139,18 +154,18 @@ function ServicesOffer() {
             {services.map((service) => (
               <SwiperSlide key={service.id} className="!h-auto">
                 {({ isActive, isPrev, isNext }) => {
-                  const scale = isActive ? 1.05 : isPrev || isNext ? 0.95 : 0.9;
+                  const scale = isActive ? 1.1 : isPrev || isNext ? 0.95 : 0.9;
 
                   return (
                     <div
-                      className="h-full transition-transform duration-500"
+                      className="h-full transition-transform duration-700"
                       style={{ transform: `scale(${scale})` }}
                     >
                       <div className="bg-white rounded-xl md:rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 h-full shadow-lg relative">
                         {/* Arrow Button */}
                         <button
                           onClick={() => handleServiceClick(service)}
-                          className="cursor-pointer absolute top-2 right-0 z-10 hover:scale-110 transition-transform duration-300"
+                          className="cursor-pointer absolute right-0 z-10 hover:scale-110 transition-transform duration-300"
                           aria-label="Learn more"
                         >
                           <svg
@@ -169,12 +184,9 @@ function ServicesOffer() {
                                 x2="100%"
                                 y2="0%"
                               >
-                                <stop offset="0%" stopColor="#072D5B" />
-                                <stop offset="50%" stopColor="#106CD8" />
-                                <stop
-                                  offset="100%"
-                                  stopColor="rgba(59, 130, 246, 0.9)"
-                                />
+                                <stop offset="0%" stopColor="#2563eb" />
+                                <stop offset="50%" stopColor="#60a5fa" />
+                                <stop offset="100%" stopColor="#2563eb" />
                               </linearGradient>
                             </defs>
                             <path
@@ -204,12 +216,9 @@ function ServicesOffer() {
                                 x2="100%"
                                 y2="0%"
                               >
-                                <stop offset="0%" stopColor="#072D5B" />
-                                <stop offset="50%" stopColor="#106CD8" />
-                                <stop
-                                  offset="100%"
-                                  stopColor="rgba(59, 130, 246, 0.9)"
-                                />
+                                <stop offset="0%" stopColor="#2563eb" />
+                                <stop offset="50%" stopColor="#60a5fa" />
+                                <stop offset="100%" stopColor="#2563eb" />
                               </linearGradient>
                               <clipPath id="clip0_519_2306">
                                 <rect
@@ -225,6 +234,18 @@ function ServicesOffer() {
 
                         {/* Content */}
                         <div className="p-5 md:p-6 lg:p-8 flex flex-col h-full">
+                          {/* <div>
+                            <Image
+                              alt={service.title}
+                              width={71}
+                              height={70}
+                              src={service?.image}
+                            />
+                          </div> */}
+
+                          {/* {service.icon && (
+                            <div className="mb-4">{service.icon}</div>
+                          )} */}
                           <svg
                             width="71"
                             height="70"
@@ -271,48 +292,39 @@ function ServicesOffer() {
                             <defs>
                               <linearGradient
                                 id="paint0_linear_519_2293"
-                                x1="35.25"
-                                y1="0"
-                                x2="35.25"
-                                y2="70"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="0%"
                                 gradientUnits="userSpaceOnUse"
                               >
-                                <stop stopColor="#D2C8FF" />
-                                <stop
-                                  offset="1"
-                                  stopColor="white"
-                                  stopOpacity="0"
-                                />
+                                <stop offset="0%" stopColor="#2563eb" />
+                                <stop offset="50%" stopColor="#60a5fa" />
+                                <stop offset="100%" stopColor="#2563eb" />
                               </linearGradient>
                               <linearGradient
                                 id="paint1_linear_519_2293"
-                                x1="162.523"
-                                y1="-69.6023"
-                                x2="0.250007"
-                                y2="70"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="0%"
                                 gradientUnits="userSpaceOnUse"
                               >
-                                <stop offset="0.224072" stopColor="#1A00FF" />
-                                <stop
-                                  offset="0.696783"
-                                  stopColor="#9EFF00"
-                                  stopOpacity="0"
-                                />
+                                <stop offset="0%" stopColor="#2563eb" />
+                                <stop offset="50%" stopColor="#60a5fa" />
+                                <stop offset="100%" stopColor="#2563eb" />
                               </linearGradient>
                               <linearGradient
                                 id="paint2_linear_519_2293"
-                                x1="35.25"
-                                y1="0"
-                                x2="35.25"
-                                y2="70"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="0%"
                                 gradientUnits="userSpaceOnUse"
                               >
-                                <stop stopColor="white" />
-                                <stop
-                                  offset="1"
-                                  stopColor="#5732DA"
-                                  stopOpacity="0"
-                                />
+                                <stop offset="0%" stopColor="#2563eb" />
+                                <stop offset="50%" stopColor="#60a5fa" />
+                                <stop offset="100%" stopColor="#2563eb" />
                               </linearGradient>
                               <clipPath id="clip0_519_2293">
                                 <rect

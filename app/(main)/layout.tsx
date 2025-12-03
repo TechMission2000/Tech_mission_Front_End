@@ -16,7 +16,9 @@ export default function MainLayoutContent({
   return (
     <>
       <TopHeader></TopHeader>
+
       <Header></Header>
+
       <div className="min-h-screen">{children}</div>
 
       <Chatbot />

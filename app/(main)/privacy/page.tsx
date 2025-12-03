@@ -73,7 +73,7 @@ const PrivacyPolicyPage = () => {
         title="Privacy Policy"
         lastUpdated="January 2025"
         sections={privacyPolicySections}
-        contactEmail="privacy@example.com"
+        contactEmail="contact.techmission@gmail.com"
         companyName="TechMission"
       />
     </main>

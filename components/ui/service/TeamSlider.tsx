@@ -17,95 +17,186 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
+  // 🧠 AI & Machine Learning Team
   {
-    name: "Asifur Rahman",
+    name: "Dr. Ahsan Rahim",
+    role: "AI & Machine Learning Lead",
+    image:
+      "https://i.postimg.cc/26qB0RJ1/Gemini-Generated-Image-zhxjdxzhxjdxzhxj.png",
+    description:
+      "AI specialist with over a decade of experience in computer vision and predictive analytics. Leads automation, NLP, and deep learning initiatives for data-driven business innovation.",
+  },
+  {
+    name: "Sadia Rahman",
+    role: "AI Research Engineer",
+    image:
+      "https://i.postimg.cc/dVH1pNGR/Gemini-Generated-Image-4c55wj4c55wj4c55.png",
+    description:
+      "Researches and develops intelligent AI systems using TensorFlow and PyTorch. Focused on large-scale model training, automation, and innovative machine learning applications.",
+  },
+  {
+    name: "Farid Hossain",
+    role: "Data Scientist",
+    image:
+      "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&auto=format&fit=crop&q=60",
+    description:
+      "Expert in data visualization and statistical modeling. Uses Python, Power BI, and AI tools to extract actionable insights and optimize business performance.",
+  },
+
+  // 🌐 Web Development Team
+  {
+    name: "Md Moniruzzaman",
+    role: "Full Stack Developer (Web Solutions)",
+    image:
+      "https://i.postimg.cc/5NdcnBG5/Gemini-Generated-Image-mlj9l2mlj9l2mlj9.png",
+    // image: "https://i.postimg.cc/4ybTznJf/full-stack-developer.png",
+    description:
+      "Full stack MERN and PERN developer building secure, scalable web apps. Skilled in TypeScript, Prisma, and PostgreSQL for modern enterprise-grade solutions.",
+  },
+  {
+    name: "Khalid Mahmud",
+    role: "Frontend Developer",
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=60",
+    description:
+      "Frontend developer passionate about clean UI and responsive design. Expert in Next.js, React, and Tailwind CSS for modern, high-performing web interfaces.",
+  },
+  {
+    name: "Tanjila Akter",
     role: "Backend Developer",
     image:
-      "https://images.unsplash.com/photo-1480429370139-e0132c086e2a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://i.postimg.cc/sf8fyGLH/Gemini-Generated-Image-kpw0kvkpw0kvkpw0.png",
     description:
-      "Scadjscn jk nd ojifeo naqf fd a dkacolaadadn kl a dfsaf sdfvsdfvwerf qwefjhasdbcf jkfcajcasdf sfgv.",
+      "Backend engineer creating robust APIs using Node.js, Express, and MongoDB. Focused on performance, security, and seamless frontend-backend integration.",
+  },
+
+  // 🔒 Cybersecurity Team
+  {
+    name: "Nabila Chowdhury",
+    role: "Cybersecurity Specialist",
+    image:
+      "https://i.postimg.cc/V6WtpBgS/Gemini-Generated-Image-6pprpl6pprpl6ppr-1.png",
+    description:
+      "Protects enterprise systems through penetration testing, digital defense, and endpoint security. Dedicated to preventing threats and ensuring network resilience.",
   },
   {
-    name: "Moniruzzaman",
-    role: "Full Stack Developer",
+    name: "Shakil Ahmed",
+    role: "Network Security Engineer",
     image:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww",
+      "https://i.postimg.cc/k5m1rw9P/Gemini-Generated-Image-6z0c7z6z0c7z6z0c.png",
     description:
-      "Experienced in MERN stack, TypeScript, Prisma, PostgreSQL, and building scalable applications.",
+      "Designs and maintains secure network infrastructures. Expert in firewall management, VPN configuration, and enterprise intrusion detection systems.",
+  },
+  {
+    name: "Zarina Islam",
+    role: "Ethical Hacker",
+    image:
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&auto=format&fit=crop&q=60",
+    description:
+      "Certified Ethical Hacker skilled in vulnerability assessment, penetration testing, and securing cloud-based infrastructure for digital safety.",
+  },
+
+  // 📱 App Development Team
+  {
+    name: "Arif Mahmud",
+    role: "Mobile App Developer",
+    image:
+      "https://i.postimg.cc/43f07wMk/Gemini-Generated-Image-chtnkpchtnkpchtn.png",
+    description:
+      "Develops cross-platform apps using React Native and Flutter. Creates smooth, intuitive, and performance-driven mobile experiences for users.",
+  },
+  {
+    name: "Rafiul Islam",
+    role: "Android Engineer",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&auto=format&fit=crop&q=60",
+    description:
+      "Android developer specializing in Kotlin and Jetpack Compose. Builds modern, scalable, and responsive Android applications with clean architecture.",
+  },
+  {
+    name: "Fatema Noor",
+    role: "iOS Developer",
+    image:
+      "https://i.postimg.cc/Prn2v2pv/Gemini-Generated-Image-rgngeprgngeprgng.png",
+    description:
+      "iOS engineer experienced in Swift and SwiftUI. Focused on elegant design, performance, and user-friendly mobile app development.",
+  },
+
+  // 🎨 Graphics & UI/UX Design Team
+  {
+    name: "Farzana Akter",
+    role: "Graphics Design Lead",
+    image:
+      "https://i.postimg.cc/Rh2rwftR/Gemini-Generated-Image-xjx52kxjx52kxjx5.png",
+    description:
+      "Creative design leader producing digital visuals and marketing assets. Skilled in Figma and Adobe Creative Suite for brand excellence.",
   },
   {
     name: "Sara Ahmed",
     role: "UI/UX Designer",
-    image: "https://placehold.co/140x140",
-    description:
-      "Designs intuitive, user-friendly interfaces and focuses on accessibility & modern design trends.",
-  },
-  {
-    name: "Asifur Rahman",
-    role: "Backend Developer",
     image:
-      "https://images.unsplash.com/photo-1480429370139-e0132c086e2a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://i.postimg.cc/ZYW5vLtd/Gemini-Generated-Image-vzqq6cvzqq6cvzqq.png",
     description:
-      "Scadjscn jk nd ojifeo naqf fd a dkacolaadadn kl a dfsaf sdfvsdfvwerf qwefjhasdbcf jkfcajcasdf sfgv.",
+      "Designs intuitive and visually appealing interfaces. Applies human-centered design to create accessible and engaging digital experiences.",
   },
   {
-    name: "Moniruzzaman",
-    role: "Full Stack Developer",
+    name: "Rashedul Karim",
+    role: "3D & Motion Graphics Artist",
     image:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww",
+      "https://i.postimg.cc/qRdx67g2/Chat-GPT-Image-Oct-30-2025-07-30-30-AM.png",
     description:
-      "Experienced in MERN stack, TypeScript, Prisma, PostgreSQL, and building scalable applications.",
+      "3D artist and motion designer using Blender and After Effects. Delivers dynamic visuals and animations for web and marketing.",
   },
+
+  // 📈 Digital Marketing Team
   {
-    name: "Sara Ahmed",
-    role: "UI/UX Designer",
-    image: "https://placehold.co/140x140",
-    description:
-      "Designs intuitive, user-friendly interfaces and focuses on accessibility & modern design trends.",
-  },
-  {
-    name: "Asifur Rahman",
-    role: "Backend Developer",
+    name: "Tanvir Hasan",
+    role: "Digital Marketing Manager",
     image:
-      "https://images.unsplash.com/photo-1480429370139-e0132c086e2a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://i.postimg.cc/GtnMJQ2z/Gemini-Generated-Image-lw5yb0lw5yb0lw5y.png",
     description:
-      "Scadjscn jk nd ojifeo naqf fd a dkacolaadadn kl a dfsaf sdfvsdfvwerf qwefjhasdbcf jkfcajcasdf sfgv.",
+      "Drives SEO, PPC, and content strategies to boost digital reach. Expert in growth campaigns and performance optimization.",
   },
   {
-    name: "Moniruzzaman",
-    role: "Full Stack Developer",
+    name: "Jannatul Ferdous",
+    role: "Social Media Strategist",
     image:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww",
+      "https://i.postimg.cc/D0hWcJKv/Chat-GPT-Image-Oct-30-2025-07-49-09-AM.png",
     description:
-      "Experienced in MERN stack, TypeScript, Prisma, PostgreSQL, and building scalable applications.",
+      "Creates and manages social media campaigns that build brand engagement. Skilled in analytics and influencer collaboration.",
   },
   {
-    name: "Sara Ahmed",
-    role: "UI/UX Designer",
-    image: "https://placehold.co/140x140",
+    name: "Imran Hossain",
+    role: "Content & SEO Specialist",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&auto=format&fit=crop&q=60",
     description:
-      "Designs intuitive, user-friendly interfaces and focuses on accessibility & modern design trends.",
+      "Optimizes digital content for search engines. Crafts persuasive copy that enhances traffic, visibility, and brand authority.",
+  },
+
+  // ⚙️ Operations & Coordination
+  {
+    name: "Nusrat Jahan",
+    role: "Project Coordinator",
+    image:
+      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=600&auto=format&fit=crop&q=60",
+    description:
+      "Ensures seamless coordination between clients and teams. Manages project timelines, communication, and delivery quality.",
   },
   {
-    name: "Sara Ahmed",
-    role: "UI/UX Designer",
-    image: "https://placehold.co/140x140",
+    name: "Riyad Khan",
+    role: "DevOps Engineer",
+    image:
+      "https://i.postimg.cc/5NdcnBG5/Gemini-Generated-Image-mlj9l2mlj9l2mlj9.png",
     description:
-      "Designs intuitive, user-friendly interfaces and focuses on accessibility & modern design trends.",
-  },
-  {
-    name: "Sara Ahmed",
-    role: "UI/UX Designer",
-    image: "https://placehold.co/140x140",
-    description:
-      "Designs intuitive, user-friendly interfaces and focuses on accessibility & modern design trends.",
+      "Implements CI/CD pipelines, Docker, and AWS infrastructure. Maintains system reliability, scalability, and efficient deployment automation.",
   },
 ];
 
 const TeamSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="w-full mx-auto py-12 ">
+    <div className="w-full mx-auto  ">
       <Swiper
         modules={[Autoplay]}
         loop
@@ -135,9 +226,7 @@ const TeamSlider = () => {
           return (
             <SwiperSlide
               key={index}
-              className={`flex justify-center pb-5 ${
-                isNext ? "" : "" // 👉 add margin only for right-side card
-              }`}
+              className={`flex justify-center pb-5 ${isNext ? "" : ""}`}
             >
               <motion.div
                 style={{ scale }}
@@ -183,8 +272,8 @@ const TeamSlider = () => {
                         </p>
 
                         <div className="flex justify-center items-center space-x-1 mt-4">
-                          <div className="w-14 h-1.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-md"></div>
-                          <div className="w-5 h-1.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-md"></div>
+                          <div className="w-14 h-1.5 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 rounded-md"></div>
+                          <div className="w-5 h-1.5 bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90 rounded-md"></div>
                         </div>
                       </div>
 

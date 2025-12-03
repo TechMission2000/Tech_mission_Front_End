@@ -45,8 +45,8 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#072D5B] lg:h-24 md:h-20 h-16">
-      <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6 bg-opacity-10">
+    <header className="sticky top-0 z-50 w-full bg-[#072D5B] lg:h-24 md:h-20 h-16 ">
+      <div className="container mx-auto flex lg:h-24 md:h-20 h-16 items-center justify-between px-4 md:px-6 ">
         {/* Logo */}
         <Link
           href="/"
@@ -79,7 +79,7 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           <Link
             href="/"
-            className="px-6 py-2 text-base font-semibold text-white bg-gradient-to-r from-brand-secondary to-brand-primary rounded-lg shadow-md transition-transform hover:scale-105"
+            className="px-6 py-2 text-base font-semibold text-white bg-gradient-to-r from-brand-secondary to-brand-primary rounded-lg shadow-md transition-transform hover:scale-105 hover:text-gray-400"
             prefetch={false}
           >
             Home
@@ -87,7 +87,7 @@ export function Header() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1 text-base font-semibold text-white hover:text-brand-light-blue transition-colors outline-none">
+              <button className="flex items-center gap-1 text-base font-semibold text-white hover:text-brand-light-blue transition-colors outline-none hover:text-gray-400">
                 Services <ChevronDown className="h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
@@ -110,7 +110,7 @@ export function Header() {
             <Link
               key={item.link}
               href={item.link}
-              className="text-base font-semibold text-white hover:text-brand-light-blue transition-colors"
+              className="text-base font-semibold text-white hover:text-brand-light-blue transition-colors hover:text-gray-400"
               prefetch={false}
             >
               {item.title}
