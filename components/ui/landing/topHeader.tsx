@@ -113,22 +113,22 @@ export default function TopHeader() {
           >
             <FaWhatsapp className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
           </Link>
-          <Link
+          {/* <Link
             href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
           >
             <Twitter className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             href="https://www.youtube.com/@techmissionglove"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
           >
             <FaYoutube className="h-5 w-5 hover:opacity-80 transition-opacity cursor-pointer" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

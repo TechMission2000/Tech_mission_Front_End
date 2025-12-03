@@ -19,8 +19,8 @@ export default function OurTopService() {
       buttonText: "Read More",
       imageUrl:
         "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074828916_website%20development.png",
-      backgroundColor: "bg-white",
-      reverse: false,
+      backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
+      reverse: true,
     },
     {
       title: "App Development",
@@ -30,8 +30,8 @@ export default function OurTopService() {
       buttonText: "Read More",
       imageUrl:
         "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074811490_Mobile%20App%20Development.png",
-      backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
-      reverse: true,
+      backgroundColor: "bg-white",
+      reverse: false,
     },
     {
       title: "Website Development",
@@ -41,8 +41,8 @@ export default function OurTopService() {
       buttonText: "Read More",
       imageUrl:
         "https://pro-bucket.s3.us-east-1.amazonaws.com/1758074806726_all-services.png",
-      backgroundColor: "bg-white",
-      reverse: false,
+      backgroundColor: "bg-gradient-to-b from-neutral-50 to-neutral-50",
+      reverse: true,
     },
 
     {
@@ -78,11 +78,11 @@ export default function OurTopService() {
   ];
 
   return (
-    <div className="px-4">
+    <div className="">
       {/* Section Header */}
       <div className="w-full flex flex-col items-center text-center">
         <h2 className="text-4xl font-semibold text-brand-secondary text-[#072D5B] font-raleway">
-          Our Top <span className="text-sky-700">Services</span>
+          Our Top <span className="text-blue-600">Services</span>
         </h2>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
           We ensure you have every functionality you need to build, run, and

@@ -154,10 +154,12 @@ function Contect() {
                 </svg>
               }
               title="Visit Us"
-              details={[
-                "H#180/6, R#Titas Road, East Rampura",
-                "Dhaka-1219, Bangladesh",
-              ]}
+              details={
+                [
+                  // "H#180/6, R#Titas Road, East Rampura",
+                  // "Dhaka-1219, Bangladesh",
+                ]
+              }
             />
 
             <div className="pt-6 border-t border-gray-200">
@@ -186,21 +188,21 @@ function Contect() {
                 >
                   <FaWhatsapp size={22} />
                 </Link>
-                <Link
+                {/* <Link
                   href="https://x.com/TechMissio93153?t=cQtGopkqyutrhRAQAyKS9w&s=08"
                   target="_blank"
                   className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
                 >
                   <Twitter size={22} />
-                </Link>
+                </Link> */}
 
-                <Link
+                {/* <Link
                   href="https://www.youtube.com/@techmissionglove"
                   target="_blank"
                   className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-[#072D5B] via-[#106CD8] to-blue-500/90  text-white hover:bg-blue-700 hover:cursor-pointer transition"
                 >
                   <FaYoutube size={22} />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
