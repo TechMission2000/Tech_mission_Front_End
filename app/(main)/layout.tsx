@@ -5,7 +5,7 @@ import Footer from "@/components/ui/landing/footer";
 import Chatbot from "@/components/chat/Chatbot";
 
 import { Header } from "@/components/ui/landing/header";
-import TopHeader from "@/components/ui/landing/topHeader";
+import TopHeader from "@/components/ui/landing/TopHeader";
 
 
 export default function MainLayoutContent({
