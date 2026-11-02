@@ -23,7 +23,7 @@ This is a modern, responsive web application built for Tech Mission, a technolog
 
 ## Technologies Used
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **State Management**: Redux Toolkit with RTK Query
@@ -93,8 +93,9 @@ This project demonstrates expertise in:
 
 3. **Environment Setup** (if needed)
 
-   - Copy `.env.example` to `.env.local`
-   - Add necessary environment variables
+   - To use the API locally, create `.env.local` and set
+     `NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api`.
+   - Replace the URL with your backend's API URL when deploying.
 
 4. **Run the development server**
 
@@ -108,6 +109,21 @@ This project demonstrates expertise in:
 
 5. **Open your browser**
    - Navigate to [http://localhost:3000](http://localhost:3000)
+
+## Deploy to Vercel
+
+1. Push this repository to GitHub, GitLab, or Bitbucket.
+2. In [Vercel](https://vercel.com/new), import the repository and keep the detected Next.js framework settings.
+3. In the Vercel project's **Settings → Environment Variables**, add
+   `NEXT_PUBLIC_API_BASE_URL` with your deployed backend API URL, including `/api`
+   (for example, `https://api.example.com/api`). Apply it to the environments you
+   plan to deploy.
+4. Deploy the project. Vercel detects the Next.js build command from `package.json`.
+   Redeploy after changing environment variables.
+
+The backend must be deployed separately and configured to allow requests from the
+Vercel site's domain. Do not set `NEXT_PUBLIC_API_BASE_URL` to `localhost` in
+Vercel; visitors' browsers would resolve that to their own devices.
 
 ## Usage
 
